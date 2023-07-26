@@ -100,6 +100,33 @@ export async function getStaticProps() {
 }
 ```
 
+## Updating Fonts
+
+1. Add font files to `public/static/fonts`
+2. Add font declarations to `css/tailwind.css`:
+
+```css
+@font-face {
+  font-family: Thiccboi;
+  src: url('../public/static/fonts/THICCCBOI-Medium.woff2') format('opentype');
+  font-weight: 500;
+}
+```
+
+3. Add a declaration for each unique font weight
+4. Update `fontFamily` in `tailwind.config.js`:
+
+```json
+theme: {
+	extend: {
+		...
+		fontFamily: {
+			sans: ['Thiccboi', ...defaultTheme.fontFamily.sans],
+		},
+		...
+},
+```
+
 ## ✅ Todo
 
 ## ⭐️ Credits
