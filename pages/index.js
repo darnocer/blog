@@ -2,31 +2,34 @@ import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
+import { getFileBySlug, getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 
+import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import ListLayoutSimple from '@/layouts/ListLayoutSimple'
 import NewsletterForm from '@/components/NewsletterForm'
 
-export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
+const DEFAULT_LAYOUT = 'HomeLayout'
 
-  return { props: { posts } }
+export async function getStaticProps() {
+  const posts = await getAllFilesFrontMatter('blog', 'snippets')
+  // const posts = await getAllFilesWithType('snippet', 'blog')
+  const homePage = await getFileBySlug('content', ['home'])
+
+  return { props: { posts, homePage } }
 }
 
-export default function Home({ posts }) {
+export default function Home({ posts, homePage }) {
+  const { mdxSource, frontMatter } = homePage
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
-        </div>
+      <div className="border-b-2 border-gray-300">
+        <MDXLayoutRenderer
+          layout={frontMatter.layout || DEFAULT_LAYOUT}
+          mdxSource={mdxSource}
+          frontMatter={frontMatter}
+        />
       </div>
       <ListLayoutSimple posts={posts} />
       {siteMetadata.newsletter.provider !== '' && (
