@@ -1,6 +1,6 @@
 const siteMetadata = {
   title: "Darian's Blog",
-  author: 'Darian Nocera',
+  author: 'Darian',
   description: 'The inner machinitions of my mind are an enigma',
   language: 'en-us',
   theme: 'system', // system, dark or light
