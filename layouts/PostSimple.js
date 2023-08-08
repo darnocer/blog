@@ -6,6 +6,7 @@ import siteMetadata from '@/data/siteMetadata'
 import formatDate from '@/lib/utils/formatDate'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { date, title } = frontMatter
@@ -17,15 +18,16 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       <article>
         <div>
           <header>
+            <Breadcrumbs />
             <div className="space-y-1 border-b border-gray-200 pb-10 text-center dark:border-gray-700">
-              <dl>
+              {/* <dl>
                 <div>
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>{formatDate(date)}</time>
                   </dd>
                 </div>
-              </dl>
+              </dl> */}
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
