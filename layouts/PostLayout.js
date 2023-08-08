@@ -7,6 +7,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import LinkArrow from '@/components/LinkArrow'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
@@ -103,7 +104,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
                       Tags
                     </h2>
-                    <div className="flex flex-wrap">
+                    <div className="flex flex-wrap gap-y-2">
                       {tags.map((tag) => (
                         <Tag key={tag} text={tag} />
                       ))}
@@ -135,14 +136,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   </div>
                 )}
               </div>
-              <div className="pt-4 xl:pt-8">
-                <Link
-                  href="/blog"
-                  className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                >
-                  &larr; Back to the blog
-                </Link>
-              </div>
+              <Link className="flex pt-4 xl:pt-8">
+                <LinkArrow direction="left" />{' '}
+                <span className="text-primary-500 underline">Back</span>
+              </Link>
             </footer>
           </div>
         </div>
