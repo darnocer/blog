@@ -20,7 +20,36 @@ npm run dev
 - `data/headerNavLinks.js` - nav links
 - `data/chips.js` - interest chips
 
-### Add Custom Components
+### Updating Fonts
+
+1. Add font files to `public/static/fonts`
+2. Add font declarations to `css/tailwind.css`:
+
+```css
+@font-face {
+  font-family: Thiccboi;
+  src: url('../public/static/fonts/THICCCBOI-Medium.woff2') format('opentype');
+  font-weight: 500;
+}
+```
+
+3. Add a declaration for each unique font weight
+4. Update `fontFamily` in `tailwind.config.js`:
+
+```json
+theme: {
+	extend: {
+		...
+		fontFamily: {
+			sans: ['Thiccboi', ...defaultTheme.fontFamily.sans],
+		},
+		...
+},
+```
+
+## Custom Components
+
+### Adding New Components
 
 To add new components:
 
@@ -78,7 +107,7 @@ import { getAllFilesWithType, getAllFilesFrontMatter } from '@/lib/mdx'
 
 **1. Use `getAllFilesFrontMatter()`**
 
-Specify the `folder` from the `/data` directory
+Specify the `folder(s)` from the `/data` directory to return all non-draft files from specified folders
 
 ```js
 export async function getStaticProps() {
@@ -90,7 +119,7 @@ export async function getStaticProps() {
 
 **2. Use `getAllFilesWithType()`**
 
-Specify the `type` from YAML Frontmatter (eg. `type: blog`)
+Specify the `type(s)` from YAML Frontmatter (eg. `type: blog`) to return all files of the spcified type(s)
 
 ```js
 export async function getStaticProps() {
@@ -100,32 +129,19 @@ export async function getStaticProps() {
 }
 ```
 
-## Updating Fonts
+### Sections
 
-1. Add font files to `public/static/fonts`
-2. Add font declarations to `css/tailwind.css`:
+For any component that is intended to be a full width section, within the component file, wrap the return value in `<SectionContainer></SectionContainer>`.
 
-```css
-@font-face {
-  font-family: Thiccboi;
-  src: url('../public/static/fonts/THICCCBOI-Medium.woff2') format('opentype');
-  font-weight: 500;
-}
-```
+`<SectionContainer>` takes two optional props: `padding` and `container`:
 
-3. Add a declaration for each unique font weight
-4. Update `fontFamily` in `tailwind.config.js`:
+- `padding` - specifies the vertical padding of the section
+- `container` - specifies the max-width of the container
 
-```json
-theme: {
-	extend: {
-		...
-		fontFamily: {
-			sans: ['Thiccboi', ...defaultTheme.fontFamily.sans],
-		},
-		...
-},
-```
+Both props take the values `small`, `medium`, or `large`. If not specified, the default value `medium` will apply the following classes:
+
+- `padding` = `py-5`
+- `container` = `max-w-6xl`
 
 ## ✅ Todo
 
