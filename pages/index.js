@@ -3,40 +3,37 @@ import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getFileBySlug, getAllFilesFrontMatter } from '@/lib/mdx'
+import { getAllTags } from '@/lib/tags'
 import formatDate from '@/lib/utils/formatDate'
 
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import ListLayoutSimple from '@/layouts/ListLayoutSimple'
 import NewsletterForm from '@/components/NewsletterForm'
+import TagList from '@/components/TagList'
 
 const DEFAULT_LAYOUT = 'HomeLayout'
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog', 'snippets')
-  // const posts = await getAllFilesWithType('snippet', 'blog')
+  const posts = await getAllFilesFrontMatter('blog')
   const homePage = await getFileBySlug('content', ['home'])
+  const tags = await getAllTags('blog')
 
-  return { props: { posts, homePage } }
+  return { props: { posts, homePage, tags } }
 }
 
-export default function Home({ posts, homePage }) {
+export default function Home({ posts, homePage, tags }) {
   const { mdxSource, frontMatter } = homePage
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="border-b-2 border-gray-300">
-        <MDXLayoutRenderer
-          layout={frontMatter.layout || DEFAULT_LAYOUT}
-          mdxSource={mdxSource}
-          frontMatter={frontMatter}
-        />
-      </div>
+      <MDXLayoutRenderer
+        layout={frontMatter.layout || DEFAULT_LAYOUT}
+        mdxSource={mdxSource}
+        frontMatter={frontMatter}
+      />
+      <TagList tags={tags} />
       <ListLayoutSimple posts={posts} />
-      {siteMetadata.newsletter.provider !== '' && (
-        <div className="flex items-center justify-center pt-4">
-          <NewsletterForm />
-        </div>
-      )}
+      {/* {siteMetadata.newsletter.provider !== '' && <NewsletterForm />} */}
     </>
   )
 }
