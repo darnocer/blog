@@ -1,5 +1,5 @@
 ---
-name: Darian Nocera
+name: Darian
 avatar: /static/images/avatar.png
 occupation:
 company:
