@@ -5,6 +5,8 @@ import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
 
+import LinkArrow from '@/components/LinkArrow'
+
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((frontMatter) => {
@@ -62,7 +64,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                   </dl>
                   <div className="space-y-6 xl:col-span-3">
                     <div>
-                      <h3 className="text-2xl font-bold leading-8 tracking-tight">
+                      <h3 className="py-2 text-2xl font-bold leading-8 tracking-tight">
                         <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
                           {title}
                         </Link>
@@ -76,15 +78,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                     <div className="prose max-w-none text-gray-500 dark:text-gray-400">
                       {summary}
                     </div>
-                    <div className="text-base font-medium leading-6">
-                      <Link
-                        href={`/blog/${slug}`}
-                        className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                        aria-label={`Read "${title}"`}
-                      >
-                        Read more &rarr;
-                      </Link>
-                    </div>
+                    <LinkArrow text="Read More" slug={slug} />
                   </div>
                 </article>
               </li>
