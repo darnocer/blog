@@ -136,9 +136,8 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   </div>
                 )}
               </div>
-              <Link className="flex pt-4 xl:pt-8">
-                <LinkArrow direction="left" />{' '}
-                <span className="text-primary-500 underline">Back</span>
+              <Link className="flex pt-4 text-primary-500 underline xl:pt-8">
+                <LinkArrow direction="left" /> Back
               </Link>
             </footer>
           </div>
