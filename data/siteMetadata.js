@@ -9,6 +9,7 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
+  website: 'https://darian.digital',
   email: 'darian@madebyrvg.com',
   github: 'https://github.com/darnocer',
   twitter: 'https://twitter.com/Twitter',
