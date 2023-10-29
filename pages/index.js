@@ -2,7 +2,7 @@ import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import { getFileBySlug, getAllFilesFrontMatter } from '@/lib/mdx'
+import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { getAllTags } from '@/lib/tags'
 import formatDate from '@/lib/utils/formatDate'
 
@@ -16,22 +16,16 @@ const DEFAULT_LAYOUT = 'HomeLayout'
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
   const tips = await getAllFilesFrontMatter('tips')
-  const homePage = await getFileBySlug('content', ['home'])
   const tags = await getAllTags('blog')
 
-  return { props: { posts, homePage, tags, tips } }
+  return { props: { posts, tags, tips } }
 }
 
-export default function Home({ posts, homePage, tips, tags }) {
-  const { mdxSource, frontMatter } = homePage
+export default function Home({ posts, tips, tags }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      {/* <MDXLayoutRenderer
-        layout={frontMatter.layout || DEFAULT_LAYOUT}
-        mdxSource={mdxSource}
-        frontMatter={frontMatter}
-      /> */}
+
       {/* <TagList tags={tags} /> */}
       <ListLayoutSimple posts={posts} directory="blog" />
       <ListLayoutSimple posts={tips} directory="tips" />
