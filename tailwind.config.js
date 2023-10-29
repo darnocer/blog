@@ -28,8 +28,25 @@ module.exports = {
         sans: ['Thiccboi', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: colors.teal,
+        primary: {
+          ...colors.teal,
+          DEFAULT: '#27A185',
+          400: '#27A185',
+        },
         gray: colors.neutral,
+        yellow: '#ECAC45',
+        red: {
+          ...colors.red,
+          500: '#f65e69',
+        },
+      },
+      borderWidth: {
+        1: '1px',
+      },
+      boxShadow: {
+        greenDark: '0 0 22px 8px rgba(5, 255, 0, .25)',
+        green: '0 0 22px 8px rgba(39, 161, 133, .25)',
+        yellow: '0 0 22px 8px rgba(236, 172, 69, .25)',
       },
       typography: (theme) => ({
         DEFAULT: {
