@@ -111,7 +111,7 @@ Specify the `folder(s)` from the `/data` directory to return all non-draft files
 
 ```js
 export async function getStaticProps() {
-  const posts = await getAllFilesWithType('blog')
+  const posts = await getAllFilesFrontMatter('blog')
 
   return { props: { posts } }
 }
@@ -144,6 +144,10 @@ Both props take the values `small`, `medium`, or `large`. If not specified, the 
 - `container` = `max-w-6xl`
 
 ## ✅ Todo
+
+- [ ] Update PostLayoutSimple to hide pipe and flex column on mobile
+- [ ] Update date format on /blog
+- [ ] Style Next/Previous on /blog
 
 ## ⭐️ Credits
 
