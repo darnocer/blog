@@ -15,24 +15,26 @@ const DEFAULT_LAYOUT = 'HomeLayout'
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
+  const tips = await getAllFilesFrontMatter('tips')
   const homePage = await getFileBySlug('content', ['home'])
   const tags = await getAllTags('blog')
 
-  return { props: { posts, homePage, tags } }
+  return { props: { posts, homePage, tags, tips } }
 }
 
-export default function Home({ posts, homePage, tags }) {
+export default function Home({ posts, homePage, tips, tags }) {
   const { mdxSource, frontMatter } = homePage
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <MDXLayoutRenderer
+      {/* <MDXLayoutRenderer
         layout={frontMatter.layout || DEFAULT_LAYOUT}
         mdxSource={mdxSource}
         frontMatter={frontMatter}
-      />
-      <TagList tags={tags} />
-      <ListLayoutSimple posts={posts} />
+      /> */}
+      {/* <TagList tags={tags} /> */}
+      <ListLayoutSimple posts={posts} directory="blog" />
+      <ListLayoutSimple posts={tips} directory="tips" />
       {/* {siteMetadata.newsletter.provider !== '' && <NewsletterForm />} */}
     </>
   )

@@ -8,9 +8,9 @@ import formatDateShort from '@/lib/utils/formatDateShort'
 import SectionContainer from '@/components/SectionContainer'
 import LinkArrow from '@/components/LinkArrow'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 8
 
-export default function ListLayoutSimple({ posts }) {
+export default function ListLayoutSimple({ posts, directory }) {
   return (
     <SectionContainer>
       <div className="border-b-1 border-gray-300 py-4">
@@ -25,7 +25,7 @@ export default function ListLayoutSimple({ posts }) {
               <li key={slug} className="py-0">
                 <article className="justify-stretch flex flex-row flex-nowrap items-center items-baseline gap-x-2">
                   <Link
-                    href={`/blog/${slug}`}
+                    href={`/${directory}/${slug}`}
                     className="justify-stretch flex content-center items-baseline gap-x-4"
                   >
                     <time className="w-14 text-gray-500 dark:text-gray-300" dateTime={date}>
