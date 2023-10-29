@@ -1,0 +1,504 @@
+---
+title: Complete Guide to Webflow and MailChimp Integration
+date: '2023-08-12'
+tags: ['webflow', 'mailchimp']
+draft: false
+type: 'Guide'
+summary: More than you want to know about connecting MailChimp to Webflow.
+layout: 'PostSimple'
+---
+
+## Introduction
+
+### Overview
+
+MailChimp is an email marketing platform used to build an audience contact list and connect with your customers via email.
+
+In this article, we'll cover from start to finish how to setup and structure your Audience if you're new to MailChimp as well as how to add the contacts to your mailing list when they signup from your Webflow website.
+
+This guide is intended to be referenced during the implementation of a Signup form and integration with MailChimp and answer any questions you may run into. I've provided a lot of details to help your understanding and cover edge cases, so use search to find what you're looking for.
+
+### High-Level Steps
+
+The high-level steps we'll cover are as follows:
+
+#### 1. Plan Your Structure
+
+- **Design your form:** List the form fields and field types needed for your form.
+- **Determine contact classification:** Decide if this Signup form will target a specific subset of your audience, and classify contacts accordingly (e.g., using groups, tags, or segments).
+
+#### 2. Setup Your MailChimp Audience
+
+- **Set up MailChimp fields:** Configure the form fields in your MailChimp audience, including visibility and requirement settings, and create groups if necessary.
+
+#### 3. Build Your Form
+
+- **Choose form design method:** Decide if you will design the form fields from Webflow's designer or use MailChimp's embed code, depending on your preferences.
+  - If using Webflow, build a section with the corresponding form elements and match the `names` of the fields in Webflow with the `field labels` in MailChimp.
+  - If using MailChimp, build the form elements in MailChimp and create a section in Webflow that will hold an Embed element with your form code.
+
+#### 4. Configure the Integration
+
+- If you're embedding the form, update the styling and add the embed code to an Embed element in Webflow.
+- If you're integrating, decide whether you will directly integrate with MailChimp using a Form Action (recommended) or use a third-party tool like Zapier:
+  - For direct MailChimp integration, connect the form by setting the `action URL `and a `POST` method.
+  - For Zapier, log in to complete the setup.
+
+#### 5. Testing
+
+- **Test the form submission:** Ensure that your form submission successfully adds a contact to your MailChimp Audience
+- **Troubleshoot errors:** If you missed a step, your form submission may fail and you may need to troubleshoot common errors
+
+---
+
+## Planning Your Form and MailChimp Audience
+
+- ! You can skip this section if you already understand MailChimp Audiences
+
+### Overview
+
+There are many aspects to effectively managing your your audience in MailChimp and multiple ways to achieve the same outcomes, but understanding the basics can make it more approachable. In this section, we'll go over fundamental MailChimp concepts and terminology that will be important for your understanding to structure your form and audience effectively.
+
+Before you dive in, you'll want to take a moment to plan how to structure your form and your audience, considering your current needs and allowing for future flexibility. Fortunately, MailChimp's platform accommodates the average user, easily allowing for future modifications if needed.
+
+#### Audience
+
+A MailChimp audience is essentially a collection of contacts that you can engage with through your email marketing campaigns. While you may have difference "audiences" within your customer base, for a single business, it is typically recommended to create and maintain only one audience in MailChimp and utilize segments and tags to categorize your contacts.
+
+#### Signup Forms
+
+If you you have a form on your website and you intend to add the contact submissions to your audience for marketing purposes, then you need to create a Signup form. The Signup form can be created on Webflow or embedded directly from MailChimp.
+
+- i Sign Up forms are managed from Audience > Signup Forms
+
+There are a few options in MailChimp:
+
+- **Form Builder** - You will use this to create and configure your audience fields, even if you are not embedding the form.
+- **Embedded Forms** - You use this to generate the HTML for an embedded form.
+- **Contact Forms** - These forms will not add the contact to your MailChimp Audience. You likely don't want to use this feature. If you just need a contact form, Webflow handles this natively.
+
+Examples of Signup forms include:
+
+- A basic form with a field for the user's email and a consent checkbox for receiving newsletters.
+- A contact form where the user can express interest in specific products or services, along with identifying the type of content they're interested in.
+- A registration form for an event or webinar, including the user's name, email, and an option to subscribe to future updates.
+
+> [!info] GDPR Compliance
+> For all signup forms, even contact forms, you must obtain the user's consent to store their contact information, as required by GDPR (General Data Protection Regulations) laws. This means that your signup form should include clear language, often accompanied by a checkbox, where users affirm their consent to be contacted.
+
+#### Audience Fields (Required Setup)
+
+Audience Fields in MailChimp are designated to collect specific contact data, such as name and email, and correspond to the form fields on your site. These fields are essential for creating any type of audience or MailChimp Sign Up form.
+
+> [!info] Managing Audience Fields
+> **From Form Builder:** Audience > Signup Forms > Form Builder > Build It > Add a Field
+>
+> **From Audience Dashboard:** On the sidebar, select **Audience Dashboard** > **Manage Audience** > **Settings** > **Audience Fields and `**|MERGE|**` Tags**
+
+#### Groups (Optional Setup)
+
+Groups allow contacts to categorize themselves within your audience, such as identifying the type of content they're interested in. You should use groups if you intend to provide personalized content based on the contact's category.
+
+#### Tags (Optional Setup)
+
+Tags are labels that can be attached to contacts, storing additional information about them, like their attendance at a specific event. Tags are versatile and flexible and can be added whenever necessary for targeted communication.
+
+#### Segments (Optional, Future Setup)
+
+Unlike groups and tags that add _new_ data to a contact, segments filter your audience based on their existing data, allowing for targeted communication. For example, a segment of contacts who have purchased three or more times in the last 6 months. Depending on your marketing strategy, you want to use segments, but you don't need to set them up as part of the Signup form configuration.
+
+### Planning your form
+
+We will not cover form design or UX in this article. This assumes that you already have a Webflow style guide with classes applied to available form elements that align with your site design and business branding.
+
+Using the information about MailChimp audiences above, plan your form structure:
+
+- List all of the Audience Fields you will need (these are the fields on your form)
+- Decide if you will classify contacts in "groups" (this will be connected to a form field that is a Radio Button, Dropdown, or Checkbox type)
+- Determine if you need a tag to be applied to the contact when they submit the form
+
+> [!info] Note on having multiple, different signup forms
+> There are some considerations for configuring the Audience Field visibility and requirements to be aware of in the "Setup Your Audience Fields" section if you need to have different signup forms on your website (eg. Contact and Newsletter Subscribe).
+
+Note the available Webflow form elements are not 1:1. Many types will be an input text field where you select the type. See the corresponding Webflow elements in the table below.
+
+| MailChimp Field Type | Corresponding Webflow Element                                                        |
+| -------------------- | ------------------------------------------------------------------------------------ |
+| Text                 | Input (Plain)                                                                        |
+| Number               | Input (Number)                                                                       |
+| Radio Buttons        | Radio Buttons                                                                        |
+| Checkboxes           | Checkboxes                                                                           |
+| Dropdown             | Select                                                                               |
+| Date                 | There is no native Webflow date picker element, but it can be added with custom code |
+| Birthday             | Custom code for Date Picker element                                                  |
+| Address              | Input (Plain)                                                                        |
+| Zipcode              | Input (Number)                                                                       |
+| Phone                | Input (Phone)                                                                        |
+| Website              | Input (Plain)                                                                        |
+| Image                | File Upload (Only available on e-commerce plus, advanced, or business plans)         |
+
+## Determine Your Integration Method
+
+Using the MailChimp API is the only way to get COMPLETE customizability and flexibility with your form setup in Webflow. However, there are other options that work perfectly well that you can setup without a developer. Each has some considerations, so you'll need to pick what will work best for your business needs.
+
+### Choose an Option
+
+#### 1. Embed the MailChimp form
+
+**_Use this option if:_** You just want the fastest option and/or you don't really care what it looks like.
+
+#### 2. Directly integrate the Webflow form with MailChimp using a Form Action (Recommended)
+
+**_Use this option if:_** you want full control of your form front-end from Webflow and the most flexibility.
+
+#### 3. Integrate using a third-party tool like Zapier (Not Recommended)
+
+**_Use this option if:_** You have more complex workflows for form submissions and are already using Zapier.
+
+### Considerations
+
+Below are some considerations and limitations to be aware of with each method. Considerations are summarized in the table below.
+
+- If you use the Embedded form, there are only limited design options in MailChimp. It will require manually styling with CSS to fully match your design. Custom CSS in Webflow can result in class conflicts.
+- Options #2 and #3 give you complete control over the design and structure. However, adding NEW form fields, if you want the data to go to MailChimp, will always require the Audience Fields to be updated in MailChimp.
+- Third party integrations introduce an additional point of failure. For Zapier, be aware if you have a Group field with multiple options, you will need to create and maintain a zap for each group option, introducing multiple points of failure.
+- Form submissions for any method will not trigger Webflow's native form submission notification emails, even if you build the form in Webflow, as the data will be connected to MailChimp.
+- If you build the form in Webflow, you can utilize and style the native success/error messages that appear under the form, or setup a redirect. The embedded form option will only support the redirect and redirect to a MailChimp confirmation page (but this page can be changed in Embedded Form settings)
+
+| -                 | 1. Form Embed                                                      | 2. Direct Integration                                                                                              | 3. Third-Party Tool                                           |
+| ----------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| Tag               | Applied on submission; Configured in Embed Settings                | Must use custom code or hidden fields to apply tag on submission                                                   | Same as #2                                                    |
+| Form Submission   | Redirects to MailChimp success page; or configure the redirect URL | Utilizes Webflow's native success/error messages which can be styled from Webflow or setup a redriect from Webflow | Same as #2                                                    |
+| Styling           | Must be manually styled with CSS                                   | Full design control from Webflow                                                                                   | Same as #2                                                    |
+| Points of Failure | One (MailChimp)                                                    | Two (MailChimp and Webflow)                                                                                        | Three+ (MailChimp, Webflow, Zapier, Multiple Zaps for Groups) |
+
+## Setup Your Audience Fields
+
+<mark class="hltr-orange">Audience Fields</mark> are the fields of information in MailChimp you will
+collect from your contacts and correspond to your form fields. ### Create Audience Fields in Form Builder
+1. Go to Audience > Sign Up Forms > **Form Builder** 2. In the **Build It** area for the form, expand
+the sidebar on the right 3. Go to the **Add a Field** section in the sidebar, and select the field type
+4. Configure the field: - **Field label** - Label for the field. This will be created as a field label
+in Webflow if you do not embed the form. - **Field tag** - IMPORTANT. These are how you map the fields
+in Webflow to the correct Audience field. - **Required field** /* - Whether the data is required to add
+a contact to your Audience - **Field Visibility** /* - Whether or not the field is hidden - **Help text**
+- Will be a description for the field if embedding the form
+
+> [!question]- What are `**|MERGE|**` tags?
+> These tags allow you to reference your contact's information. Such as when you send an email, you may have the following text in your email template, which would greet the contact by their first name.
+>
+> ```
+> Hi *|FNAME|*, // your email template
+> ```
+
+### Setup Considerations for Multiple Forms
+
+While you can only create one form in MailChimp's form builder— Assuming you have one Audience— it _is_ possible to have multiple, different signup forms on your website.
+
+For instance, you may have a contact form with First Name, Last Name, Email, Message, and a Group, but also want a newsletter subscription form that has the email field only.
+
+In Form Builder, you can only build one form (and set of Audience Fields) per Audience. If you have multiple forms with different fields, you should add _all_ of the fields across _all_ forms in Form Builder.
+
+#### Required Fields
+
+You should only mark fields as required in Form Builder if they are common across _all_ forms. Marking an Audience Field as "Required" there means that field data is required for the contact to be added to your audience.
+
+You will mostly likely want to configure only the "Email" field as a required audience field. If you want to require other fields for a valid form submission, you can control that requirement on the front-end from Webflow.
+
+Also note if you're embedding the form, and you use "Embedded Forms" in MailChimp to generate the HTML code, marking a field as required there is only enabling the front-end validation, such as making the field required in Webflow.
+
+Thus, you'll also want to make sure in Webflow you mark any required Audience Field as "required". If it is not required on the front-end, but the Audience Field is required, then the user will get an error if they attempt to submit the form with the required field blank.
+
+#### Field Visibility
+
+You will want to mark any fields that need to be visible on _any_ form as "Visible", even if they are not on some forms.
+
+For instance, in our example we would have Email, First Name, Last Name, Message and Group fields all marked as "visible" Audience Fields. On the Subscription form that only has the email field, you would simply leave the other fields off when you build the form in Webflow.
+
+### Setup Groups in MailChimp (if necessary)
+
+You will want to create <mark class="hltr-yellow">Groups</mark> if you want to categorize your contacts based on their form submission.
+
+For instance, a non-profit might use a Group on their contact form to differentiate between a volunteer inquiry and a donor. A tech newsletter might ask the user what content their interested in: Crypto, AI, or Quantum Computing. Groups allow your contacts to "self-identify" their category. This allows you to deliver more relevant content to their inbox based on their group.
+
+1. When adding a field from Form Builder, Select a field type option that supports Groups:
+   - **Checkboxes** - can select more than one option
+   - **Radio** - can select only one option
+   - **Dropdown** - can select only one option
+2. For Radio Buttons and Dropdowns, click **Convert to Groups** (Checkboxes are automatically a group)
+
+> [!info] You can also create groups directly instead of converting them in Form Builder
+> **Audience Dashboard** > **Manage Audience** > **Manage Contacts** > **Groups** > **Create Group**
+
+### Configuration for Tags
+
+If you have decided to apply a tag for contact submissions, and are using an embedded form, the tag can be configured from the Embedded form settings.
+
+However, if you are integrating the Webflow form with MailChimp, you will need to use custom code to apply the tag.
+
+Another option to capture the data if you do not want to use custom code to apply the tag, is to utilize a "hidden field" to capture the data.
+
+Say you have multiple different targeted landing pages for different products, you have a subscription form on each page, and you want to know from which product page the user subscribed.
+
+You can configure an Audience Field in MailChimp as a Checkbox type, add an option for each product, and mark it as hidden.
+
+Then, when you build the form in Webflow, you can add an Embed element with the following code, updating the values accordingly:
+
+```html
+<input type="hidden" name="product" value="Product1" />
+```
+
+- `name` - This attribute should correspond to the `field tag` on the Audience Field
+- `value` - Update to the value (eg. product) that you want to automatically apply when the specific form is submitted
+
+While it is not technically MailChimp "tag" functionality, this gives access to the same data in an Audience Field without custom code and still allows you to segment your audience based on the information.
+
+---
+
+## Building your form
+
+### Create the Section for your Form in Webflow
+
+Regardless of how you choose to integrate the form, you'll need somewhere to place the form on your website.
+
+You can prepare a section on Webflow with the appropriate global padding elements where you can insert the Form or Embed element.
+
+### Build the Form Elements
+
+#### Option A: MailChimp Embed
+
+- ! Skip to the below section if you're not embedding a form
+
+Although you can only have one setup in Form Builder with one set of Audience Fields, in the Embedded Form editor, you can select which fields will display and generate code for a form with those fields only.
+
+Complete this section once you've created the Audience Field in Form Builder.
+
+##### **Generate the Embed Code**
+
+1. Go to Audience > Sign Up Forms > **Embedded Form**
+2. Go to Form Fields > Turn on each field you would like to display
+3. For each field, you can edit additional settings including whether the field is required, and help text (a description that appears below the field).
+
+- i When you edit these settings, you're not applying them globally to the Audience Field, rather they will only apply to that embedded form instance.
+
+4. In **Settings**, you can edit additional settings such as adding a Title.
+5. In **Tags**, you can specify a tag to be applied to the contact when the form is submitted.
+6. Once you're done in the editor, click **Continue** > **Copy Code**
+
+- i Note - any subsequent changes in the Embedded Form editor will require you to update the code on your website to see the changes reflected.
+
+##### **Style the Form (Optional)**
+
+There are minimal styling configuration options available in the Embedded Form editor, so you will have a basic, plain form when you generate the embed code. You can use the code as is, or style it yourself.
+
+If you style it yourself, you may find it easier to select `Remove CSS Styles` in `Settings` and style the elements from a blank slate, depending on your preferences.
+
+You can paste the code into Webflow and style it from there; however, I prefer to do it in a code editor first.
+
+Place all of your CSS in between `<style></style>` tags. You can use the same classes you have in Webflow; however, it's recommended to add a unique prefix to each class such as `mc-` (for MailChimp) so that it reduces the likelihood of conflicts and unexpected styles resulting from the Webflow classes.
+
+##### **Add the Code to Webflow**
+
+1. In Webflow, navigate to the section you already created for your form
+2. Add an `HTML Embed` element that will act as your form element. Add a class based on your convention.
+3. Paste the embed code
+4. Save and view the form. Make any styling adjustments as needed.
+5. Once you are satisfied with the look of the form, copy and cut the code block from `<style>` to `</style>` tag
+6. Navigate to **Site Settings** > **Custom Code** and paste the CSS into the "Head code" section which will add your styles to `<head></head>` for your website.
+7. Publish your site to your staging domain and test the form still looks as expected with the styles added to the the `head` code.
+
+> Remember Webflow does not validate custom code. If the global CSS styles you added aren't working as expected, try to troubleshoot in a code editor. Something as simple as a missing bracket or semi-colon can cause all of the code to not work, and you will not receive the specific error.
+
+You're done implementing your embedded form! The remaining content in the article focuses on the the other integration options. Be sure to always test your forms are sending data how you expect. Hop down to the Testing & Troubleshooting section for additional information.
+
+#### Option B: Webflow Form
+
+##### Build the Form
+
+Once you've created the section and added your globals styles, you can build out the structure of your form elements and apply the classes as needed.
+
+Again, we will assume you're proficient with building in Webflow. I've included an example below in case you need some inspiration for your form structure.
+
+> [!example] Example
+> Here is an example that I built for a non-profit website.
+>
+> - [Client-First](https://finsweet.com/client-first/docs) classes are applied to the section
+> - `c__` is a namespace I use for reusable "components" such as forms or buttons
+> - You'll want to add a style to add `*` to required fields
+> - The radio buttons are mapped to a MailChimp group
+> - There is a consent checkbox
+>
+> ![[Pasted image 20230810085203.png]]
+
+##### Map the Form Fields
+
+Once you have the structure setup, now you actually want to map each field to its corresponding Audience Field in MailChimp to ensure the data is sent.
+
+**Locate the Field Tags**
+The `name` field (or `name` attribute) in Webflow on each input field must EXACTLY match the field tag in MailChimp. This is the most error-prone part of the setup.
+
+Select the input element and find the `name` field in the Settings.
+
+![[Pasted image 20230810091629.png]]
+
+In MailChimp, locate the `Field Tag` for each field (from Form Builder or Audience Field settings).
+![[Pasted image 20230810091439.png]]
+
+Ensure that it matches.
+
+###### Mapping Fields to Groups
+
+Groups function similarly to regular audience fields but do not have Field Tags so they need to be mapped to MailChimp by their group name. The only way I've found to get their group `name` is by inspecting the code. You can do this from the Embedded Form builder, even if you're not using an embedded form.
+
+**Find the Group Names and Option Values**
+
+1. Go to Audience > Sign Up Forms > **Embedded Form**
+2. Add the Group as a field to the form > Continue
+3. Check the Form Embed code for the `name` and `value` attributes of each group option
+
+If you have a group with 3 options, for example, each option will share a group `name` but have a unique `value` that is an integer. You will need both.
+
+Example: All options have `group[384357]` as the `name` and their values are different, eg. `8`
+
+```html
+<input type="radio" value="8" name="group[384357]" id="mce-group[384357]-384357-0" />
+```
+
+**Connect Group Fields in Webflow**
+
+1. On each Radio Button element in Webflow, add the Group Name (in the format `group[XXXXXX]`) for each option.
+2. Add the unique `value` for each option
+
+> Note - Radio buttons are added as separate elements in Webflow. They are classified together by using their `Group Name`. If you need to require a response for the group, you can simply make one of the options required, and the user will need to select any of the options from the group.
+
+![[Pasted image 20230810092308.png]]
+
+## Configure the Integration
+
+- ! You can skip this section if you've embedded the form
+
+### Option A: Using Form Action
+
+After the Audience Fields and Groups have been configured and the form has been built in Form Builder, you will grab the Action URL from the embed code in MailChimp and configure the form with a `POST` method in Webflow. You can find the Action URL from the Embedded Form builder, even if you are not using an Embedded form.
+
+**Grab the Action URL**
+
+1. From Audience > Sign Up Forms > Embedded Forms
+2. Verify form fields are configured and click **Continue** (this form code won't actually be embedded so you don't need to style the form here)
+3. From the embedded form code, grab the `Action URL` from for the `action` attribute within the first set of quotation marks:
+
+```html
+<form
+  action="https://example.us1.list-manage.com/subscribe/post?u=329a4665730d583e05682ed10&amp;id=1ab3dc8109&amp;f_id=004e0fe2f0"
+  method="post"
+  id="mc-embedded-subscribe-form"
+  name="mc-embedded-subscribe-form"
+  class="validate"
+  target="_self"
+></form>
+```
+
+_Copy the Action URL in this format:_
+
+```html
+https://example.us1.list-manage.com/subscribe/post?u=329a4665730d583e05682ed10&amp;id=1ab3dc8109&amp;f_id=004e0fe2f0
+```
+
+**Configure the form in Webflow**
+
+1. Select the form element in Webflow
+2. Go to Settings > Form Block Settings > Action: paste the Action URL you copied
+3. Set the Method to `POST`
+
+![[Pasted image 20230810093028.png]]
+
+...And you're done!! Always be sure to test your form. Jump down to the Testing & Troubleshooting section for more information.
+
+### Option B: Using Zapier
+
+Again, I really don't recommend you use this method as it's prone to failues. However, if you have a reason to, then here is how you do it.
+
+**Ensure your form is working**
+At this point you should have a form built with Webflow elements, but not connected to MailChimp. Forms on Webflow by default will collect the submission data in Webflow and trigger an email notification.
+
+1. Submit a test form submission to your Webflow form so there is test data for Zapier
+2. Verify the form submission worked. It submitted successfully if:
+   - You should see a success message in Webflow
+   - You can check **Dashboard** > **Project Settings** > **Forms** and verify the submission data
+   - And/or you should have received an email confirmation
+
+**Configure the Zap**
+
+1. Login to Zapier > start a Zap > connect Webflow to MailChimp apps
+2. Set the `Trigger` as **Form Submission** and the `Action` as **Find or Create a Subscriber**
+3. Test the Trigger - it should pull in data from your most recent form submission
+4. Setup the action by mapping test data to the MailChimp Audience Fields
+5. Test the action and verify the test data was added as a contact in Mailchimp\*
+
+> **IMPORTANT:** If you want to have the contact's group/interest update on form submission, you will need to add a code step. In it, you will need to add a Zap for _each_ Group Option. Otherwise, you will see all group options applied to the contact.
+
+**Create a Zap for Each Group option (if applicable)**
+For example, if you have an "Interests" group for your Tech Blog with "AI", "Blockchain," and "Analytics," you will create 3 identical zaps, but link the Group Options separately in each group: a zap for "AI" group, "Blockchain" group, and "Analytics" group.
+
+It is recommended to set the Replace field to **Replace All**.
+
+> This option enables BOTH adding the data to MailChimp and using Webflow's native form submission notifications. However, the Form Submission data will return the `name` attributes of each field. So if you're using groups, you can't easily identify the value selected from the Form Data without custom code.
+
+_Example Form Data with Groups:_
+
+```txt
+384357: 8
+384361: true
+FNAME: John
+LNAME: Doe
+EMAIL: gambits.hickory-0i@icloud.com
+MESSAGE: fdgdfgd
+```
+
+Honestly, using Zapier is a huge pain in the butt for this so I recommend you go with the direct integration if at all possible.
+
+## Testing & Troubleshooting
+
+### Test the form
+
+Always test your forms (and everything)!
+
+> [!tip] Testing tip
+> Your settings may prevent the user from subscribing or being updated if they're already in your contact list. When I test things, I use my personal gmail and add `+test1`, `+test2`, etc. before the domain (eg. `darian+test1@gmail.com`). These will all go to your personal email, but be recognized as different emails when you're testing the form submission, so should create separate contacts for your testing purposes.
+
+- Verify the following:
+  - The form submits successfully and you see a success message or are redirected to a confirmation
+  - Verify the data for each field you have mapped is available in MailChimp
+  - Try leaving required fields blank and ensure you cannot submit the form
+  - If you have a group, test selecting EACH option and verify the correct value is applied to the contact in MailChimp
+  - Submit the form with an email that is already in your Contact list
+
+### Troubleshooting
+
+All right, now you know all about MailChimp and you've completed all of the setup. The moment of truth........ and, error. DAMNIT. Hopefully it is something silly. Here are a few things to check.
+
+- ? If the field element exists in the HTML, then the field should exist in Mailchimp
+- The `name` of the input field must match the field tag in Webflow
+- ? If the field is required in MailChimp it must be `required` in the HTML attribute
+- ? All input fields in the HTML must be marked as `Visible` in MailChimp
+- ? Ensure the input type is the same as in MailChimp, and if it is marked Required in MailChimp it must be marked Required on the form
+- Ensure the action URL is correct and there are no quotation marks, etc.
+- Ensure the Form Action method is set to `POST`
+
+## Conclusion
+
+Phew— that was a lot! This setup really isn't too complicated, but there are a few "gotchas" so hopefully you were able to find the information you needed from this article. When I did this setup for the first time, I found information on all of these options, and I was a little confused which one would be best. Also, even though MailChimp is pretty basic, I've found it a little tricky to navigate the first time I used it. Difference between signup forms, Form Builder, Embedded Form, Contact Form... how the heck do I connect a Group, etc.
+
+---
+
+## GDPR
+
+Audience > Signup forms > Settings > GDPR Fields & Settings:
+Title
+Description
+Marketing preferences
+Legal Text
+
+---
+
+https://university.webflow.com/integrations/mailchimp-form-integration
