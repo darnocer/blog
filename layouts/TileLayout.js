@@ -35,10 +35,10 @@ export default function TileLayout({
           <p className="text-gray-800 dark:text-gray-300">{description ? description : null}</p>
           <div className="relative max-w-lg">
             <input
-              aria-label="Search snippets"
+              aria-label="Search tips"
               type="text"
               onChange={(e) => setSearchValue(e.target.value)}
-              placeholder="Search snippets"
+              placeholder="Search tips"
               className="block w-full rounded-md border border-gray-400 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
             />
             <svg

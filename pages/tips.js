@@ -26,7 +26,7 @@ export default function Tips({ posts, initialDisplayPosts, pagination }) {
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
         directory="tips"
-        title="Tips & Tricks"
+        title="Tips"
       />
     </>
   )
