@@ -7,9 +7,14 @@ import formatDate from '@/lib/utils/formatDate'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import { useRouter } from 'next/router'
+import LinkArrow from '@/components/LinkArrow'
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { date, title } = frontMatter
+
+  const router = useRouter()
+  const directory = router.pathname.split('/')[1]
 
   return (
     <SectionContainer>
@@ -45,21 +50,29 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <div className="flex flex-col text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
                 {prev && (
                   <div className="pt-4 xl:pt-8">
-                    <Link
+                    {/* <Link
                       href={`/blog/${prev.slug}`}
                       className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                     >
                       &larr; {prev.title}
+                    </Link> */}
+
+                    <Link href={`/${directory}/${prev.slug}`}>
+                      <LinkArrow direction="left" text={prev.title} />
                     </Link>
                   </div>
                 )}
                 {next && (
                   <div className="pt-4 xl:pt-8">
-                    <Link
+                    {/* <Link
                       href={`/blog/${next.slug}`}
                       className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                     >
                       {next.title} &rarr;
+                    </Link> */}
+
+                    <Link href={`/${directory}/${next.slug}`}>
+                      <LinkArrow direction="right" text={next.title} />
                     </Link>
                   </div>
                 )}

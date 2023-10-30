@@ -87,7 +87,9 @@ export default function ListLayout({
                     <div className="prose max-w-none text-gray-500 dark:text-gray-400">
                       {summary}
                     </div>
-                    <LinkArrow text="Read More" slug={slug} />
+                    <Link href={`/${directory}/${slug}`}>
+                      <LinkArrow direction="right" text="Read More" slug={slug} />
+                    </Link>
                   </div>
                 </article>
               </li>

@@ -5,11 +5,12 @@ import { useRouter } from 'next/router'
 
 export default function Breadcrumbs() {
   const router = useRouter()
-  const isTipsPage = router.pathname.startsWith('/tips')
+
+  const directory = router.pathname.split('/')[1]
 
   return (
-    <Link className="mb-6 flex text-primary-500 underline" href={isTipsPage ? '/tips' : '/blog'}>
-      <LinkArrow direction="left" /> Back
+    <Link className="mb-6 flex text-primary-500 underline" href={`/${directory}`}>
+      <LinkArrow text="Back" direction="left" />
     </Link>
   )
 }
