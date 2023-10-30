@@ -7,15 +7,14 @@ import Pagination from '@/components/Pagination'
 import formatDateShort from '@/lib/utils/formatDateShort'
 import SectionContainer from '@/components/SectionContainer'
 import LinkArrow from '@/components/LinkArrow'
+import Heading from '@/components/Heading'
 
 const MAX_DISPLAY = 8
 
-export default function ListLayoutSimple({ posts, directory }) {
+export default function ListLayoutSimple({ posts, directory, heading }) {
   return (
     <SectionContainer>
-      <div className="border-b-1 border-gray-300 py-4">
-        <h2 className="text-4xl font-extrabold">Recent Posts</h2>
-      </div>
+      <Heading text={heading} />
       <div className="space-y-6">
         <ul className="space-y-6">
           {!posts.length && 'No posts found.'}

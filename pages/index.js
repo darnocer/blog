@@ -26,9 +26,9 @@ export default function Home({ posts, tips, tags }) {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
 
-      {/* <TagList tags={tags} /> */}
-      <ListLayoutSimple posts={posts} directory="blog" />
-      <ListLayoutSimple posts={tips} directory="tips" />
+      <TagList tags={tags} heading="Topics" />
+      {/* <ListLayoutSimple posts={posts} directory="blog" /> */}
+      <ListLayoutSimple posts={tips} directory="tips" heading="Recent" />
       {/* {siteMetadata.newsletter.provider !== '' && <NewsletterForm />} */}
     </>
   )
