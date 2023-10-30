@@ -58,7 +58,7 @@ export default function TileLayout({
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-          {!filteredBlogPosts.length && 'No posts found.'}
+          {!filteredBlogPosts.length && <span className="mt-6">No posts found.</span>}
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags, category } = frontMatter
             return (
