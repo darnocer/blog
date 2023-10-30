@@ -6,21 +6,39 @@ https://darian.blog
 
 ## ⚙️ Setup
 
+**Installation:**
+
 ```bash
 npm install
 npm run dev
 ```
 
-- Open http://localhost:3000 in browser to view.
+- Open http://localhost:3000 in browser to view
+
+**Pull changes:**
+
+```bash
+npm run update
+```
+
+- Pulls changes from remote repo
+- Updates submodule content
 
 ## 🎨 Customization
 
-### Update content/data
+### Update content
+
+#### Site data
 
 - `data/siteMetadata.js` - site information
 - `data/authors/default.md` - about me info
 - `data/headerNavLinks.js` - nav links
-- `data/chips.js` - interest chips
+
+#### Blog content
+
+This codebase has been updated to pull blog content from `content/` instead of `data/`. It currently supports two content types: `blog` and `tips`.
+
+`content/` is added as a submodule so the content lives in a separate repository.
 
 ### Updating Fonts
 
@@ -40,13 +58,16 @@ npm run dev
 
 ```json
 theme: {
+  ...
 	extend: {
 		...
 		fontFamily: {
 			sans: ['Thiccboi', ...defaultTheme.fontFamily.sans],
 		},
 		...
-},
+  }
+  ...
+}
 ```
 
 ## Custom Components
@@ -101,6 +122,8 @@ export const MDXComponents = {
 
 ### Retrieving Posts
 
+`TODO::UPDATE`
+
 Functions defined in `@lib/mdx`
 
 ```js
@@ -147,13 +170,26 @@ Both props take the values `small`, `medium`, or `large`. If not specified, the 
 
 ## ✅ Todo
 
-- [ ] Update PostLayoutSimple to hide pipe and flex column on mobile
-- [ ] Update date format on /blog
-- [ ] Style Next/Previous on /blog
+App:
+
+- [x] 🎨 Link hover styles
+- [x] ✨ update `getAllTags()` to return tags from all content types
+- [x] 🐞 tile images broken on prod - host from content repo
+- [x] 🧹 cleanup unused declarations/files
+- [x] 🧹 combine Link/LinkArrow; build `{directory}` into Link
+- [x] 📝 add tips/blog content
+- [x] ✨ unhide blog listing
+
+Documentation:
+
+- [x] Add submodule configuration details
+- [x] Add details to create / update content types
+- [x] Add automatic deployment info
+- [x] `imageselector()` details
 
 ## ⭐️ Credits
 
-I used [this AMAZING template](https://github.com/timlrx/tailwind-nextjs-starter-blog) by timlrx as a starter and am adding customizations along the way.
+I used [this AMAZING template](https://github.com/timlrx/tailwind-nextjs-starter-blog) by timlrx as a starter.
 
 Also shout out to the [Indie Web](https://indieweb.org/). Let's make the internet great again.
 
