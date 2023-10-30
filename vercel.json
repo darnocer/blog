@@ -1,11 +1,8 @@
 {
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
   "github": {
-    "enabled": false
+    "enabled": true,
+    "autoAlias": true,
+    "includeFiles": ".gitmodules",
+    "submodules": "recursive"
   }
 }
