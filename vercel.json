@@ -1,8 +1,0 @@
-{
-  "github": {
-    "enabled": true,
-    "autoAlias": true,
-    "includeFiles": ".gitmodules",
-    "submodules": "recursive"
-  }
-}
