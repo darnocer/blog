@@ -1,3 +1,3 @@
 [submodule "content"]
 	path = content
-	url = https://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@github.com/darnocer/content.git
+	url = git@github.com:darnocer/content.git
