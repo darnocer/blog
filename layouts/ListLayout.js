@@ -88,7 +88,7 @@ export default function ListLayout({
                       {summary}
                     </div>
                     <Link href={`/${directory}/${slug}`}>
-                      <LinkArrow direction="right" text="Read More" slug={slug} />
+                      <LinkArrow direction="right" text="Read More" />
                     </Link>
                   </div>
                 </article>
