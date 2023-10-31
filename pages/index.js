@@ -16,7 +16,7 @@ const DEFAULT_LAYOUT = 'HomeLayout'
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
   const tips = await getAllFilesFrontMatter('tips')
-  const tags = await getAllTags('blog')
+  const tags = await getAllTags('blog', 'tips')
 
   return { props: { posts, tags, tips } }
 }
