@@ -173,7 +173,6 @@ Both props take the values `small`, `medium`, or `large`. If not specified, the 
 App:
 
 - [x] 🎨 Link hover styles
-- [x] 🐞 tile images broken on prod - host from content repo
 - [x] 🧹 cleanup unused declarations/files
 - [x] 🧹 combine Link/LinkArrow; build `{directory}` into Link
 - [x] 📝 add tips/blog content
