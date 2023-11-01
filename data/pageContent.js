@@ -16,6 +16,9 @@ const pageContent = {
   },
   tags: {
     title: 'Tags',
+    tagDescriptions: {
+      test: 'Awesome resources',
+    },
   },
 }
 module.exports = pageContent
