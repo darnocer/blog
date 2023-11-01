@@ -1,0 +1,21 @@
+const pageContent = {
+  home: {
+    title: null,
+    tagHeading: 'Topics',
+    blogHeading: null,
+    tipHeading: 'Recent Posts',
+  },
+  tips: {
+    title: 'Tips & Trix',
+    description:
+      'Short efficiency tips and code snippets for Webflow, Obsidian, MacOS, and other random stuff.',
+  },
+  blog: {
+    title: 'Blog Posts',
+    description: null,
+  },
+  tags: {
+    title: 'Tags',
+  },
+}
+module.exports = pageContent

@@ -1,8 +1,9 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import kebabCase from '@/lib/utils/kebabCase'
-import SectionContainer from './SectionContainer'
+
 import Heading from '@/components/Heading'
+import SectionContainer from './SectionContainer'
 
 export default function Tags({ tags, heading }) {
   const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a])

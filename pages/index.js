@@ -1,34 +1,31 @@
-import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
+
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { getAllTags } from '@/lib/tags'
-import formatDate from '@/lib/utils/formatDate'
 
-import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import ListLayoutSimple from '@/layouts/ListLayoutSimple'
-import NewsletterForm from '@/components/NewsletterForm'
 import TagList from '@/components/TagList'
 
-const DEFAULT_LAYOUT = 'HomeLayout'
+import PageTitle from '@/components/PageTitle'
+import pageContent from '@/data/pageContent'
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
+  const blogs = await getAllFilesFrontMatter('blog')
   const tips = await getAllFilesFrontMatter('tips')
-  const tags = await getAllTags('blog', 'tips')
+  const tags = await getAllTags('tips')
 
-  return { props: { posts, tags, tips } }
+  return { props: { blogs, tags, tips } }
 }
 
-export default function Home({ posts, tips, tags }) {
+export default function Home({ blogs, tips, tags }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
 
-      <TagList tags={tags} heading="Topics" />
-      {/* <ListLayoutSimple posts={posts} directory="blog" /> */}
-      <ListLayoutSimple posts={tips} directory="tips" heading="Recent" />
+      {/* <PageTitle>{pageContent.home.title}</PageTitle> */}
+      <TagList tags={tags} heading={pageContent.home.tagHeading} />
+      <ListLayoutSimple posts={tips} directory="tips" heading={pageContent.home.tipHeading} />
       {/* {siteMetadata.newsletter.provider !== '' && <NewsletterForm />} */}
     </>
   )

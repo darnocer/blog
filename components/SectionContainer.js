@@ -19,15 +19,9 @@ const SectionContainer = ({ padding, container, children }) => {
 
   return (
     <section className={sectionClasses}>
-      <div className="px-5">
-        <div className={containerClasses}>{children}</div>
-      </div>
+      <div className={containerClasses}>{children}</div>
     </section>
   )
 }
 
 export default SectionContainer
-
-// export default function SectionContainer({ children }) {
-//   return <div className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">{children}</div>
-// }

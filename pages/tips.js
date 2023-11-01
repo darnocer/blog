@@ -1,8 +1,10 @@
-import { getAllFilesFrontMatter } from '@/lib/mdx'
-import siteMetadata from '@/data/siteMetadata'
-// import ListLayout from '@/layouts/ListLayout'
-import TileLayout from '@/layouts/TileLayout'
 import { PageSEO } from '@/components/SEO'
+import siteMetadata from '@/data/siteMetadata'
+
+import { getAllFilesFrontMatter } from '@/lib/mdx'
+import pageContent from '@/data/pageContent'
+
+import TileLayout from '@/layouts/TileLayout'
 
 export const POSTS_PER_PAGE = 5
 
@@ -20,13 +22,14 @@ export async function getStaticProps() {
 export default function Tips({ posts, initialDisplayPosts, pagination }) {
   return (
     <>
-      <PageSEO title={`Tips - ${siteMetadata.author}`} description={siteMetadata.description} />
+      <PageSEO title={`Tips | ${siteMetadata.author}`} description={siteMetadata.description} />
       <TileLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
         directory="tips"
-        title="Tips"
+        title={pageContent.tips.title}
+        description={pageContent.tips.description}
       />
     </>
   )

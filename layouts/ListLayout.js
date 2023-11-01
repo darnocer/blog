@@ -1,15 +1,17 @@
-import Link from '@/components/Link'
-import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
-import Pagination from '@/components/Pagination'
+
 import formatDate from '@/lib/utils/formatDate'
 
+import Link from '@/components/Link'
+import Tag from '@/components/Tag'
+import Pagination from '@/components/Pagination'
+import PageTitle from '@/components/PageTitle'
 import LinkArrow from '@/components/LinkArrow'
 
 export default function ListLayout({
   posts,
   title,
+  description,
   initialDisplayPosts = [],
   pagination,
   directory,
@@ -28,9 +30,8 @@ export default function ListLayout({
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            {title}
-          </h1>
+          <PageTitle>{title}</PageTitle>
+          <p className="text-gray-800 dark:text-gray-300">{description ? description : null}</p>
           <div className="relative max-w-lg">
             <input
               aria-label="Search articles"

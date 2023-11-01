@@ -2,12 +2,11 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
-// import { getAllFilesFrontMatter } from '@/lib/mdx'
 import Pagination from '@/components/Pagination'
 import formatDateShort from '@/lib/utils/formatDateShort'
-import SectionContainer from '@/components/SectionContainer'
 import LinkArrow from '@/components/LinkArrow'
 import Heading from '@/components/Heading'
+import SectionContainer from '@/components/SectionContainer'
 
 const MAX_DISPLAY = 8
 
