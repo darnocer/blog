@@ -1,6 +1,7 @@
 import Link from '@/components/Link'
+import LinkArrow from './LinkArrow'
 
-export default function Pagination({ totalPages, currentPage }) {
+export default function Pagination({ totalPages, currentPage, directory }) {
   const prevPage = parseInt(currentPage) - 1 > 0
   const nextPage = parseInt(currentPage) + 1 <= parseInt(totalPages)
 
@@ -13,9 +14,13 @@ export default function Pagination({ totalPages, currentPage }) {
           </button>
         )}
         {prevPage && (
-          <Link href={currentPage - 1 === 1 ? `/blog/` : `/blog/page/${currentPage - 1}`}>
-            <button rel="previous">Previous</button>
-          </Link>
+          <LinkArrow
+            text="Previous"
+            direction="left"
+            href={
+              currentPage - 1 === 1 ? `/${directory}/` : `/${directory}/page/${currentPage - 1}`
+            }
+          />
         )}
         <span>
           {currentPage} of {totalPages}
@@ -26,9 +31,13 @@ export default function Pagination({ totalPages, currentPage }) {
           </button>
         )}
         {nextPage && (
-          <Link href={`/blog/page/${currentPage + 1}`}>
-            <button rel="next">Next</button>
-          </Link>
+          <LinkArrow
+            text="Next"
+            direction="right"
+            href={
+              currentPage - 1 === 1 ? `/${directory}/` : `/${directory}/page/${currentPage + 1}`
+            }
+          />
         )}
       </nav>
     </div>

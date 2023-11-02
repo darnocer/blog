@@ -1,4 +1,3 @@
-import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
@@ -50,30 +49,20 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <div className="flex flex-col text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
                 {prev && (
                   <div className="pt-4 xl:pt-8">
-                    {/* <Link
-                      href={`/blog/${prev.slug}`}
-                      className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                    >
-                      &larr; {prev.title}
-                    </Link> */}
-
-                    <Link href={`/${directory}/${prev.slug}`}>
-                      <LinkArrow direction="left" text={prev.title} />
-                    </Link>
+                    <LinkArrow
+                      text={prev.title}
+                      direction="left"
+                      href={`/${directory}/${prev.slug}`}
+                    />
                   </div>
                 )}
                 {next && (
                   <div className="pt-4 xl:pt-8">
-                    {/* <Link
-                      href={`/blog/${next.slug}`}
-                      className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                    >
-                      {next.title} &rarr;
-                    </Link> */}
-
-                    <Link href={`/${directory}/${next.slug}`}>
-                      <LinkArrow direction="right" text={next.title} />
-                    </Link>
+                    <LinkArrow
+                      text={next.title}
+                      direction="right"
+                      href={`/${directory}/${next.slug}`}
+                    />
                   </div>
                 )}
               </div>

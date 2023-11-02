@@ -69,7 +69,11 @@ export default function TileLayout({
         </div>
       </div>
       {pagination && pagination.totalPages > 1 && !searchValue && (
-        <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
+        <Pagination
+          directory={directory}
+          currentPage={pagination.currentPage}
+          totalPages={pagination.totalPages}
+        />
       )}
     </>
   )

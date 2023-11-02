@@ -8,9 +8,5 @@ export default function Breadcrumbs() {
 
   const directory = router.pathname.split('/')[1]
 
-  return (
-    <Link className="mb-6 flex text-primary-500 underline" href={`/${directory}`}>
-      <LinkArrow text="Back" direction="left" />
-    </Link>
-  )
+  return <LinkArrow text="Back" direction="left" href={`/${directory}`} />
 }
