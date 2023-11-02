@@ -1,140 +1,143 @@
-/**
- * CSS Styles for code highlighting.
- * Feel free to customize token styles 
- * by copying from a prismjs compatible theme:
- * https://github.com/PrismJS/prism-themes
- */
-
-/* Code title styles */
-.remark-code-title {
-  @apply rounded-t bg-gray-700 px-5 py-3 font-mono text-sm font-bold text-gray-200;
+pre {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.75);
 }
 
-.remark-code-title + div > pre {
-  @apply mt-0 rounded-t-none;
+pre[class*='language-'],
+code[class*='language-'] {
+  color: #dddddd;
+  font-size: 13px;
+  text-shadow: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
-
-/* Code block styles */
-.code-highlight {
-  @apply float-left min-w-full;
+pre[class*='language-']::selection,
+code[class*='language-']::selection,
+pre[class*='language-']::mozselection,
+code[class*='language-']::mozselection {
+  text-shadow: none;
+  background: #14ff30;
 }
-
-.code-line {
-  @apply -mx-4 block border-l-4 border-transparent pl-4 pr-4;
+@media print {
+  pre[class*='language-'],
+  code[class*='language-'] {
+    text-shadow: none;
+  }
 }
-
-.code-line.inserted {
-  @apply bg-green-500 bg-opacity-20;
+pre[class*='language-'] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  background: #262626;
 }
-
-.code-line.deleted {
-  @apply bg-red-500 bg-opacity-20;
+:not(pre) > code[class*='language-'] {
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
+  color: #14ff30;
+  background: #262626 !important;
 }
-
-.highlight-line {
-  @apply -mx-4 border-l-4 border-primary-500  bg-gray-700 bg-opacity-50;
+/*********************************************************
+* Tokens
+*/
+.namespace {
+  opacity: 0.7;
 }
-
-.line-number::before {
-  @apply mr-4 -ml-2 inline-block w-4 text-right text-gray-400;
-  content: attr(line);
-}
-
-/* Token styles */
-/**
- * MIT License
- * Copyright (c) 2018 Sarah Drasner
- * Sarah Drasner's[@sdras] Night Owl
- * Ported by Sara vieria [@SaraVieira]
- * Added by Souvik Mandal [@SimpleIndian]
- */
 .token.comment,
 .token.prolog,
+.token.doctype,
 .token.cdata {
-  color: rgb(99, 119, 119);
-  font-style: italic;
+  color: #777777;
 }
-
 .token.punctuation {
-  color: rgb(199, 146, 234);
+  color: #999999;
 }
-
-.namespace {
-  color: rgb(178, 204, 214);
-}
-
-.token.deleted {
-  color: rgba(239, 83, 80, 0.56);
-  font-style: italic;
-}
-
-.token.symbol,
-.token.property {
-  color: rgb(128, 203, 196);
-}
-
+.token.property,
 .token.tag,
-.token.operator,
-.token.keyword {
-  color: rgb(127, 219, 202);
-}
-
-.token.boolean {
-  color: rgb(255, 88, 116);
-}
-
-.token.number {
-  color: rgb(247, 140, 108);
-}
-
+.token.boolean,
+.token.number,
 .token.constant,
-.token.function,
-.token.builtin,
-.token.char {
-  color: rgb(130, 170, 255);
+.token.symbol,
+.token.deleted {
+  color: #ff49b1;
 }
-
 .token.selector,
-.token.doctype {
-  color: rgb(199, 146, 234);
-  font-style: italic;
-}
-
 .token.attr-name,
-.token.inserted {
-  color: rgb(173, 219, 103);
-  font-style: italic;
-}
-
 .token.string,
-.token.url,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #31cca8;
+}
+.token.operator,
 .token.entity,
+.token.url,
 .language-css .token.string,
 .style .token.string {
-  color: rgb(173, 219, 103);
+  color: #999999;
+  background: #262626;
 }
-
-.token.class-name,
 .token.atrule,
-.token.attr-value {
-  color: rgb(255, 203, 139);
+.token.attr-value,
+.token.keyword {
+  color: #ffd147;
 }
-
+.token.function {
+  color: #3ce3f9;
+}
 .token.regex,
 .token.important,
 .token.variable {
-  color: rgb(214, 222, 235);
+  color: #1aa7ff;
 }
-
 .token.important,
 .token.bold {
   font-weight: bold;
 }
-
 .token.italic {
   font-style: italic;
 }
+.token.entity {
+  cursor: help;
+}
+/*********************************************************
+* Line highlighting
+*/
+pre[data-line] {
+  position: relative;
+}
+pre[class*='language-'] > code[class*='language-'] {
+  position: relative;
+  z-index: 1;
+}
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: #333333;
+  box-shadow: inset 5px 0 0 #14ff30;
+  z-index: 0;
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
 
-.token.table {
-  display: inline;
+/* Specifically targeting inline code */
+.prose :where(code):not(:where([class~='not-prose'] *)) {
+  padding: 0.1em 0.3em;
+  border-radius: 0.2em;
+  background: #262626;
+  color: #31cca8;
 }

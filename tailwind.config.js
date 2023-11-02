@@ -110,10 +110,17 @@ module.exports = {
             'ul li::marker': {
               backgroundColor: theme('colors.gray.500'),
             },
-            strong: { color: theme('colors.gray.600') },
+            strong: {
+              color: theme('colors.gray.600'),
+              fontWeight: '700',
+              textDecoration: 'underline',
+              textDecorationColor: theme('colors.primary.DEFAULT'),
+              textDecorationThickness: '4px',
+              textUnderlineOffset: '1px',
+            },
             blockquote: {
               color: theme('colors.gray.900'),
-              borderLeftColor: theme('colors.gray.200'),
+              borderLeftColor: theme('colors.primary.400'),
             },
           },
         },
@@ -161,7 +168,14 @@ module.exports = {
             'ul li::marker': {
               backgroundColor: theme('colors.gray.400'),
             },
-            strong: { color: theme('colors.gray.100') },
+            strong: {
+              color: theme('colors.gray.100'),
+              fontWeight: '700',
+              textDecoration: 'underline',
+              textDecorationColor: theme('colors.primary.DEFAULT'),
+              textDecorationThickness: '4px',
+              textUnderlineOffset: '1px',
+            },
             thead: {
               th: {
                 color: theme('colors.gray.100'),
@@ -174,7 +188,7 @@ module.exports = {
             },
             blockquote: {
               color: theme('colors.gray.100'),
-              borderLeftColor: theme('colors.gray.700'),
+              borderLeftColor: theme('colors.primary.400'),
             },
           },
         },
