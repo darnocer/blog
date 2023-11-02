@@ -1,4 +1,5 @@
 import { Star, Info, Construction } from 'lucide-react'
+import parse from 'html-react-parser'
 
 const Callout = ({ type, text, title }) => {
   let icon = ''
@@ -21,7 +22,7 @@ const Callout = ({ type, text, title }) => {
         <div className="mr-2">{icon}</div>
         <p className="my-0 text-lg text-sm font-bold">{title ? title : 'Summary'}</p>
       </div>
-      <div>{text ? <p className="my-0 text-sm"> {text}</p> : null}</div>
+      <div>{text ? <p className="my-0 text-sm"> {parse(text)}</p> : null}</div>
     </div>
   )
 }
