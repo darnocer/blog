@@ -116,7 +116,7 @@ module.exports = {
               textDecoration: 'underline',
               textDecorationColor: theme('colors.primary.DEFAULT'),
               textDecorationThickness: '4px',
-              textUnderlineOffset: '1px',
+              textUnderlineOffset: '3px',
             },
             blockquote: {
               color: theme('colors.gray.900'),
@@ -174,7 +174,7 @@ module.exports = {
               textDecoration: 'underline',
               textDecorationColor: theme('colors.primary.DEFAULT'),
               textDecorationThickness: '4px',
-              textUnderlineOffset: '1px',
+              textUnderlineOffset: '3px',
             },
             thead: {
               th: {
