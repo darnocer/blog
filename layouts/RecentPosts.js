@@ -8,9 +8,9 @@ import LinkArrow from '@/components/LinkArrow'
 import Heading from '@/components/Heading'
 import SectionContainer from '@/components/SectionContainer'
 
-const MAX_DISPLAY = 8
+const MAX_DISPLAY = 5
 
-export default function ListLayoutSimple({ posts, directory, heading }) {
+export default function RecentPosts({ posts, directory, heading }) {
   return (
     <SectionContainer>
       <Heading text={heading} />
@@ -44,7 +44,9 @@ export default function ListLayoutSimple({ posts, directory, heading }) {
             )
           })}
         </ul>
-        {posts.length > MAX_DISPLAY && <LinkArrow text="View All" />}
+        {posts.length > MAX_DISPLAY && (
+          <LinkArrow text="View All" direction="right" href={`/${directory}`} />
+        )}
       </div>
     </SectionContainer>
   )
