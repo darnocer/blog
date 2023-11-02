@@ -4,7 +4,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { getAllTags } from '@/lib/tags'
 
-import ListLayoutSimple from '@/layouts/ListLayoutSimple'
+import RecentPosts from '@/layouts/RecentPosts'
 import TagList from '@/components/TagList'
 
 import PageTitle from '@/components/PageTitle'
@@ -25,7 +25,7 @@ export default function Home({ blogs, tips, tags }) {
 
       {/* <PageTitle>{pageContent.home.title}</PageTitle> */}
       <TagList tags={tags} heading={pageContent.home.tagHeading} />
-      <ListLayoutSimple posts={tips} directory="tips" heading={pageContent.home.tipHeading} />
+      <RecentPosts posts={tips} directory="tips" heading={pageContent.home.tipHeading} />
       {/* {siteMetadata.newsletter.provider !== '' && <NewsletterForm />} */}
     </>
   )

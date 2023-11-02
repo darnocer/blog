@@ -6,7 +6,7 @@ import pageContent from '@/data/pageContent'
 
 import TileLayout from '@/layouts/TileLayout'
 
-export const POSTS_PER_PAGE = 5
+export const POSTS_PER_PAGE = 12
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('tips')
