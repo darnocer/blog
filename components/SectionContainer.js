@@ -19,7 +19,9 @@ const SectionContainer = ({ padding, container, children }) => {
 
   return (
     <section className={sectionClasses}>
-      <div className={containerClasses}>{children}</div>
+      <div className="px-5">
+        <div className={containerClasses}>{children}</div>
+      </div>
     </section>
   )
 }
