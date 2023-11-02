@@ -8,12 +8,14 @@ import Pre from './Pre'
 import { BlogNewsletterForm } from './NewsletterForm'
 import PageTitle from './PageTitle'
 import CodeContainer from './CodeContainer'
+import Callout from './Callout'
 
 export const MDXComponents = {
   Image,
   TOCInline,
   PageTitle,
   CodeContainer,
+  Callout,
   a: CustomLink,
   pre: Pre,
   BlogNewsletterForm: BlogNewsletterForm,
