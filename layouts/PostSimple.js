@@ -8,9 +8,11 @@ import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { useRouter } from 'next/router'
 import LinkArrow from '@/components/LinkArrow'
+import HeaderTagList from '@/components/HeaderTagList'
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { date, title } = frontMatter
+  console.log(frontMatter)
+  const { date, title, tags } = frontMatter
 
   const router = useRouter()
   const directory = router.pathname.split('/')[1]
@@ -32,9 +34,9 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   </dd>
                 </div>
               </dl> */}
-              <div>
-                <PageTitle>{title}</PageTitle>
-              </div>
+
+              <PageTitle>{title}</PageTitle>
+              <HeaderTagList tags={tags} />
             </div>
           </header>
           <div
