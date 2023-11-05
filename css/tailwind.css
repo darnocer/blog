@@ -16,14 +16,24 @@
 
 @font-face {
   font-family: Thiccboi;
-  src: url('../public/static/fonts/THICCCBOI-Bold.woff2') format('opentype');
+  src: url('../public/static/fonts/THICCCBOI-SemiBold.woff2') format('opentype');
   font-weight: 600;
 }
 
 @font-face {
   font-family: Thiccboi;
-  src: url('../public/static/fonts/THICCCBOI-ExtraBold.woff2') format('opentype');
+  src: url('../public/static/fonts/THICCCBOI-Bold.woff2') format('opentype');
   font-weight: 700;
+}
+
+@font-face {
+  font-family: Thiccboi;
+  src: url('../public/static/fonts/THICCCBOI-ExtraBold.woff2') format('opentype');
+  font-weight: 800;
+}
+
+html {
+  font-weight: 500;
 }
 
 .prose em {

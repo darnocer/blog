@@ -5,7 +5,7 @@ export default function LinkArrow({ text, direction, href }) {
   return (
     <Link href={href}>
       <div className="my-4 flex justify-start text-base font-medium leading-6">
-        <span className="flex items-center text-primary-500 underline hover:text-primary-600 dark:hover:text-primary-400">
+        <span className="flex items-center text-primary-500 underline duration-200 ease-in hover:text-primary-600 dark:hover:text-primary-400">
           {direction === 'left' && (
             <svg
               xmlns="http://www.w3.org/2000/svg"

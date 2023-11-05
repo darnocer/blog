@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <p>
             Made with 👽 by{' '}
-            <a href={siteMetadata.website} target="_blank" rel="noreferrer">
+            <a className="underline" href={siteMetadata.website} target="_blank" rel="noreferrer">
               darian.
             </a>
           </p>

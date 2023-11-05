@@ -27,6 +27,9 @@ module.exports = {
       fontFamily: {
         sans: ['Thiccboi', ...defaultTheme.fontFamily.sans],
       },
+      fontWeight: {
+        normal: 500,
+      },
       colors: {
         primary: {
           ...colors.teal,
@@ -53,6 +56,7 @@ module.exports = {
           css: {
             color: theme('colors.gray.700'),
             a: {
+              fontWeight: 600,
               color: theme('colors.primary.500'),
               '&:hover': {
                 color: `${theme('colors.primary.600')} !important`,
@@ -70,7 +74,7 @@ module.exports = {
               color: theme('colors.gray.900'),
             },
             h3: {
-              fontWeight: '600',
+              fontWeight: '700',
               color: theme('colors.gray.900'),
             },
             'h4,h5,h6': {
@@ -112,7 +116,7 @@ module.exports = {
             },
             strong: {
               color: theme('colors.gray.600'),
-              fontWeight: '700',
+              fontWeight: '800',
               textDecoration: 'underline',
               textDecorationColor: theme('colors.primary.DEFAULT'),
               textDecorationThickness: '4px',
@@ -128,6 +132,7 @@ module.exports = {
           css: {
             color: theme('colors.gray.300'),
             a: {
+              fontWeight: 600,
               color: theme('colors.primary.500'),
               '&:hover': {
                 color: `${theme('colors.primary.400')} !important`,
@@ -145,7 +150,7 @@ module.exports = {
               color: theme('colors.gray.100'),
             },
             h3: {
-              fontWeight: '600',
+              fontWeight: '700',
               color: theme('colors.gray.100'),
             },
             'h4,h5,h6': {
@@ -170,7 +175,7 @@ module.exports = {
             },
             strong: {
               color: theme('colors.gray.100'),
-              fontWeight: '700',
+              fontWeight: '800',
               textDecoration: 'underline',
               textDecorationColor: theme('colors.primary.DEFAULT'),
               textDecorationThickness: '4px',

@@ -30,7 +30,7 @@ export default function RecentPosts({ posts, directory, heading }) {
                       {formatDateShort(date)}
                     </time>
                     <span className="text-gray-400 dark:text-gray-400">|</span>
-                    <h3 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">
+                    <h3 className="text-xl font-semibold tracking-tight tracking-normal text-primary-500 underline duration-200 ease-in hover:text-primary-600 dark:hover:text-primary-400">
                       {title}
                     </h3>
                     {/* <div className="flex flex-wrap">
