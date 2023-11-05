@@ -17,7 +17,7 @@ const Callout = ({ type, text, title }) => {
   }
 
   return (
-    <div className="mb-10 rounded-md border-1 border-primary-600/25 bg-primary-500 bg-opacity-30 p-3 shadow-lg">
+    <div className="mb-10 rounded-md border-1 border-primary-600/25 bg-primary-500 bg-opacity-30 p-4 shadow-lg">
       <div className="justify-left mb-2 flex flex-row items-center">
         <div className="mr-2">{icon}</div>
         <p className="my-0 text-lg text-sm font-bold">{title ? title : 'Summary'}</p>
