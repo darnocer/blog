@@ -6,7 +6,7 @@ aliases:
 tags:
   - test
   - example
-draft: true
+draft: false
 type:
   - tip
 layout:
