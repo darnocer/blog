@@ -2,11 +2,11 @@
 title: Blog Example
 summary: This is a summary
 date: 2023-10-29
-aliases:
+aliases: 
 tags:
   - test
   - example
-draft: true
+draft: false
 type:
   - blog
 layout:
