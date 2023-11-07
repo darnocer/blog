@@ -3,7 +3,7 @@ name: Sync to Airtable
 on:
   push:
     branches:
-      - master  # Replace with your default branch if it's not master
+      - master
 
 jobs:
   build:
