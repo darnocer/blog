@@ -1,11 +1,11 @@
 ---
 title: Open File in VSCode Quick Action
-summary:
+summary: 
 date: 2023-11-02
-aliases:
+aliases: 
 tags:
   - macos
-draft: true
+draft: false
 type:
   - tip
 layout:
@@ -15,7 +15,6 @@ category:
 ---
 
 <Callout text="Add 'Open in VSCode' to the right-click menu in Mac to quickly open a file directly in Visual Studio Code."/>
-
 ## Setup a Quick Action
 
 1. Open **Automator**
