@@ -5,7 +5,7 @@ date: 2023-11-02
 aliases: 
 tags:
   - macos
-draft: false
+draft: true
 type:
   - tip
 layout:
