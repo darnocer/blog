@@ -2,6 +2,21 @@ pre {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.75);
 }
 
+input[type='checkbox']:disabled {
+  background-color: transparent;
+  border: 1px solid #31cca8;
+  border-radius: 2px;
+}
+
+input[type='checkbox']:checked {
+  background-color: #31cca8;
+  transition: all 2ms ease-in;
+}
+
+input[type='checkbox']:checked:hover {
+  background-color: #31cca8;
+}
+
 pre[class*='language-'],
 code[class*='language-'] {
   color: #dddddd;
