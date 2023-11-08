@@ -50,6 +50,7 @@ module.exports = {
         greenDark: '0 0 22px 8px rgba(5, 255, 0, .25)',
         green: '0 0 22px 8px rgba(39, 161, 133, .25)',
         yellow: '0 0 22px 8px rgba(236, 172, 69, .25)',
+        code: '0 8px 16px rgba(0, 0, 0, 0.75)',
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -82,15 +83,11 @@ module.exports = {
             },
             pre: {
               backgroundColor: theme('colors.gray.800'),
+              boxShadow: theme('boxShadow.code'),
             },
             code: {
-              color: theme('colors.pink.500'),
-              backgroundColor: theme('colors.gray.100'),
-              paddingLeft: '4px',
-              paddingRight: '4px',
-              paddingTop: '2px',
-              paddingBottom: '2px',
-              borderRadius: '0.25rem',
+              backgroundColor: theme('colors.gray.200'),
+              color: theme('colors.primary.600'),
             },
             'code::before': {
               content: 'none',
@@ -161,6 +158,7 @@ module.exports = {
             },
             code: {
               backgroundColor: theme('colors.gray.800'),
+              color: theme('colors.primary.400'),
             },
             details: {
               backgroundColor: theme('colors.gray.800'),

@@ -10,12 +10,20 @@ import { useRouter } from 'next/router'
 import LinkArrow from '@/components/LinkArrow'
 import HeaderTagList from '@/components/HeaderTagList'
 
+import { useEffect } from 'react'
+
+import Prism from 'prismjs'
+import '../lib/prism/dataview'
+
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  console.log(frontMatter)
   const { date, title, tags } = frontMatter
 
   const router = useRouter()
   const directory = router.pathname.split('/')[1]
+
+  useEffect(() => {
+    Prism.highlightAll()
+  }, [])
 
   return (
     <SectionContainer>
