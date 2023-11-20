@@ -1,18 +1,22 @@
-import { Star, Info, Construction } from 'lucide-react'
+import { Star, Info, Construction, Wrench } from 'lucide-react'
 import parse from 'html-react-parser'
 
 const Callout = ({ type, text, title }) => {
   let icon = ''
+  const iconSize = 20
 
   switch (type) {
     case 'contruction':
-      icon = <Construction />
+      icon = <Construction size={iconSize} />
+      break
+    case 'tools':
+      icon = <Wrench size={iconSize} />
       break
     case 'info':
-      icon = <Info />
+      icon = <Info size={iconSize} />
       break
     default:
-      icon = <Star />
+      icon = <Star size={iconSize} />
       break
   }
 
@@ -20,7 +24,7 @@ const Callout = ({ type, text, title }) => {
     <div className="mb-10 rounded-md border-1 border-primary-600/25 bg-primary-500 bg-opacity-30 p-4 shadow-lg">
       <div className="justify-left mb-2 flex flex-row items-center">
         <div className="mr-2">{icon}</div>
-        <p className="my-0 text-lg text-sm font-bold">{title ? title : 'Summary'}</p>
+        <p className="text-md my-0 text-sm font-bold">{title ? title : 'Summary'}</p>
       </div>
       <div>{text ? <p className="my-0 text-sm"> {parse(text)}</p> : null}</div>
     </div>
