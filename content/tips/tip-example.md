@@ -5,7 +5,7 @@ date: 2023-10-01
 aliases: 
 tags:
   - test
-  - example
+  - sample
 draft: true
 type:
   - tip
@@ -14,6 +14,7 @@ layout:
 category:
   - webflow
 ---
+
 # Heading 1
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae **vestibulum**. Donec in efficitur ipsum, _in egestas orci_. Maecenas libero nisi, pellentesque vel pretium eu, [link to somewhere](https://chat.openai.com/c/b381a204-bd2f-45b4-a464-ca9434d9cbf1#).
@@ -43,12 +44,23 @@ Duis cursus, mi quis `viverra ornare`, eros dolor interdum nulla, ut commodo dia
 - Fusce dapibus
 - Tellus ac cursus
 
-
 ### Subheading
 
 This is a checklist:
-- [ ] Item 1
-- [ ] Item 2
-- [ ] Item 3
 
+- [x] Item 1
 
+- [x] Item 2
+
+- [x] Item 3
+
+#### Dataview styling
+
+```dataview
+TABLE WITHOUT ID map(rows, (r) => link(r.file.link, r.title)) AS Snippets
+FROM #type/snippet
+FLATTEN file.etags AS Tag
+WHERE contains(Tag, "#tech/")
+GROUP BY Tag
+WHERE !contains(file.path,this.file.path) AND econtains(this.file.etags, Tag)
+```

@@ -1,11 +1,11 @@
 ---
 title: Custom Next.js Link Component
-summary:
-date: 2023-11-02
-aliases:
+summary: Automatically handle external links in a new window
+date: 2023-11-03
+aliases: 
 tags:
   - nextjs
-draft: true
+draft: false
 type:
   - tip
 layout:
@@ -14,7 +14,7 @@ category:
   - next
 ---
 
-<Callout text="Create a custom `Link` component that handles both internal and external links automatically, such as opening external links in a new tab by default. " />
+<Callout title="When this is useful" text="Create a custom `Link` component for your Next.js app that automatically handles both internal and external links, such as opening external links in a new tab by default. " />
 
 The native Next.js `<Link />` component handles internal routing, whereas external links should use `<a></a>` tags.
 
@@ -41,7 +41,7 @@ const CustomLink = ({ href, ...rest }) => {
 export default CustomLink
 ```
 
-You can now import your custom Link component in place of the native link component:
+You can now import your custom Link component in place of the native link component as use it as normal:
 
 ```js
 import Link from '@/components/Link'

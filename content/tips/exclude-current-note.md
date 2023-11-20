@@ -1,11 +1,11 @@
 ---
-title: Exclude current note from DQL query
-summary:
-date: 2023-11-02
-aliases:
+title: Exclude the current note from DQL query in Obsidian
+summary: 
+date: 2023-11-06
+aliases: 
 tags:
   - dql
-draft: true
+draft: false
 type:
   - tip
 layout:
@@ -13,8 +13,9 @@ layout:
 category:
   - obsidian
 ---
+<Callout title="When to use" text="When your current note matches your DQL query but you don't want to display it in the list." />
 
-<Callout text="For Obsidian users using Dataview" />
+<Callout title="Tools" type="tools" text="Obsidian, Dataview plug-in" />
 
 Exclude the current note from the query results:
 

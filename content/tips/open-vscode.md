@@ -1,11 +1,11 @@
 ---
-title: Open File in VSCode Quick Action
+title: Open File in VSCode from right-click menu
 summary: 
-date: 2023-11-02
+date: 2023-11-07
 aliases: 
 tags:
   - macos
-draft: true
+draft: false
 type:
   - tip
 layout:
@@ -19,12 +19,12 @@ category:
 
 1. Open **Automator**
 2. File > New > **Quick Action**
-3. In the right-hand pane: **When workflow receives `current files or folders` in `Finder`**
+3. In the right-hand pane: **When workflow receives** `current files or folders` **in** `Finder`
 4. Add an **Image** and **Color** for the Quick Action (Note - you can choose Visual Studio Code from Applications to select the logo as your icon)
-5. In the left-hand pane: Under the*Actions* Library, select **Files & Folders**
-6. Select **Open Finder Items** and drag it to the right-hand pane
+5. In the left-hand pane: Under the *Actions* Library, select **Files & Folders** > drag **Open Finder Items** to the right-hand pane
 7. **Open With** > **Other...** > Select **Visual Studio Code** from _Applications_
 8. **File** > **Save** > name it what you want to call the Quick Action, like _Open in VSCode_
+9. Ensure the Quick Action is enabled for Finder from System Preferences > **Extensions** 
 
 ## Test It Out
 
