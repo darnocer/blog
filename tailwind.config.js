@@ -37,6 +37,11 @@ module.exports = {
           400: '#27A185',
         },
         gray: colors.neutral,
+        secondary: {
+          ...colors.yellow,
+          DEFAULT: '#ECAC45',
+          500: '#ECAC45',
+        },
         yellow: '#ECAC45',
         red: {
           ...colors.red,
@@ -88,6 +93,8 @@ module.exports = {
             code: {
               backgroundColor: theme('colors.gray.200'),
               color: theme('colors.primary.600'),
+              padding: '3px',
+              borderRadius: '0.15rem',
             },
             'code::before': {
               content: 'none',
