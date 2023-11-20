@@ -1,9 +1,5 @@
 import Link from '@/components/Link'
 
-import siteMetadata from '@/data/siteMetadata'
-import { useState } from 'react'
-import Pagination from '@/components/Pagination'
-
 import formatDateShort from '@/lib/utils/formatDateShort'
 
 import LinkArrow from '@/components/LinkArrow'
@@ -22,6 +18,7 @@ export default function RecentPosts({ posts, directory, heading }) {
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags, type } = frontMatter
+            // const directory = type === 'tip' ? 'tips' : 'blog'
             return (
               <li key={slug} className="py-0">
                 <article className="justify-stretch flex flex-row flex-nowrap items-center items-baseline gap-x-2">
