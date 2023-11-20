@@ -9,6 +9,7 @@ import { BlogNewsletterForm } from './NewsletterForm'
 import PageTitle from './PageTitle'
 import CodeContainer from './CodeContainer'
 import Callout from './Callout'
+import WebflowComponentIcon from './icons/webflow-component'
 
 export const MDXComponents = {
   Image,
@@ -16,6 +17,7 @@ export const MDXComponents = {
   PageTitle,
   CodeContainer,
   Callout,
+  WebflowComponentIcon,
   a: CustomLink,
   pre: Pre,
   BlogNewsletterForm: BlogNewsletterForm,
