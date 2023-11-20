@@ -6,7 +6,7 @@ aliases:
 tags:
   - test
   - example
-draft: false
+draft: true
 type:
   - blog
 layout:
