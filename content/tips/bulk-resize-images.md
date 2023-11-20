@@ -32,6 +32,7 @@ category:
 9. Choose `To Size (pixels)` from the dropdown and specify a size like `700px`
 10. **File** > **Save..**. name the file what you would like to call the Quick Action such as _Image Resize_
 
+
 ![Image Resize](/static/images/posts/image-resize.png)
 ### Make it a Quick Action
 
