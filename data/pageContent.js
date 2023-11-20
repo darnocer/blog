@@ -1,6 +1,6 @@
 const pageContent = {
   home: {
-    title: null,
+    title: "Darian's Blog",
     tagHeading: 'Topics',
     blogHeading: null,
     tipHeading: 'Recent Posts',
