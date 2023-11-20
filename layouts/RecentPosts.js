@@ -33,11 +33,6 @@ export default function RecentPosts({ posts, directory, heading }) {
                     <h3 className="text-xl font-semibold tracking-tight tracking-normal text-primary-500 underline duration-200 ease-in hover:text-primary-600 dark:hover:text-primary-400">
                       {title}
                     </h3>
-                    {/* <div className="flex flex-wrap">
-                          {tags.map((tag) => (
-                            <Tag key={tag} text={tag} />
-                          ))}
-                        </div> */}
                   </Link>
                 </article>
               </li>
