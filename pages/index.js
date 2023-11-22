@@ -1,7 +1,7 @@
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
-import { getAllFilesFrontMatterMultiple } from '@/lib/mdx'
+import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { getAllTags } from '@/lib/tags'
 
 import RecentPosts from '@/layouts/RecentPosts'
@@ -16,13 +16,14 @@ import { getDataFile } from '@/lib/mdx'
 
 export async function getStaticProps() {
   const homeContent = await getDataFile('content', ['home'])
-  const allPosts = await getAllFilesFrontMatterMultiple(['blog', 'tips'])
+  // const allPosts = await getAllFilesFrontMatterMultiple(['blog', 'tips'])
+  const tips = await getAllFilesFrontMatter('tips')
   const tags = await getAllTags('tips', 'blog')
 
-  return { props: { allPosts, tags, homeContent } }
+  return { props: { tips, tags, homeContent } }
 }
 
-export default function Home({ allPosts, tags, homeContent }) {
+export default function Home({ tips, tags, homeContent }) {
   const { mdxSource, frontMatter } = homeContent
   const DEFAULT_LAYOUT = 'ContentLayout'
   return (
@@ -37,7 +38,7 @@ export default function Home({ allPosts, tags, homeContent }) {
         />
       </SectionContainer>
       <TagList tags={tags} heading={pageContent.home.tagHeading} />
-      <RecentPosts posts={allPosts} directory="tips" heading={pageContent.home.tipHeading} />
+      <RecentPosts posts={tips} directory="tips" heading={pageContent.home.tipHeading} />
       {/* {siteMetadata.newsletter.provider !== '' && <NewsletterForm />} */}
     </>
   )
