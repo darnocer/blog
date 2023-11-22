@@ -4,8 +4,8 @@
 
 @font-face {
   font-family: Edu;
-  src: url('../public/static/fonts/EduNSWACTFoundation-Regular.ttf') format('truetype');
-  font-weight: 400;
+  src: url('../public/static/fonts/EduNSWACTFoundation-Medium.ttf') format('truetype');
+  font-weight: 500;
 }
 
 @font-face {
@@ -38,8 +38,8 @@ html {
 
 .prose em {
   font-family: 'Edu', cursive;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
+  font-size: 1.1rem;
+  /* line-height: 1.4rem; */
 }
 
 .task-list-item::before {
