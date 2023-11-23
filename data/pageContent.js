@@ -14,6 +14,10 @@ const pageContent = {
     title: 'Blog Posts',
     description: null,
   },
+  posts: {
+    title: 'All Posts',
+    description: null,
+  },
   tags: {
     title: 'Tags',
     tagDescriptions: {
