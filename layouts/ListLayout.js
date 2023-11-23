@@ -64,9 +64,9 @@ export default function ListLayout({
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!filteredBlogPosts.length && <span className="mt-6">'No posts found.'</span>}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+            const { slug, date, title, summary, tags, directory } = frontMatter
             return (
-              <li key={slug} className="py-12">
+              <li key={slug} className="article-item py-12">
                 <article className="space-y-1 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                   <dl>
                     <dt className="sr-only">Published on</dt>
