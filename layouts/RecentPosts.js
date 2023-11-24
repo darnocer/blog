@@ -7,7 +7,7 @@ import Heading from '@/components/Heading'
 import SectionContainer from '@/components/SectionContainer'
 import Badge from '@/components/Badge'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 10
 
 export default function RecentPosts({ posts, heading }) {
   return (
@@ -21,12 +21,12 @@ export default function RecentPosts({ posts, heading }) {
             // const directory = type === 'tip' ? 'tips' : 'blog'
             return (
               <li key={slug} className="article-item py-0">
-                <article className="justify-stretch flex flex-row flex-nowrap items-center items-baseline gap-x-2">
+                <article className="justify-stretch w-100 flex flex-row flex-nowrap items-center items-baseline">
                   <Link
                     href={`/${directory}/${slug}`}
                     className="justify-stretch flex content-center items-baseline gap-x-4"
                   >
-                    <time className="w-14 text-gray-500 dark:text-gray-300" dateTime={date}>
+                    <time className="text-gray-500 dark:text-gray-400" dateTime={date}>
                       {formatDateShort(date)}
                     </time>
                     <span className="text-gray-400 dark:text-gray-400">|</span>

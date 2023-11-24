@@ -37,8 +37,9 @@ export default function Home({ posts, tags, homeContent }) {
           frontMatter={frontMatter}
         />
       </SectionContainer>
-      <TagList tags={tags} heading={pageContent.home.tagHeading} />
       <RecentPosts posts={posts} heading={pageContent.home.tipHeading} />
+      <TagList tags={tags} heading={pageContent.home.tagHeading} />
+
       {/* {siteMetadata.newsletter.provider !== '' && <NewsletterForm />} */}
     </>
   )
