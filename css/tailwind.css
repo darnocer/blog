@@ -56,6 +56,16 @@ li {
   color: #f65e69;
 }
 
+.bold-underline {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #f3f4f6;
+  text-decoration: underline;
+  text-decoration-color: #38b2ac;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 3px;
+}
+
 /* tasks */
 .task-list-item::before {
   @apply hidden;
@@ -125,6 +135,7 @@ ul > li:not(.article-item) {
 
 ul > li:not(.article-item)::before {
   content: '\279C'; /* This is the unicode for the arrow symbol */
+  color: #2dd4bf !important;
   position: absolute;
   left: -10px;
   top: 0;
@@ -135,7 +146,7 @@ ul > li:not(.article-item)::before {
 
 h2 .list-heading {
   position: relative;
-  padding-left: 35px; /* Adjust as needed */
+  padding-left: 35px;
 }
 
 h2 .list-heading::before {

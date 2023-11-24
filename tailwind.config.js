@@ -35,7 +35,7 @@ const sharedTypographyStyles = {
       },
       code: {
         backgroundColor: colors.gray[300],
-        color: colors.gray[600],
+        color: colors.gray[700],
         padding: '3px',
         borderRadius: '0.15rem',
       },
@@ -53,11 +53,12 @@ const sharedTypographyStyles = {
         backgroundColor: colors.gray[500],
       },
       strong: {
-        fontWeight: '700',
-        textDecoration: 'underline',
-        textDecorationColor: colors.teal[500],
-        textDecorationThickness: '4px',
-        textUnderlineOffset: '3px',
+        fontWeight: '800',
+        color: colors.gray[800],
+        // textDecoration: 'underline',
+        // textDecorationColor: colors.teal[500],
+        // textDecorationThickness: '4px',
+        // textUnderlineOffset: '3px',
       },
       blockquote: {
         borderLeftColor: colors.teal[400],
@@ -88,6 +89,9 @@ module.exports = {
         12: '3rem',
         13: '3.25rem',
         14: '3.5rem',
+      },
+      fontSize: {
+        xxs: '.70rem',
       },
       fontFamily: {
         sans: ['Thiccboi', ...defaultTheme.fontFamily.sans],
@@ -144,8 +148,8 @@ module.exports = {
             },
             code: {
               ...sharedTypographyStyles.css[0].code,
-              backgroundColor: colors.gray[800],
-              color: colors.gray[400],
+              backgroundColor: colors.gray[700],
+              color: colors.gray[300],
             },
             details: {
               backgroundColor: colors.gray[800],
