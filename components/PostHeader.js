@@ -11,7 +11,7 @@ export default function PostHeader({ title, summary, tags, date }) {
       <dl>
         <div>
           <dt className="sr-only">Published on</dt>
-          <dd className="text-xs font-medium uppercase leading-6 text-gray-500 dark:text-gray-400">
+          <dd className="text-xs font-medium leading-6 text-gray-500 dark:text-gray-400">
             <time dateTime={date}>{formatDate(date)}</time>
           </dd>
         </div>
