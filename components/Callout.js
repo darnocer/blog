@@ -23,18 +23,26 @@ const Callout = ({ type, text, title }) => {
       break
   }
 
+  // Function to replace backticks with <code> tags
+  const formatText = (inputText) => {
+    const formattedText = inputText.replace(/`([^`]+)`/g, "<code class='inline-code'>$1</code>")
+    return parse(formattedText)
+  }
+
   // Apply a different style if 'text' is provided
-  const calloutStyle = text
-    ? 'mb-10 rounded-md border-1 border-primary-600/25 bg-primary-500 bg-opacity-30 p-4 shadow-lg' // Style for callout with text
-    : 'mb-10 rounded-md border-1 border-primary-600/60 bg-primary-200 p-4 shadow-lg text-primary-900 bg-opacity-75' // Style for title only
+  const calloutStyleWithText =
+    'mb-10 rounded-md border-1 border-primary-600/25 bg-primary-500 bg-opacity-30 p-4 shadow-lg' // Style for callout with text
+  const calloutStyleWithTitleOnly =
+    'mb-10 rounded-md border-1 border-secondary-300/80 bg-secondary-400 bg-opacity-40 dark:bg-gray-400 p-4 shadow-lg text-gray-600 dark:text-secondary-300 dark:bg-opacity-10' // Style for title only
+  const calloutStyle = text ? calloutStyleWithText : calloutStyleWithTitleOnly
 
   return (
     <div className={`${calloutStyle} callout`}>
       <div className="justify-left flex flex-row items-center">
         <div className="mr-2">{icon}</div>
-        <p className="my-0 text-base font-bold">{title ? title : 'Summary'}</p>
+        <p className="my-0 text-base font-bold">{title || 'Summary'}</p>
       </div>
-      {text && <div className="mt-2 text-sm">{parse(text)}</div>}
+      {text && <div className="mt-2 text-sm">{formatText(text)}</div>}
     </div>
   )
 }
