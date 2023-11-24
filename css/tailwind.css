@@ -43,6 +43,12 @@ li {
   font-size: 1.1rem;
 }
 
+/* hides backticks  */
+.prose code::before,
+.prose code::after {
+  content: none !important;
+}
+
 /* Italic text  */
 .prose em {
   font-family: 'Edu', cursive;

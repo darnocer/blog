@@ -1,6 +1,71 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
+const sharedTypographyStyles = {
+  css: [
+    {
+      color: colors.gray[700],
+      a: {
+        fontWeight: 600,
+        color: colors.teal[500],
+        '&:hover': {
+          color: `${colors.teal[600]} !important`,
+        },
+      },
+      h1: {
+        fontWeight: '700',
+        letterSpacing: defaultTheme.letterSpacing.tight,
+        color: colors.gray[900],
+      },
+      h2: {
+        fontWeight: '700',
+        letterSpacing: defaultTheme.letterSpacing.tight,
+        color: colors.gray[900],
+      },
+      h3: {
+        fontWeight: '700',
+        color: colors.gray[900],
+      },
+      'h4,h5,h6': {
+        color: colors.gray[900],
+      },
+      pre: {
+        backgroundColor: colors.gray[800],
+        boxShadow: '0 8px 16px rgba(0, 0, 0, 0.75)',
+      },
+      code: {
+        backgroundColor: colors.gray[300],
+        color: colors.gray[600],
+        padding: '3px',
+        borderRadius: '0.15rem',
+      },
+      details: {
+        backgroundColor: colors.gray[100],
+      },
+      hr: {
+        borderColor: colors.gray[200],
+      },
+      'ol li::marker': {
+        fontWeight: '600',
+        color: colors.gray[500],
+      },
+      'ul li::marker': {
+        backgroundColor: colors.gray[500],
+      },
+      strong: {
+        fontWeight: '700',
+        textDecoration: 'underline',
+        textDecorationColor: colors.teal[500],
+        textDecorationThickness: '4px',
+        textUnderlineOffset: '3px',
+      },
+      blockquote: {
+        borderLeftColor: colors.teal[400],
+      },
+    },
+  ],
+}
+
 module.exports = {
   experimental: {
     optimizeUniversalDefaults: true,
@@ -31,22 +96,11 @@ module.exports = {
         normal: 500,
       },
       colors: {
-        primary: {
-          ...colors.teal,
-          DEFAULT: '#27A185',
-          400: '#27A185',
-        },
+        primary: colors.teal,
         gray: colors.neutral,
-        secondary: {
-          ...colors.yellow,
-          DEFAULT: '#ECAC45',
-          500: '#ECAC45',
-        },
+        secondary: colors.yellow,
         yellow: '#ECAC45',
-        red: {
-          ...colors.red,
-          500: '#f65e69',
-        },
+        red: colors.red,
       },
       borderWidth: {
         1: '1px',
@@ -58,147 +112,71 @@ module.exports = {
         code: '0 8px 16px rgba(0, 0, 0, 0.75)',
       },
       typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            color: theme('colors.gray.700'),
-            a: {
-              fontWeight: 600,
-              color: theme('colors.primary.500'),
-              '&:hover': {
-                color: `${theme('colors.primary.600')} !important`,
-              },
-              code: { color: theme('colors.primary.400') },
-            },
-            h1: {
-              fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.900'),
-            },
-            h2: {
-              fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.900'),
-            },
-            h3: {
-              fontWeight: '700',
-              color: theme('colors.gray.900'),
-            },
-            'h4,h5,h6': {
-              color: theme('colors.gray.900'),
-            },
-            pre: {
-              backgroundColor: theme('colors.gray.800'),
-              boxShadow: theme('boxShadow.code'),
-            },
-            code: {
-              backgroundColor: theme('colors.gray.200'),
-              color: theme('colors.primary.600'),
-              padding: '3px',
-              borderRadius: '0.15rem',
-            },
-            'code::before': {
-              content: 'none',
-            },
-            'code::after': {
-              content: 'none',
-            },
-            details: {
-              backgroundColor: theme('colors.gray.100'),
-              paddingLeft: '4px',
-              paddingRight: '4px',
-              paddingTop: '2px',
-              paddingBottom: '2px',
-              borderRadius: '0.25rem',
-            },
-            hr: { borderColor: theme('colors.gray.200') },
-            'ol li::marker': {
-              fontWeight: '600',
-              color: theme('colors.gray.500'),
-            },
-            'ul li::marker': {
-              backgroundColor: theme('colors.gray.500'),
-            },
-            strong: {
-              color: theme('colors.gray.600'),
-              fontWeight: '800',
-              textDecoration: 'underline',
-              textDecorationColor: theme('colors.primary.DEFAULT'),
-              textDecorationThickness: '4px',
-              textUnderlineOffset: '3px',
-            },
-            blockquote: {
-              color: theme('colors.gray.900'),
-              borderLeftColor: theme('colors.primary.400'),
-            },
-          },
-        },
+        DEFAULT: sharedTypographyStyles,
         dark: {
           css: {
-            color: theme('colors.gray.300'),
+            ...sharedTypographyStyles.css[0],
+            color: colors.gray[300],
             a: {
-              fontWeight: 600,
-              color: theme('colors.primary.500'),
+              ...sharedTypographyStyles.css[0].a,
+              color: colors.teal[500],
               '&:hover': {
-                color: `${theme('colors.primary.400')} !important`,
+                color: `${colors.teal[400]} !important`,
               },
-              code: { color: theme('colors.primary.400') },
             },
             h1: {
-              fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.100'),
+              ...sharedTypographyStyles.css[0].h1,
+              color: colors.gray[100],
             },
             h2: {
-              fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.100'),
+              ...sharedTypographyStyles.css[0].h2,
+              color: colors.gray[100],
             },
             h3: {
-              fontWeight: '700',
-              color: theme('colors.gray.100'),
+              ...sharedTypographyStyles.css[0].h3,
+              color: colors.gray[100],
             },
             'h4,h5,h6': {
-              color: theme('colors.gray.100'),
+              color: colors.gray[100],
             },
             pre: {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: colors.gray[800],
             },
             code: {
-              backgroundColor: theme('colors.gray.800'),
-              color: theme('colors.primary.400'),
+              ...sharedTypographyStyles.css[0].code,
+              backgroundColor: colors.gray[800],
+              color: colors.gray[400],
             },
             details: {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: colors.gray[800],
             },
-            hr: { borderColor: theme('colors.gray.700') },
+            hr: {
+              borderColor: colors.gray[700],
+            },
             'ol li::marker': {
-              fontWeight: '600',
-              color: theme('colors.gray.400'),
+              ...sharedTypographyStyles.css[0]['ol li::marker'],
+              color: colors.gray[400],
             },
             'ul li::marker': {
-              backgroundColor: theme('colors.gray.400'),
+              backgroundColor: colors.gray[400],
             },
             strong: {
-              color: theme('colors.gray.100'),
-              fontWeight: '800',
-              textDecoration: 'underline',
-              textDecorationColor: theme('colors.primary.DEFAULT'),
-              textDecorationThickness: '4px',
-              textUnderlineOffset: '3px',
+              ...sharedTypographyStyles.css[0].strong,
+              color: colors.gray[100],
+            },
+            blockquote: {
+              ...sharedTypographyStyles.css[0].blockquote,
+              color: colors.gray[100],
             },
             thead: {
               th: {
-                color: theme('colors.gray.100'),
+                color: colors.gray[100],
               },
             },
             tbody: {
               tr: {
-                borderBottomColor: theme('colors.gray.700'),
+                borderBottomColor: colors.gray[700],
               },
-            },
-            blockquote: {
-              color: theme('colors.gray.100'),
-              borderLeftColor: theme('colors.primary.400'),
             },
           },
         },
