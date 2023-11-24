@@ -38,10 +38,15 @@ html {
   font-weight: 500;
 }
 
+p,
+li {
+  font-size: 1.1rem;
+}
+
 /* Italic text  */
 .prose em {
   font-family: 'Edu', cursive;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #f65e69;
 }
 
