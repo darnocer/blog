@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* FONT DECLARATIONS */
+
 @font-face {
   font-family: Edu;
   src: url('../public/static/fonts/EduNSWACTFoundation-Medium.ttf') format('truetype');
@@ -36,22 +38,20 @@ html {
   font-weight: 500;
 }
 
+/* Italic text  */
 .prose em {
   font-family: 'Edu', cursive;
   font-size: 1.1rem;
-  /* line-height: 1.4rem; */
+  color: #f65e69;
 }
 
+/* tasks */
 .task-list-item::before {
   @apply hidden;
 }
 
 .task-list-item {
   @apply list-none;
-}
-
-.footnotes {
-  @apply mt-12 border-t border-gray-200 pt-8 dark:border-gray-700;
 }
 
 .csl-entry {
@@ -62,4 +62,89 @@ html {
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+/* Ordered List Styles  */
+/* ol {
+  list-style: none !important;
+  counter-reset: list-counter;
+  padding-left: 0;
+}
+
+ol > li {
+  counter-increment: list-counter;
+  position: relative;
+  margin-top: 10px;
+}
+
+ol > li::before {
+  content: counter(list-counter);
+  position: absolute;
+  left: -25px;
+  top: 2px;
+  background: rgb(236, 172, 69, 0.75);
+  color: #181818;
+  font-size: large;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+ol > li ul li {
+  margin-bottom: 5px;
+} */
+
+/* Unordered list styles  */
+
+ul {
+  list-style: none !important;
+  padding-left: 0;
+}
+
+/* All unordered lists in posts will be styled with arrows. Use `article-item` class to exclude UI elements */
+
+ul > li:not(.article-item) {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+
+ul > li:not(.article-item)::before {
+  content: '\279C'; /* This is the unicode for the arrow symbol */
+  position: absolute;
+  left: -10px;
+  top: 0;
+  color: inherit;
+}
+
+/* Ordered list headings */
+
+h2 .list-heading {
+  position: relative;
+  padding-left: 35px; /* Adjust as needed */
+}
+
+h2 .list-heading::before {
+  content: counter(h2-counter);
+  counter-increment: h2-counter;
+  position: absolute;
+  left: -5px;
+  top: 2px;
+  background: rgb(236, 172, 69, 0.75);
+  color: #0c0b0b;
+  font-size: large;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+/* Optional: Reset the counter at the start of a new section or container */
+.section {
+  counter-reset: h2-counter;
 }
