@@ -1,7 +1,9 @@
 const pageContent = {
   home: {
     title: "Darian's Blog",
-    tagHeading: 'Topics',
+    topicHeading: 'Topics',
+    tipsTagsHeading: 'Technical',
+    blogTagsHeading: 'Not Technical',
     blogHeading: null,
     tipHeading: 'Recent Posts',
   },
