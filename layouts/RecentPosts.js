@@ -20,7 +20,7 @@ export default function RecentPosts({ posts, heading }) {
             const { slug, date, title, summary, tags, type } = frontMatter
             // const directory = type === 'tip' ? 'tips' : 'blog'
             return (
-              <li key={slug} className="article-item py-0">
+              <li key={slug} className="no-arrow py-0">
                 <article className="justify-stretch w-100 flex flex-row flex-nowrap items-center items-baseline">
                   <Link
                     href={`/${type}/${slug}`}

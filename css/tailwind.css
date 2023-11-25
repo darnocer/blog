@@ -125,15 +125,15 @@ ul {
   padding-left: 0;
 }
 
-/* All unordered lists in posts will be styled with arrows. Use `article-item` class to exclude UI elements */
+/* All unordered lists in posts will be styled with arrows. Use `no-arrow` class to exclude UI elements */
 
-ul > li:not(.article-item) {
+ul > li:not(.no-arrow) {
   position: relative;
   padding-left: 20px;
   margin-bottom: 5px;
 }
 
-ul > li:not(.article-item)::before {
+ul > li:not(.no-arrow)::before {
   content: '\279C'; /* This is the unicode for the arrow symbol */
   color: #2dd4bf !important;
   position: absolute;
