@@ -2,7 +2,7 @@ import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-import { getAllTags } from '@/lib/tags'
+import { getAllTags } from '@/lib/getAllTags'
 
 import RecentPosts from '@/layouts/RecentPosts'
 import TagList from '@/components/TagList'
@@ -19,15 +19,16 @@ export async function getStaticProps() {
   const homeContent = await getMdxContent('data', 'content', 'home')
   const posts = await getAllFilesFrontMatter(['blog'])
   // const posts = await getAllFilesFrontMatter('tips')
-  const tags = await getAllTags('tips', 'blog')
+  const tipsTags = await getAllTags('tips')
+  const blogTags = await getAllTags('blog')
 
-  return { props: { posts, tags, homeContent } }
+  return { props: { posts, tipsTags, blogTags, homeContent } }
 }
 
-export default function Home({ posts, tags, homeContent }) {
+export default function Home({ posts, tipsTags, blogTags, homeContent }) {
   const { mdxSource, frontMatter } = homeContent
   const DEFAULT_LAYOUT = 'ContentLayout'
-  console.log(tags)
+
   return (
     <>
       <PageSEO description={siteMetadata.description} />
@@ -39,8 +40,23 @@ export default function Home({ posts, tags, homeContent }) {
           frontMatter={frontMatter}
         />
       </SectionContainer>
-      <RecentPosts posts={posts} heading={pageContent.home.tipHeading} />
-      <TagList tags={tags} heading={pageContent.home.tagHeading} />
+      <RecentPosts posts={posts} directory="blog" heading={pageContent.home.tipHeading} />
+      <SectionContainer>
+        <Heading level="h2" text="Topics" />
+
+        <TagList
+          tags={blogTags}
+          heading={pageContent.home.blogTagsHeading}
+          level="h3"
+          border="noBorder"
+        />
+        <TagList
+          tags={tipsTags}
+          heading={pageContent.home.tipsTagsHeading}
+          level="h3"
+          border="noBorder"
+        />
+      </SectionContainer>
 
       {/* {siteMetadata.newsletter.provider !== '' && <NewsletterForm />} */}
     </>
