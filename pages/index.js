@@ -29,7 +29,7 @@ export default function Home({ posts, tags, homeContent }) {
   console.log(tags)
   return (
     <>
-      <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <PageSEO description={siteMetadata.description} />
       <SectionContainer>
         <Heading text={pageContent.home.title} level="h1" />
         <MDXLayoutRenderer

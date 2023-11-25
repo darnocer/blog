@@ -22,7 +22,7 @@ export async function getStaticProps() {
 export default function Tips({ posts, initialDisplayPosts, pagination }) {
   return (
     <>
-      <PageSEO title={`Tips | ${siteMetadata.author}`} description={siteMetadata.description} />
+      <PageSEO title="Tips" description={siteMetadata.description} />
       <TileLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}

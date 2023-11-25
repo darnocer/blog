@@ -48,10 +48,7 @@ export default function Tag({ posts, tag }) {
   const description = pageContent.tags.tagDescriptions[tag]
   return (
     <>
-      <TagSEO
-        title={`${tag} | ${siteMetadata.author}`}
-        description={`${tag} tags | ${siteMetadata.author}`}
-      />
+      <TagSEO title={`${tag} Posts`} description={`${tag} tags | ${siteMetadata.author}`} />
       <ListLayout posts={posts} title={title} description={description} directory="tips" />
     </>
   )
