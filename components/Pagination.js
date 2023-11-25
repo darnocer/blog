@@ -1,7 +1,7 @@
 import Link from '@/components/Link'
 import LinkArrow from './LinkArrow'
 
-export default function Pagination({ totalPages, currentPage, directory }) {
+export default function Pagination({ totalPages, currentPage, directory = 'blog' }) {
   const prevPage = parseInt(currentPage) - 1 > 0
   const nextPage = parseInt(currentPage) + 1 <= parseInt(totalPages)
 

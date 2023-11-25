@@ -7,9 +7,9 @@ import Heading from '@/components/Heading'
 import SectionContainer from '@/components/SectionContainer'
 import Badge from '@/components/Badge'
 
-const MAX_DISPLAY = 10
+const MAX_DISPLAY = 5
 
-export default function RecentPosts({ posts, heading }) {
+export default function RecentPosts({ posts, heading, directory }) {
   return (
     <SectionContainer>
       <Heading text={heading} />
@@ -18,7 +18,6 @@ export default function RecentPosts({ posts, heading }) {
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags, type } = frontMatter
-            // const directory = type === 'tip' ? 'tips' : 'blog'
             return (
               <li key={slug} className="no-arrow py-0">
                 <article className="justify-stretch w-100 flex flex-row flex-nowrap items-center items-baseline">
@@ -30,7 +29,7 @@ export default function RecentPosts({ posts, heading }) {
                       {formatDateShort(date)}
                     </time>
                     <span className="text-gray-400 dark:text-gray-400">|</span>
-                    <h3 className="text-xl font-bold tracking-tight tracking-normal text-gray-800 duration-200 ease-in hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">
+                    <h3 className="text-xl font-bold tracking-tight tracking-normal text-gray-800 duration-200 ease-in hover:text-primary-600 dark:text-gray-200 dark:hover:text-primary-400">
                       {title}
                     </h3>
                     {/* <Badge text={type} /> */}
@@ -40,9 +39,11 @@ export default function RecentPosts({ posts, heading }) {
             )
           })}
         </ul>
-        {posts.length > MAX_DISPLAY && (
-          <LinkArrow text="View All" direction="right" href={`/posts`} />
-        )}
+        <div className="mt-2">
+          {posts.length > MAX_DISPLAY && (
+            <LinkArrow text="View All" direction="right" href={`/${directory}`} />
+          )}
+        </div>
       </div>
     </SectionContainer>
   )
