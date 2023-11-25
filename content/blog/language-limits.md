@@ -41,6 +41,6 @@ Do we still talk in *Ye Olde English*? Of course not! The fact of the matter is 
 
 Henry David Thoreau was actually referencing English grammar in this quote. I used to be a stickler for grammar, but I think this it was primarily in the context of school where I felt I had a clear framework in which I could ensure that points didn't get deducted from my writing assignments. 
 
-As I began writing more for my own enjoyment, then I began to prioritize understanding over rules. This sometimes means I don't always follow English grammar. In fact, I often make stylistic decisions in my writing that I *know* is not proper grammar. If you know what I'm saying, then so what? 
+As I began writing more for my own enjoyment, then I began to prioritize understanding over rules. This sometimes means I don't always follow English grammar. In fact, I often make stylistic decisions in my writing that I *know* is not proper grammar. If you know what I'm saying— then so what? 
 
 At the end of the day, we're all just trying to be understood. We communicate to connect with others. I think simply having an understanding of the unique language processors that exist inside of every human, can overall increase our understanding of one another. 

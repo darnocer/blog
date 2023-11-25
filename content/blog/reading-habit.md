@@ -12,8 +12,7 @@ layout:
   - PostSimple
 category:
 ---
-
-On a good day, I read for 2-3 hours in two sessions. I believe a daily reading habit has the potential to greatly improve your mental health. I notice I'm significantly more content in life when I carve out time to read every day. I think this is for a few reasons: 1) It expands my perspective on the world, so that I am not so caught up in my own problems, 2) it forces me to take breaks throughout my day since I tend to get caught up in my work, 3) it's a form a pleasure, so I can always count on it as an enjoyable activity I get to do even on an average day.
+I believe a daily reading habit has the potential to greatly improve your mental health. I notice I'm significantly more content in life when I carve out time to read every day. I think this is for a few reasons: 1) It expands my perspective on the world, so that I am not so caught up in my own problems, 2) it forces me to take breaks throughout my day since I tend to get caught up in my work, 3) it's a form a pleasure, so I can always count on it as an enjoyable activity I get to do even on an average day.
 
 You may or may not be familiar with James Clear's [Atomic Habits](https://jamesclear.com/atomic-habits). In the book, he outlines how to build a good habit. He argues in order for a habit to stick, you need to: 1) **Make it easy**, 2) **Make it obvious**, 3) **Make it attractive**, and 4) **Make it satisfying**.
 
@@ -25,7 +24,7 @@ Maintain a reading list in an Amazon wish list (or where ever you buy your books
 
 
 ## <span className="list-heading">Read what feels relevant</span>
-When you're ready to start reading a new book, scan your reading list and read the book descriptions to pick one that resonates with you most at that point in time. This ensures the book feels relevant to your life so that you're actually excited to read it.(_Make it attractive_)
+When you're ready to start reading a new book, scan your reading list and read the book descriptions to pick one that resonates with you most at that point in time. This ensures the book feels relevant to your life so that you're actually excited to read it. (_Make it attractive_)
    - For this reason, I also don't purchase books until I'm ready to read one, in order to avoid an accumulation of books that I no longer feel like reading.
 
 ## <span className="list-heading">Pair it with another enjoyable activity</span>
@@ -39,7 +38,7 @@ At any given time, I'm reading at least 2 different books. I'll switch between t
 
 
 ## <span className="list-heading">Keep your book where you read</span>
-I set my Kindle on the end table in the living room where I usually sit in the morning when I drink my matcha (or coffee) so that it's easy to remember to pick up the device and start reading. On an ideal day, I'll read for 2-3 hours. But since this isn't always possible, reading first thing in the morning before I start my day ensures I get at least 15/20 minutes of reading time in (because lawd knows, I'm not skipping caffeine). (_Make it obvious_)
+I set my Kindle on the end table in the living room where I usually sit in the morning when I drink my matcha (or coffee) so that it's easy to remember to pick up the device and start reading. On an ideal day, I'll read for 2-3 hours across two sessions. But since this isn't always possible, reading first thing in the morning before I start my day ensures I get at least 15/20 minutes of reading time in (because lawd knows, I'm not skipping caffeine). (_Make it obvious_)
 
 ## <span className="list-heading">Quit if it sucks</span>
 I have a rule— If I'm not loving a book, then I simply stop reading it. It's okay to quit. It's okay to not finish books. Reading should be pleasurable, and be an experience that brings you joy. Nothing kills my reading habit more quickly than trying to slog through a book I'm not excited to read. (_Make it easy_)
