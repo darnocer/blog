@@ -2,7 +2,7 @@
 title: Tip Example 1
 summary: This is a summary
 date: 2023-10-01
-aliases: 
+aliases:
 tags:
   - test
   - sample
