@@ -64,17 +64,10 @@ export default function ListLayout({
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!filteredBlogPosts.length && <span className="mt-6">'No posts found.'</span>}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags, directory } = frontMatter
+            const { slug, date, title, summary, tags, type } = frontMatter
             return (
               <li key={slug} className="article-item py-6">
                 <article className="space-y-1 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                  {/* <dl>
-                    <dt className="sr-only">Published on</dt>
-                    <dd className="text-xs font-semibold leading-6 text-gray-500 dark:text-gray-400">
-                      <time dateTime={date}>{formatDate(date)}</time>
-                    </dd>
-                  </dl> */}
-
                   <div className="space-y-2 xl:col-span-3">
                     <time
                       className="text-xs font-semibold leading-6 text-gray-500 dark:text-gray-400"
@@ -86,7 +79,7 @@ export default function ListLayout({
                     <div>
                       <h3 className="py-2 text-2xl font-bold leading-8 tracking-tight">
                         <Link
-                          href={`/${directory}/${slug}`}
+                          href={`/${type}/${slug}`}
                           className="text-gray-900 dark:text-gray-100"
                         >
                           {title}
@@ -101,7 +94,7 @@ export default function ListLayout({
                     <div className="prose max-w-none text-gray-500 dark:text-gray-400">
                       {summary}
                     </div>
-                    <LinkArrow text="Read More" direction="right" href={`/${directory}/${slug}`} />
+                    <LinkArrow text="Read More" direction="right" href={`/${type}/${slug}`} />
                   </div>
                 </article>
               </li>
@@ -110,7 +103,11 @@ export default function ListLayout({
         </ul>
       </div>
       {pagination && pagination.totalPages > 1 && !searchValue && (
-        <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
+        <Pagination
+          currentPage={pagination.currentPage}
+          totalPages={pagination.totalPages}
+          directory={directory}
+        />
       )}
     </>
   )

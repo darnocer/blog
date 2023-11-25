@@ -27,7 +27,6 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
-        directory="blog"
         title={pageContent.blog.title}
         description={pageContent.blog.description}
       />

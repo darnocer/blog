@@ -16,7 +16,7 @@ import { getDataFile } from '@/lib/mdx'
 
 export async function getStaticProps() {
   const homeContent = await getDataFile('content', ['home'])
-  const posts = await getAllFilesFrontMatterMultiple(['blog', 'tips'])
+  const posts = await getAllFilesFrontMatterMultiple(['blog'])
   // const posts = await getAllFilesFrontMatter('tips')
   const tags = await getAllTags('tips', 'blog')
 
@@ -26,6 +26,7 @@ export async function getStaticProps() {
 export default function Home({ posts, tags, homeContent }) {
   const { mdxSource, frontMatter } = homeContent
   const DEFAULT_LAYOUT = 'ContentLayout'
+  console.log(tags)
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />

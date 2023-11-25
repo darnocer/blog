@@ -32,6 +32,7 @@ export default function Posts({ posts, initialDisplayPosts, pagination }) {
         pagination={pagination}
         title={pageContent.posts.title}
         description={pageContent.posts.description}
+        directory="posts"
       />
     </>
   )
