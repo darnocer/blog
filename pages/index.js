@@ -1,7 +1,7 @@
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
-import { getAllFilesFrontMatterMultiple } from '@/lib/mdx'
+import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { getAllTags } from '@/lib/tags'
 
 import RecentPosts from '@/layouts/RecentPosts'
@@ -12,11 +12,12 @@ import SectionContainer from '@/components/SectionContainer'
 import pageContent from '@/data/pageContent'
 
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
-import { getDataFile } from '@/lib/mdx'
+import { getMdxContent } from '@/lib/mdx'
 
 export async function getStaticProps() {
-  const homeContent = await getDataFile('content', ['home'])
-  const posts = await getAllFilesFrontMatterMultiple(['blog'])
+  // const homeContent = await getDataFile('content', ['home'])
+  const homeContent = await getMdxContent('data', 'content', 'home')
+  const posts = await getAllFilesFrontMatter(['blog'])
   // const posts = await getAllFilesFrontMatter('tips')
   const tags = await getAllTags('tips', 'blog')
 

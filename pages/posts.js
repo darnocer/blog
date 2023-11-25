@@ -1,7 +1,7 @@
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
-import { getAllFilesFrontMatterMultiple } from '@/lib/mdx'
+import { getAllFilesFrontMatter } from '@/lib/mdx'
 import pageContent from '@/data/pageContent'
 
 import ListLayout from '@/layouts/ListLayout'
@@ -9,7 +9,7 @@ import ListLayout from '@/layouts/ListLayout'
 export const POSTS_PER_PAGE = 5
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatterMultiple(['blog', 'tips'])
+  const posts = await getAllFilesFrontMatter(['blog', 'tips'])
   const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE)
   const pagination = {
     currentPage: 1,
