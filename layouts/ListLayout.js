@@ -66,36 +66,36 @@ export default function ListLayout({
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags, type } = frontMatter
             return (
-              <li key={slug} className="no-arrow py-6">
+              <li key={slug} className="group no-arrow py-6">
                 <article className="space-y-1 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                  <div className="space-y-2 xl:col-span-3">
-                    <time
-                      className="text-xs font-semibold leading-6 text-gray-500 dark:text-gray-400"
-                      dateTime={date}
-                    >
-                      {formatDate(date)}
-                    </time>
+                  <Link
+                    href={`/${type}/${slug}`}
+                    className="block text-gray-900 transition-all duration-300 group-hover:border-l-4 group-hover:border-primary-500 group-hover:pl-4 dark:text-gray-100"
+                  >
+                    <div className="space-y-2 xl:col-span-3">
+                      <time
+                        className="text-xs font-semibold leading-6 text-gray-500 dark:text-gray-400"
+                        dateTime={date}
+                      >
+                        {formatDate(date)}
+                      </time>
 
-                    <div>
-                      <h3 className="py-2 text-2xl font-bold leading-8 tracking-tight">
-                        <Link
-                          href={`/${type}/${slug}`}
-                          className="text-gray-900 dark:text-gray-100"
-                        >
+                      <div>
+                        <h3 className="py-2 text-2xl font-bold leading-8 tracking-tight">
                           {title}
-                        </Link>
-                      </h3>
+                        </h3>
+                      </div>
+                      <div className="flex flex-wrap">
+                        {tags.map((tag) => (
+                          <Tag key={tag} text={tag} />
+                        ))}
+                      </div>
+                      <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+                        {summary}
+                      </div>
+                      <LinkArrow text="Read More" direction="right" href={`/${type}/${slug}`} />
                     </div>
-                    <div className="flex flex-wrap">
-                      {tags.map((tag) => (
-                        <Tag key={tag} text={tag} />
-                      ))}
-                    </div>
-                    <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                      {summary}
-                    </div>
-                    <LinkArrow text="Read More" direction="right" href={`/${type}/${slug}`} />
-                  </div>
+                  </Link>
                 </article>
               </li>
             )
