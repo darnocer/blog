@@ -170,3 +170,7 @@ h2 .list-heading::before {
 .section {
   counter-reset: h2-counter;
 }
+
+.no-code-bg code {
+  background-color: transparent !important;
+}

@@ -34,10 +34,13 @@ const sharedTypographyStyles = {
         boxShadow: '0 8px 16px rgba(0, 0, 0, 0.75)',
       },
       code: {
-        backgroundColor: colors.gray[300],
+        backgroundColor: colors.gray[200],
         color: colors.gray[700],
         padding: '3px',
         borderRadius: '0.15rem',
+      },
+      'pre code': {
+        backgroundColor: 'transparent', // Ensure code blocks have no background here
       },
       details: {
         backgroundColor: colors.gray[100],
@@ -149,7 +152,10 @@ module.exports = {
             code: {
               ...sharedTypographyStyles.css[0].code,
               backgroundColor: colors.gray[700],
-              color: colors.gray[300],
+              color: colors.gray[200],
+            },
+            'pre code': {
+              backgroundColor: colors.gray[800],
             },
             details: {
               backgroundColor: colors.gray[800],
