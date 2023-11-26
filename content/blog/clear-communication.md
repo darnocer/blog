@@ -16,6 +16,19 @@ category:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 Out of college, I worked in software implementations for hospitals. Our project teams involved a coordinator/manager pair in different areas of responsibility reporting to a project director. Occasionally, there would be a critical technical issue that would need reported to the project director including the background on the situation and the next steps for resolution. 
 
 One such escalation occurred early on when I was a coordinator. I wrote out an email for the leadership team, and, proud of my work, I showed my manager to proofread. To my discouragement, she asked me to cut 2/3 of the words out! How could I possibly communicate this complex issue in so little words?! I actually thought it wouldn't be possible. 

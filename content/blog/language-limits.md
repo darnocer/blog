@@ -39,8 +39,14 @@ Do we still talk in _Ye Olde English_? Of course not! The fact of the matter is 
 
 > [!quote] Any fool can make a rule, and any fool will mind it. —Henry David Thoreau
 
-Henry David Thoreau was actually referencing English grammar in this quote. I used to be a stickler for grammar, but I think this it was primarily in the context of school where I felt I had a clear framework in which I could ensure that points didn't get deducted from my writing assignments.
+I love that Henry David Thoreau was actually referencing English grammar in this quote.
 
-As I began writing more for my own enjoyment, then I began to prioritize understanding over rules. This sometimes means I don't always follow English grammar. In fact, I often make stylistic decisions in my writing that I _know_ is not proper grammar. If you know what I'm saying— then so what?
+I'll admit, I don't always follow English grammar. In fact, I often make stylistic decisions in my writing that I _know_ is not proper grammar.
 
-At the end of the day, we're all just trying to be understood. We communicate to connect with others. I think simply having an understanding of the unique language processors that exist inside of every human, can overall increase our understanding of one another.
+I exist somewhere in between a rule-follower, and a rule-breaker. If the rules enhance understanding and experience, I'm all for it. If they don't add any value, then t' heck with it.
+
+My thought is, if you know what I'm saying— then, so what?
+
+And if you don't know what I'm saying, but I meant what I said— then, so what?
+
+At the end of the day, we're all just trying to be understood. We communicate to connect with others. I think by simply having an understanding of the unique language processors that exist inside of every human, we can overall increase our understanding of one another— ultimately that's what makes the world a better place.
