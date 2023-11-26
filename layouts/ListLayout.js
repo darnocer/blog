@@ -67,7 +67,7 @@ export default function ListLayout({
             const { slug, date, title, summary, tags, type } = frontMatter
             return (
               <li key={slug} className="group no-arrow py-6">
-                <article className="space-y-1 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                <article className="space-y-1">
                   <Link
                     href={`/${type}/${slug}`}
                     className="block text-gray-900 transition-all duration-300 group-hover:border-l-4 group-hover:border-primary-500 group-hover:pl-4 dark:text-gray-100"
@@ -81,7 +81,7 @@ export default function ListLayout({
                       </time>
 
                       <div>
-                        <h3 className="py-2 text-2xl font-bold leading-8 tracking-tight">
+                        <h3 className="whitespace-nowrap py-2 text-2xl font-bold leading-8 tracking-tight">
                           {title}
                         </h3>
                       </div>
