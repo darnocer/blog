@@ -1,4 +1,4 @@
-import Link from './Link'
+import Link from '@/components/Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 
@@ -11,7 +11,13 @@ export default function Footer() {
           <SocialIcon kind="github" href={siteMetadata.github} size="6" />
           <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="6" />
         </div> */}
-        <div className="mb-2 flex space-x-2 text-xxs text-gray-500 dark:text-gray-400">
+        <Link
+          className="text-xxs uppercase text-gray-500 underline dark:text-gray-400"
+          href="/colophon"
+        >
+          Colophon
+        </Link>
+        <div className="mt-4 mb-2 flex space-x-2 text-xxs text-gray-500 dark:text-gray-400">
           <p className="text-xxs">
             Made with 👽 by{' '}
             <a className="underline" href={siteMetadata.website} target="_blank" rel="noreferrer">
@@ -20,7 +26,6 @@ export default function Footer() {
           </p>
           <div>{`© ${new Date().getFullYear()}`}</div>
         </div>
-        <div className="mb-8 text-gray-500 dark:text-gray-400"></div>
       </div>
     </footer>
   )
