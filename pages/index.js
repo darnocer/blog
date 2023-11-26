@@ -8,6 +8,7 @@ import RecentPosts from '@/layouts/RecentPosts'
 import TagList from '@/components/TagList'
 import Heading from '@/components/Heading'
 import SectionContainer from '@/components/SectionContainer'
+import NewsletterForm from '@/components/NewsletterForm'
 
 import pageContent from '@/data/pageContent'
 
@@ -57,8 +58,13 @@ export default function Home({ posts, tipsTags, blogTags, homeContent }) {
           border="noBorder"
         />
       </SectionContainer>
-
-      {/* {siteMetadata.newsletter.provider !== '' && <NewsletterForm />} */}
+      {/* 
+      {siteMetadata.newsletter.provider !== '' && (
+        <NewsletterForm
+          title={pageContent.newsletter.heading}
+          description={pageContent.newsletter.description}
+        />
+      )} */}
     </>
   )
 }

@@ -7,10 +7,16 @@ const pageContent = {
     blogHeading: null,
     tipHeading: 'Recent Posts',
   },
+  newsletter: {
+    heading: 'Subscribe',
+    description: 'Get extremely infrequent updates about new posts',
+    error: '',
+    success: '',
+    button: '',
+  },
   tips: {
     title: 'Tips & Trix',
-    description:
-      'Short efficiency tips and code snippets for Webflow, Obsidian, MacOS, and other random stuff.',
+    description: 'Short efficiency tips and snippets for random stuff',
   },
   blog: {
     title: 'Blog Posts',
