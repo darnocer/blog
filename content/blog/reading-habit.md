@@ -1,8 +1,8 @@
 ---
 title: How to build a reading habit
-summary: It's good for your soul
+summary: It's good for your soul.
 date: 2023-11-22
-aliases:
+aliases: 
 tags:
   - productivity
 draft: false
@@ -13,7 +13,7 @@ layout:
 category:
 ---
 
-I believe a daily reading habit has the potential to greatly improve your mental health. I notice I'm significantly more content in life when I carve out time to read every day. I think this is for a few reasons: 1) It expands my perspective on the world, so that I am not so caught up in my own problems, 2) it forces me to take breaks throughout my day since I tend to get caught up in my work, 3) it's a form a pleasure, so I can always count on it as an enjoyable activity I get to do even on an average day.
+I believe a daily reading habit has the potential to greatly improve your mental health. I notice I'm significantly more content in life when I carve out time to read every day. I think this is for a few reasons: 1) It expands my perspective on the world, 2) it forces me to take breaks throughout my day, 3) it's a form a pleasure, so I can always count on it as an enjoyable activity I get to do even on an average day.
 
 You may or may not be familiar with James Clear's [Atomic Habits](https://jamesclear.com/atomic-habits). In the book, he outlines how to build a good habit. He argues in order for a habit to stick, you need to: 1) **Make it easy**, 2) **Make it obvious**, 3) **Make it attractive**, and 4) **Make it satisfying**.
 

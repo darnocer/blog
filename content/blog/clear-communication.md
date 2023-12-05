@@ -1,7 +1,7 @@
 ---
 title: Clear & concise communication
-summary: 
-date: 2023-11-24
+summary: Your coworkers will thank you.
+date: 2023-11-08
 aliases: 
 tags:
   - writing
@@ -13,45 +13,28 @@ layout:
   - PostSimple
 category:
 ---
+On a project at my first job out of college, there was a complex technical issue in my area of responsibility that put the entire project at risk. I typed up what I thought was a crystal clear escalation email for the leadership team to explain what the issue was and what we were doing about it. 
 
+As this was my first real escalation, my manager at the time proofread the email. She told me I needed to cut 2/3 of the content... How could I possibly communicate this complicated issue in so little words?! 
 
+I finally adjusted the email to her satisfaction: 2 sentences and 3 bullet points. I sent it off to the project director, sure it couldn't possibly be enough information for her to take action. 
 
+As it turns out, though, it was plenty of information. I actually received praise for the clarity and conciseness of the email, and it was shared as an example escalation email for the team. 
 
+The lesson here is you can often communicate in less words than you think you can. In a work context, you want to clearly communicate the most important information only, with the goal being clarity, not comprehensiveness. Most people are invested in their own work and roles, and don't want to spend more time reading emails than they need to. 
 
+Admittedly, I'm still not the best at this. It almost feels as if I want to give people the courtesy of communicating all of the details I know, but it's, more often than not, simply not necessary. 
 
-
-
-
-
-
-
-
-
-
-
-Out of college, I worked in software implementations for hospitals. Our project teams involved a coordinator/manager pair in different areas of responsibility reporting to a project director. Occasionally, there would be a critical technical issue that would need reported to the project director including the background on the situation and the next steps for resolution. 
-
-One such escalation occurred early on when I was a coordinator. I wrote out an email for the leadership team, and, proud of my work, I showed my manager to proofread. To my discouragement, she asked me to cut 2/3 of the words out! How could I possibly communicate this complex issue in so little words?! I actually thought it wouldn't be possible. 
-
-I trimmed all of the fat I felt I could possibly remove to get the point across and showed my manager once again. And yet, she still had me consolidate into "a maximum of two sentences" with some bullet points. HOW?!
-
-After I finally adjusted the email to her satisfaction, I sent it off to the project director, sure it couldn't possibly be enough information for her. As it turns out, it was plenty of information. I actually received praise for the clarity and conciseness of the email, and it was shared as an example escalation email for the team. 
-
-The lesson here is you can often communicate in less words than you think you can. Admittedly, I'm still not the best at this. It almost feels as if I want to give people the courtesy of communicating all of the details I know, but it's, more often than not, not necessary particularly in a work context. 
-
-In a work context, you want to clearly communicate what must be communicated in as little words as possible. The goal of the communication should be clarity, not comprehensiveness. Most people are invested in their own work and roles, and don't want to spend more time reading emails than they need to. 
-
-Since my junior days, I have since tended to receive positive feedback from my colleagues and clients about the clarity and helpfulness of my communication. I do  try my best to put a lot of conscious effort into my work communications, to limit confusion and back-and-forth to the extent that it's possible. 
+As I deal with a lot of technical communication with non-technical coworkers, my rule of thumb is to always cut at least 30% from my initial response so as to not overwhelm with unnecessary information. Most likely, your colleagues won't be impressed by a long-winded communication full of technical jargon— they'll just be confused. 
 
 Here are 5 ways that I ensure clear, concise communication: 
-
 ## <span className="list-heading">Remove extraneous words</span>
 Like in the story above, especially when the recipient is to take action based on the information received, people will almost always appreciate reading something that is short and concise. 
 
 To remove the fluff: 
 - Minimize adjectives and adverbs where possible
 - Use short sentences that each focus on one thought, idea, or concept
-- Consolidate phrases that can be said with less words like: 
+- Consolidate phrases that can be said with less words like [^1] : 
 	- "at this point in time" → _now_
 	- "determine the location of" → _find_
 	- "is able to" → _can_
@@ -79,7 +62,6 @@ Some ways to combat ambiguous messages:
 - Replace **this** or **that** with the appropriate noun 
 - Place a noun immediately after **this** or **that** 
 
-
 ## <span className="list-heading">Format for clarity</span>
 When it comes to digital communication, we have extra tools at our disposal to clarify our messages in the form of formatting. 
 
@@ -92,7 +74,7 @@ Some ways to use formatting effectively:
 
 
 ## <span className="list-heading">Be an email superstar</span>
-Most people hate reading emails. With this in mind, there are some things you can do to make it less painful for your coworker when your email hits their inbox [^1] :
+Most people hate reading emails. With this in mind, there are some things you can do to make it less painful for your coworker when your email hits their inbox [^2] :
 
 * For longer emails that are unavoidable, split the email into at least two parts: "Summary" at the top and "Details" below
 * Instead of asking an open-ended question, present options to move forward
@@ -102,15 +84,13 @@ Most people hate reading emails. With this in mind, there are some things you ca
 ## <span className="list-heading">Learn the shared language of your project</span>
 To the best of your ability, especially when working with developers or on a more technical project, try to actually learn the correct words to reference what you're talking about so that everyone can have a shared language. This ensures everyone is actually having the same conversation. 
 
-I work as a website manager, so some examples might be: 
-* Platform-specific terminology: 
-	- Wordpress - Custom Post Type (CPT), Advanced Custom Field (ACF), module
-	- Webflow - Component, CMS Collection
-	- Sitecore - Item, template
-	- Drupal - Paragraph, Content Type
+I work as a website manager, so some examples of platform-specific terminology might be: 
+- Wordpress - Custom Post Type (CPT), Advanced Custom Field (ACF), module
+- Webflow - Component, CMS Collection
+- Sitecore - Item, template
+- Drupal - Paragraph, Content Type
 
 - - -
 
-
-
-[^1]: [Don't Reply All](https://www.amazon.com/Dont-Reply-All-Tactics-Communication-ebook/dp/B018MGHZWO/ref=sr_1_1?crid=27EBP8686NXSX&keywords=don%27t+reply+all+book&qid=1700849465&sprefix=don%27t+reply+all%2Caps%2C134&sr=8-1) is a super short, quick, tactical read on writing better emails. 
+[^1]: [Google's Introduction to Technical Writing](https://developers.google.com/tech-writing/one/short-sentences) has some great examples on writing short, clear sentences. 
+[^2]: [Don't Reply All](https://www.amazon.com/Dont-Reply-All-Tactics-Communication-ebook/dp/B018MGHZWO/ref=sr_1_1?crid=27EBP8686NXSX&keywords=don%27t+reply+all+book&qid=1700849465&sprefix=don%27t+reply+all%2Caps%2C134&sr=8-1) is a super short, quick, tactical read on writing better emails. 
