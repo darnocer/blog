@@ -1,4 +1,4 @@
-const Icon = () => {
+const WebflowComponentIcon = () => {
   return (
     <span
       style={{
@@ -33,4 +33,4 @@ const Icon = () => {
   )
 }
 
-export default Icon
+export default WebflowComponentIcon
