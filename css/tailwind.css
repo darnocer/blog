@@ -174,3 +174,50 @@ h2 .list-heading::before {
 .no-code-bg code {
   background-color: transparent !important;
 }
+
+/* Custom details/summary and element/option styles for Webflow  */
+
+.element {
+  /* color: #f3f4f6; */
+  color: #0c0b0b;
+  background-color: #2dd4bf;
+  font-weight: 800;
+  padding: 0.25rem 0.5rem;
+  border-radius: 2px;
+}
+
+.option {
+  color: #f3f4f6;
+  background-color: #f65e69;
+  font-weight: 800;
+  padding: 0.25rem 0.5rem;
+  border-radius: 2px;
+}
+
+details {
+  margin-bottom: 1rem;
+  /* background-color: rgb(0, 0, 0, 0.7) !important; */
+  /* color: #f3f4f6 !important; */
+  border-radius: 5px !important;
+}
+
+summary {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  border-radius: 5px !important;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::before {
+  content: '▶ ';
+  color: rgb(236, 172, 69);
+}
+
+details[open] summary::before {
+  content: '▼ ';
+  color: rgb(236, 172, 69);
+}

@@ -43,7 +43,7 @@ const sharedTypographyStyles = {
         backgroundColor: 'transparent', // Ensure code blocks have no background here
       },
       details: {
-        backgroundColor: colors.gray[100],
+        backgroundColor: colors.gray[200],
       },
       hr: {
         borderColor: colors.gray[200],
