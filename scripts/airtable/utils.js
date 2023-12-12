@@ -90,10 +90,29 @@ async function getTagsFromExampleRecord(tableName) {
   }
 }
 
+async function getCategoriesFromExampleRecord(tableName) {
+  try {
+    // Fetch the example record where tag values are maintained
+    const records = await base(tableName)
+      .select({
+        maxRecords: 1,
+        filterByFormula: `{Name} = 'example-record'`,
+      })
+      .firstPage()
+
+    const exampleRecordCategories = records[0]?.fields?.Category || []
+    return exampleRecordCategories
+  } catch (error) {
+    console.error('Error fetching categories from the example record:', error)
+    return []
+  }
+}
+
 module.exports = {
   getAllFilesRecursively,
   formatDate,
   getAllContentFrontMatter,
   getAllUniqueTags,
   getTagsFromExampleRecord,
+  getCategoriesFromExampleRecord,
 }
