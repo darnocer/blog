@@ -25,7 +25,7 @@ const Callout = ({ type, text, title }) => {
 
   // Function to replace backticks with <code> tags
   const formatText = (inputText) => {
-    const formattedText = inputText.replace(/`([^`]+)`/g, "<code class='inline-code'>$1</code>")
+    const formattedText = inputText.replace(/`([^`]+)`/g, "<code className='inline-code'>$1</code>")
     return parse(formattedText)
   }
 
