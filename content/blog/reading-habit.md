@@ -48,3 +48,5 @@ I set my Kindle on the end table in the living room where I usually sit in the m
 ## <span className="list-heading">Quit if it sucks</span>
 
 I have a rule— If I'm not loving a book, then I simply stop reading it. It's okay to quit. It's okay to not finish books. Reading should be pleasurable, and be an experience that brings you joy. Nothing kills my reading habit more quickly than trying to slog through a book I'm not excited to read. (_Make it easy_)
+
+> [!quote] Start more books. Quit most of them. Read the great ones twice. — James Clear
