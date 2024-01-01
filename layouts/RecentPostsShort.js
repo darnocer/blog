@@ -1,11 +1,11 @@
 import Link from '@/components/Link'
 
-import formatDate from '@/lib/utils/formatDate'
+import formatDateShort from '@/lib/utils/formatDateShort'
 
 import LinkArrow from '@/components/LinkArrow'
 import Heading from '@/components/Heading'
 import SectionContainer from '@/components/SectionContainer'
-import Tag from '@/components/Tag'
+import Badge from '@/components/Badge'
 
 const MAX_DISPLAY = 5
 
@@ -19,22 +19,20 @@ export default function RecentPosts({ posts, heading, directory }) {
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags, type } = frontMatter
             return (
-              <li key={slug} className="group no-arrow py-2">
-                <article className="flex flex-col">
-                  <Link href={`/${type}/${slug}`} className="text-gray-900 dark:text-gray-100">
-                    <h3 className="text-3xl font-bold leading-snug tracking-tight text-gray-800 underline duration-200 ease-in hover:text-primary-600 dark:text-gray-200 dark:hover:text-primary-400">
+              <li key={slug} className="no-arrow py-0">
+                <article className="justify-stretch w-100 flex flex-row flex-nowrap items-center items-baseline">
+                  <Link
+                    href={`/${type}/${slug}`}
+                    className="justify-stretch flex content-center items-baseline gap-x-4"
+                  >
+                    <time className="text-gray-500 dark:text-gray-400" dateTime={date}>
+                      {formatDateShort(date)}
+                    </time>
+                    <span className="text-gray-400 dark:text-gray-400">|</span>
+                    <h3 className="text-xl font-bold tracking-tight tracking-normal text-gray-800 duration-200 ease-in hover:text-primary-600 dark:text-gray-200 dark:hover:text-primary-400">
                       {title}
                     </h3>
-                    <div className="flex items-baseline gap-x-2">
-                      <time className="text-base text-gray-500 dark:text-gray-400" dateTime={date}>
-                        {formatDate(date)}
-                      </time>
-                      {tags.map((tag, index) => (
-                        <div key={index} className="mt-2">
-                          <Tag text={tag} />
-                        </div>
-                      ))}
-                    </div>
+                    {/* <Badge text={type} /> */}
                   </Link>
                 </article>
               </li>
