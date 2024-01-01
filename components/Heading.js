@@ -6,9 +6,11 @@ export default function Heading({ text, level = 'h2', border = 'border', color =
   const textColor = `text-${color}`
 
   const HeadingLevels = {
-    h1: ({ text }) => <h1 className="text-6xl font-extrabold">{text}</h1>,
-    h2: ({ text }) => <h2 className="text-4xl font-extrabold">{text}</h2>,
-    h3: ({ text }) => <h3 className={`text-2xl font-extrabold ${textColor}`}>{text}</h3>,
+    h1: ({ text }) => <h1 className="text-6xl font-extrabold tracking-tighter">{text}</h1>,
+    h2: ({ text }) => <h2 className="text-4xl font-extrabold tracking-tighter">{text}</h2>,
+    h3: ({ text }) => (
+      <h3 className={`text-2xl font-extrabold tracking-tighter ${textColor}`}>{text}</h3>
+    ),
   }
 
   const HeadingTag = HeadingLevels[level] || HeadingLevels.h2
