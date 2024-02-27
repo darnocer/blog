@@ -38,14 +38,14 @@ yarn-error.log*
 
 
 # content folders
-content/📝 Quick Notes/
+content/📝 Notes/
+content/⚙️ Meta/
 content/zArchive/
 content/⚙️ Templates/
 content/✏️ Drafts/
 content/.obsidian/
 content/static/
 content/📔 Book/
-content/💻 Web Ting/
 
 content/tips/tip-example.md
 
