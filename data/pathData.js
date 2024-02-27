@@ -1,8 +1,14 @@
 const pathData = {
   root: 'content',
-  content: {
-    tips: 'tips',
-    blog: 'blog',
+  blogContent: {
+    base: 'content',
+    content: {
+      blog: 'blog',
+    },
+  },
+  sectionContent: {
+    base: 'data',
+    directory: 'content',
   },
 }
 module.exports = pathData

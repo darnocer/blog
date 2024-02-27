@@ -18,8 +18,8 @@ const pageContent = {
     title: 'Tips & Trix',
     description: 'Short efficiency tips and snippets for random stuff',
   },
-  blog: {
-    title: 'Blog Posts',
+  posts: {
+    title: 'All Posts',
     description: null,
   },
   posts: {
