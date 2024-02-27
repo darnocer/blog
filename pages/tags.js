@@ -6,7 +6,7 @@ import pageContent from '@/data/pageContent'
 import TagList from '@/components/TagList'
 
 export async function getStaticProps() {
-  const tags = await getAllTags('tips', 'blog')
+  const tags = await getAllTags()
 
   return { props: { tags } }
 }
