@@ -28,7 +28,7 @@ const Callout = ({ type, text, title }) => {
     const formattedText = inputText.replace(/`([^`]+)`/g, "<code className='inline-code'>$1</code>")
     return parse(formattedText)
   }
-
+0
   // Apply a different style if 'text' is provided
   const calloutStyleWithText =
     'mb-8 rounded-md border-1 border-primary-600/25 bg-primary-500 bg-opacity-30 p-4 shadow-lg' // Style for callout with text
