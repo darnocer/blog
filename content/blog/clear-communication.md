@@ -3,15 +3,18 @@ title: Clear & concise communication
 summary: Your coworkers will thank you.
 date: 2023-11-08
 aliases: 
+draft: false
+category:
+  - blog
+content_type:
+  - musings
 tags:
   - writing
   - communication
-draft: false
-type:
-  - blog
 layout:
   - PostSimple
-category:
+status:
+  - edit
 ---
 On a project at my first job out of college, there was a complex technical issue in my area of responsibility that put the entire project at risk. I typed up what I thought was a crystal clear escalation email for the leadership team to explain what the issue was and what we were doing about it. 
 

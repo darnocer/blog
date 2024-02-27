@@ -1,20 +1,18 @@
 ---
-title: Tip Example 1
+title: Blog Example
 summary: This is a summary
-date: 2023-10-01
-aliases: 
-draft: true
-category:
-  - tech
-content_type:
-  - snippets
+date: 2023-10-29
+aliases:
+  - Test
 tags:
   - test
-  - sample
+  - example
+draft: false
+category:
+  - blog
 layout:
   - PostSimple
-status:
-  - archive
+content_type:
 ---
 
 # Heading 1
@@ -50,19 +48,6 @@ Duis cursus, mi quis `viverra ornare`, eros dolor interdum nulla, ut commodo dia
 
 This is a checklist:
 
-- [x] Item 1
-
-- [x] Item 2
-
-- [x] Item 3
-
-#### Dataview styling
-
-```dataview
-TABLE WITHOUT ID map(rows, (r) => link(r.file.link, r.title)) AS Snippets
-FROM #type/snippet
-FLATTEN file.etags AS Tag
-WHERE contains(Tag, "#tech/")
-GROUP BY Tag
-WHERE !contains(file.path,this.file.path) AND econtains(this.file.etags, Tag)
-```
+- [ ] Item 1
+- [ ] Item 2
+- [ ] Item 3

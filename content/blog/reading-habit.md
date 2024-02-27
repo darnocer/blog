@@ -3,14 +3,18 @@ title: How to build a reading habit
 summary: It's good for your soul.
 date: 2023-11-22
 aliases: 
+draft: false
+category:
+  - blog
+content_type:
+  - tips
 tags:
   - productivity
-draft: false
-type:
-  - blog
+  - reading
 layout:
   - PostSimple
-category:
+status:
+  - edit
 ---
 
 I believe a daily reading habit has the potential to greatly improve your mental health. I notice I'm significantly more content in life when I carve out time to read every day. I think this is for a few reasons: 1) It expands my perspective on the world, 2) it forces me to take breaks throughout my day, 3) it's a form a pleasure, so I can always count on it as an enjoyable activity I get to do even on an average day.
@@ -47,6 +51,6 @@ I set my Kindle on the end table in the living room where I usually sit in the m
 
 ## <span className="list-heading">Quit if it sucks</span>
 
-I have a rule— If I'm not loving a book, then I simply stop reading it. It's okay to quit. It's okay to not finish books. Reading should be pleasurable, and be an experience that brings you joy. Nothing kills my reading habit more quickly than trying to slog through a book I'm not excited to read. Put it away and start a new one you'll love. (_Make it easy_)
+Another rule for myself— If I'm not loving a book, then I simply stop reading it. It's okay to quit. It's okay to not finish books. Reading should be pleasurable, and be an experience that brings you joy. Nothing kills my reading habit more quickly than trying to slog through a book I'm not excited to read. Put it away and start a new one you'll love. (_Make it easy_)
 
 > [!quote] Start more books. Quit most of them. Read the great ones twice. — James Clear

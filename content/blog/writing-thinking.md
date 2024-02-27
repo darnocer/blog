@@ -3,14 +3,17 @@ title: Writing is thinking
 summary: Thinking is hard.
 date: 2023-11-01
 aliases: 
+draft: false
+category:
+  - blog
+content_type:
+  - musings
 tags:
   - writing
-draft: false
-type:
-  - blog
 layout:
   - PostSimple
-category:
+status:
+  - edit
 ---
 
 I have cardboard boxes and storage bins filled with all of my full journals since high school. In recent years, I now digitally take notes and journal more than ever. I document my thoughts, feelings, ideas, interests, and reflections every day. I take notes from books and podcasts, and things I want to remember. I "write" every day. I have *thousands* of notes and entries. 

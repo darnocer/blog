@@ -3,16 +3,18 @@ title: Resize images in bulk
 summary: Resize a library of images for your website with one-click
 date: 2023-11-02
 aliases: 
+draft: false
+category:
+  - tech
+content_type:
+  - guides
 tags:
   - efficiency
   - macos
-draft: false
-type:
-  - tip
 layout:
   - PostSimple
-category:
-  - macos
+status:
+  - published
 ---
 
 <Callout title="When this is useful" text="Quickly resize a library of full-size photos to upload to your website."/>

@@ -3,14 +3,17 @@ title: The limits of language
 summary: The limits of the world.
 date: 2023-11-15
 aliases: 
+draft: false
+category:
+  - blog
+content_type:
+  - musings
 tags:
   - communication
-draft: false
-type:
-  - blog
 layout:
   - PostSimple
-category:
+status:
+  - edit
 ---
 
 We all long to be understood. Language is the vehicle in which we share our thoughts and feelings— what's going on on the inside— with the outside world. The purpose of language is communication, and the priority of communication in most cases is clarity, so the other person can understand what we are meaning to say. 
@@ -22,9 +25,8 @@ I think the obvious answer to this is that everyone interprets language through 
 When we communicate a message to another person, something like the following process happens:
 
 - **Person A** - has an internal thought or feeling
-- **Person A** - processes those thoughts and feelings into language for communication
-- **Person B** - intakes the processed language from Person A
-- **Person B** - processes the language through their own unique processor
+- **Person A** - processes those thoughts or feelings into language and outputs communication
+- **Person B** - intakes the already processed language from Person A and processes again through their own unique processor
 - **Person B** - arrives at their own understanding of Person A's words
 
 In dialogue, this processing happens not just once, but many times, back and forth. When you see how much room for error there is in understanding during dialogue, it makes sense why miscommunication is so prevalent. A given person's interpretation of another person's idea is then at least two degrees of separation away from the idea itself.
@@ -47,8 +49,8 @@ I exist somewhere in between a rule-follower, and a rule-breaker. If the rules e
 
 My thought is, if you know what I'm saying— then, so what?
 
-And if you don't know what I'm saying, but I meant what I said— then, so what?
+And if you don't know what I'm saying, but I meant what I said— then, so what..?
 
-At the end of the day, we're all just trying to be understood. We communicate to connect with others. 
+At the end of the day, we're all just trying to be understood. We all do our best to communicate who we really are and what we really think and feel, in order to connect with others. 
 
-I think by simply having an understanding of the unique language processors that exist inside of every human, we can overall increase our understanding of one another. Increasing our understanding is likely to increase our compassion, and that's ultimately what makes the world a better place.
+So by simply having an understanding of the unique processors that exist inside of every human, we can overall increase our understanding of one another. When we increase our understanding, we become more compassionate, and that's ultimately what makes the world a better place.
