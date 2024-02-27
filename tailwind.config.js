@@ -4,26 +4,28 @@ const colors = require('tailwindcss/colors')
 const sharedTypographyStyles = {
   css: [
     {
-      color: colors.gray[700],
+      color: colors.gray[800],
       a: {
         fontWeight: 600,
         color: colors.teal[500],
+        textDecoration: 'none',
         '&:hover': {
           color: `${colors.teal[600]} !important`,
+          textDecoration: 'underline',
         },
       },
       h1: {
-        fontWeight: '700',
+        fontWeight: '800',
         letterSpacing: defaultTheme.letterSpacing.tight,
         color: colors.gray[900],
       },
       h2: {
-        fontWeight: '700',
+        fontWeight: '800',
         letterSpacing: defaultTheme.letterSpacing.tight,
         color: colors.gray[900],
       },
       h3: {
-        fontWeight: '700',
+        fontWeight: '800',
         color: colors.gray[900],
       },
       'h4,h5,h6': {
@@ -129,22 +131,23 @@ module.exports = {
               color: colors.teal[500],
               '&:hover': {
                 color: `${colors.teal[400]} !important`,
+                textDecoration: 'underline',
               },
             },
             h1: {
               ...sharedTypographyStyles.css[0].h1,
-              color: colors.gray[100],
+              color: colors.gray[200],
             },
             h2: {
               ...sharedTypographyStyles.css[0].h2,
-              color: colors.gray[100],
+              color: colors.gray[200],
             },
             h3: {
               ...sharedTypographyStyles.css[0].h3,
-              color: colors.gray[100],
+              color: colors.gray[200],
             },
             'h4,h5,h6': {
-              color: colors.gray[100],
+              color: colors.gray[200],
             },
             pre: {
               backgroundColor: colors.gray[800],
