@@ -8,7 +8,7 @@ const Tag = ({ text, index }) => {
         {text.split(' ').join('-')}
       </a> */}
 
-      <a className="text-xs font-semibold uppercase uppercase leading-none tracking-wide text-primary-500  duration-100 ease-in">
+      <a className="text-xs font-semibold uppercase uppercase leading-none tracking-wide text-primary-500  duration-100 ease-in dark:hover:text-primary-400">
         #{text.split(' ').join('-')}
       </a>
     </Link>

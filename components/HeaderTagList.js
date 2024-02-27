@@ -11,7 +11,7 @@ export default function HeaderTagList({ tags, heading }) {
       <div className="flex flex-wrap justify-center">
         {tags.length === 0 && 'No tags found.'}
         {tags.map((tag, index) => (
-          <div key={index} className="mt-2 mr-1">
+          <div key={index} className="mr-1">
             <Tag text={tag} />
           </div>
         ))}

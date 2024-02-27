@@ -5,6 +5,7 @@ const SectionContainer = ({ padding, container, children }) => {
     small: 'py-3',
     medium: 'py-5',
     large: 'py-7',
+    xlarge: 'py-9',
   }
   const containerClassNames = {
     small: 'max-w-3xl',
