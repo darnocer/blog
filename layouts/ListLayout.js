@@ -85,7 +85,7 @@ export default function ListLayout({
                           {title}
                         </h3>
                       </div>
-                      <div className="flex flex-wrap">
+                      <div className="flex flex-wrap gap-x-2">
                         {tags.map((tag) => (
                           <Tag key={tag} text={tag} />
                         ))}
