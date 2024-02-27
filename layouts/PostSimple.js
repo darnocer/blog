@@ -46,20 +46,12 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <div className="flex flex-col text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
                 {prev && (
                   <div className="pt-4 xl:pt-8">
-                    <LinkArrow
-                      text={prev.title}
-                      direction="left"
-                      href={`/${directory}/${prev.slug}`}
-                    />
+                    <LinkArrow text={prev.title} direction="left" href={`/${prev.slug}`} />
                   </div>
                 )}
                 {next && (
                   <div className="pt-4 xl:pt-8">
-                    <LinkArrow
-                      text={next.title}
-                      direction="right"
-                      href={`/${directory}/${next.slug}`}
-                    />
+                    <LinkArrow text={next.title} direction="right" href={`/${next.slug}`} />
                   </div>
                 )}
               </div>
