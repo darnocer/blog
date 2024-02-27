@@ -42,7 +42,7 @@ export default function Home({ posts, tipsTags, blogTags, homeContent }) {
         />
       </SectionContainer>
       <RecentPosts posts={posts} directory="blog" heading={pageContent.home.tipHeading} />
-      <SectionContainer>
+      {/* <SectionContainer>
         <Heading level="h2" text="Topics" />
 
         <TagList
@@ -57,7 +57,7 @@ export default function Home({ posts, tipsTags, blogTags, homeContent }) {
           level="h3"
           border="noBorder"
         />
-      </SectionContainer>
+      </SectionContainer> */}
       {/* 
       {siteMetadata.newsletter.provider !== '' && (
         <NewsletterForm
