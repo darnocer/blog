@@ -38,6 +38,10 @@ html {
   font-weight: 500;
 }
 
+.prose a:hover {
+  text-decoration: underline !important;
+}
+
 p,
 li {
   font-size: 1.2rem;
@@ -221,5 +225,3 @@ details[open] summary::before {
   content: '▼ ';
   color: rgb(236, 172, 69);
 }
-
-
