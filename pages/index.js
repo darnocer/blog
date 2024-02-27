@@ -1,7 +1,7 @@
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
-import { getAllFilesFrontMatter } from '@/lib/mdx'
+import { getAllFilesByCategory } from '@/lib/mdx'
 import { getAllTags } from '@/lib/getAllTags'
 
 import RecentPosts from '@/layouts/RecentPosts'
@@ -18,7 +18,7 @@ import { getMdxContent } from '@/lib/mdx'
 export async function getStaticProps() {
   // const homeContent = await getDataFile('content', ['home'])
   const homeContent = await getMdxContent('data', 'content', 'home')
-  const posts = await getAllFilesFrontMatter(['blog'])
+  const posts = await getAllFilesByCategory(['blog', 'tech'])
   // const posts = await getAllFilesFrontMatter('tips')
   const tipsTags = await getAllTags('tips')
   const blogTags = await getAllTags('blog')

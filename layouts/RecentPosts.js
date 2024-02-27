@@ -22,7 +22,7 @@ export default function RecentPosts({ posts, heading, directory }) {
             return (
               <li key={slug} className="group no-arrow py-2">
                 <article className="flex flex-col">
-                  <Link href={`/${type}/${slug}`} className="text-gray-900 dark:text-gray-100">
+                  <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
                     {/* <div className="flex items-baseline gap-x-2">
                       <time
                         className="text-xs uppercase text-gray-500 dark:text-gray-400"
