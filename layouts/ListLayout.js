@@ -66,31 +66,31 @@ export default function ListLayout({
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags, type } = frontMatter
             return (
-              <li key={slug} className="group no-arrow py-6">
+              <li key={slug} className="group no-arrow py-2">
                 <article className="space-y-1">
                   <Link
                     href={`/${slug}`}
-                    className="block text-gray-900 transition-all duration-300 group-hover:border-l-4 group-hover:border-primary-500 group-hover:pl-4 dark:text-gray-100"
+                    className="block text-gray-900 transition-all duration-300 group-hover:border-l-4 group-hover:border-accent-300 group-hover:pl-4 dark:text-gray-100 dark:group-hover:border-accent-400"
                   >
-                    <div className="space-y-2 xl:col-span-3">
+                    <div className="space-y-0.5 xl:col-span-3">
                       <time
-                        className="text-xs font-semibold leading-6 text-gray-500 dark:text-gray-400"
+                        className="text-xs font-semibold uppercase text-gray-600 dark:text-gray-400"
                         dateTime={date}
                       >
                         {formatDate(date)}
                       </time>
-
-                      <div>
-                        <h3 className="whitespace-nowrap py-2 text-2xl font-bold leading-8 tracking-tight">
-                          {title}
-                        </h3>
-                      </div>
                       <div className="flex flex-wrap gap-x-2">
                         {tags.map((tag) => (
                           <Tag key={tag} text={tag} />
                         ))}
                       </div>
-                      <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+                      <div>
+                        <h3 className="whitespace-nowrap pt-2 text-2xl font-bold tracking-tight hover:underline">
+                          {title}
+                        </h3>
+                      </div>
+
+                      <div className="prose max-w-none text-gray-600 dark:text-gray-400">
                         {summary}
                       </div>
                       <LinkArrow text="Read More" direction="right" href={`/${slug}`} />
