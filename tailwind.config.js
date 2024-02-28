@@ -1,16 +1,58 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
+const customColors = {
+  primary: {
+    300: '#55C3D0',
+    400: '#40BCCA',
+    500: '#39B4C4',
+    600: '#32A2B0',
+    700: '#2C909D',
+  },
+  secondary: {
+    100: '#fef9c3',
+    200: '#fef08a',
+    300: '#FCE047',
+    400: '#FACC14',
+    500: '#EAB307',
+    600: '#CA8A04',
+  },
+  tertiary: {
+    300: '#59B49D',
+    400: '#45AA91',
+    500: '#30A185',
+    600: '#2C9178',
+  },
+  accent: {
+    300: '#c76565',
+    400: '#c05252',
+    500: '#B93F3F',
+    600: '#a73939',
+    700: '#943232',
+  },
+  gray: {
+    100: '#ffffff',
+    200: '#e6e6e6',
+    300: '#cdcccc',
+    400: '#b3b3b3',
+    500: '#9a9a9a',
+    600: '#818181',
+    700: '#4f4e4e',
+    800: '#353535',
+    900: '#1c1b1b',
+  },
+}
+
 const sharedTypographyStyles = {
   css: [
     {
       color: colors.gray[800],
       a: {
         fontWeight: 600,
-        color: colors.teal[500],
+        color: customColors.primary[500],
         textDecoration: 'none',
         '&:hover': {
-          color: `${colors.teal[600]} !important`,
+          color: customColors.primary[600],
           textDecoration: 'underline',
         },
       },
@@ -66,7 +108,7 @@ const sharedTypographyStyles = {
         // textUnderlineOffset: '3px',
       },
       blockquote: {
-        borderLeftColor: colors.teal[400],
+        borderLeftColor: customColors.primary[500],
       },
     },
   ],
@@ -105,11 +147,7 @@ module.exports = {
         normal: 500,
       },
       colors: {
-        primary: colors.teal,
-        gray: colors.neutral,
-        secondary: colors.yellow,
-        yellow: '#ECAC45',
-        red: colors.red,
+        ...customColors,
       },
       borderWidth: {
         1: '1px',
@@ -128,9 +166,9 @@ module.exports = {
             color: colors.gray[300],
             a: {
               ...sharedTypographyStyles.css[0].a,
-              color: colors.teal[500],
+              color: customColors.primary[500],
               '&:hover': {
-                color: `${colors.teal[400]} !important`,
+                color: customColors.primary[400],
                 textDecoration: 'underline',
               },
             },
