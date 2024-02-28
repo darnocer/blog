@@ -3,7 +3,7 @@ title: How to build a reading habit
 summary: It's good for your soul.
 date: 2023-11-22
 aliases: 
-draft: false
+draft: true
 category:
   - blog
 content_type:

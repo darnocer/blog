@@ -3,7 +3,7 @@ title: Resize images in bulk
 summary: Resize a library of images for your website with one-click
 date: 2023-11-02
 aliases: 
-draft: false
+draft: true
 category:
   - tech
 content_type:

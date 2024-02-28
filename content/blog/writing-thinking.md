@@ -3,7 +3,7 @@ title: Writing is thinking
 summary: Thinking is hard.
 date: 2023-11-01
 aliases: 
-draft: false
+draft: true
 category:
   - blog
 content_type:

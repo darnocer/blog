@@ -3,7 +3,7 @@ title: Export Kindle Highlights to Obsidian
 summary: 
 date: 2023-11-02
 aliases: 
-draft: false
+draft: true
 category:
   - tech
 content_type:

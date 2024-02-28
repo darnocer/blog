@@ -3,7 +3,7 @@ title: The limits of language
 summary: The limits of the world.
 date: 2023-11-15
 aliases: 
-draft: false
+draft: true
 category:
   - blog
 content_type:

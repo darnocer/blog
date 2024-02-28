@@ -3,7 +3,7 @@ title: Exclude the current note from DQL query in Obsidian
 summary: 
 date: 2023-11-06
 aliases: 
-draft: false
+draft: true
 category:
   - tech
 content_type:

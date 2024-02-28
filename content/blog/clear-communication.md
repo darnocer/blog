@@ -3,7 +3,7 @@ title: Clear & concise communication
 summary: Your coworkers will thank you.
 date: 2023-11-08
 aliases: 
-draft: false
+draft: true
 category:
   - blog
 content_type:
