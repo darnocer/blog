@@ -15,7 +15,7 @@ import Prism from 'prismjs'
 import '../lib/prism/dataview'
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { date, title, tags, summary } = frontMatter
+  const { date, title, tags, summary, content_type } = frontMatter
 
   const router = useRouter()
   const directory = router.pathname.split('/')[1]
@@ -32,7 +32,13 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
         <div>
           <header>
             <Breadcrumbs />
-            <PostHeader title={title} summary={summary} tags={tags} date={date} />
+            <PostHeader
+              title={title}
+              summary={summary}
+              tags={tags}
+              date={date}
+              contentType={content_type}
+            />
           </header>
           <div
             className="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:divide-y-0 "

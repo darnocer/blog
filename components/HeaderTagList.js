@@ -8,14 +8,16 @@ export default function HeaderTagList({ tags, heading }) {
   return (
     <SectionContainer>
       {heading ? <Heading text={heading} /> : null}
-      <div className="flex flex-wrap justify-center">
-        {tags.length === 0 && 'No tags found.'}
-        {tags.map((tag, index) => (
-          <div key={index} className="mr-1">
-            <Tag text={tag} />
-          </div>
-        ))}
-      </div>
+      {tags ? (
+        <div className="flex flex-wrap justify-center">
+          {tags.length === 0 && null}
+          {tags.map((tag, index) => (
+            <div key={index} className="mr-1">
+              <Tag text={tag} />
+            </div>
+          ))}
+        </div>
+      ) : null}
     </SectionContainer>
   )
 }

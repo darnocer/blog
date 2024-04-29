@@ -47,17 +47,19 @@ export default function RecentPosts({
               <li key={slug} className="group no-arrow py-2">
                 <article className="flex flex-col">
                   <Link href={`/${slug}`} className="text-gray-900 dark:text-gray-100">
-                    <div className="flex items-baseline gap-x-2 pt-1 pb-2 align-middle">
+                    <div className="flex items-center gap-x-2 pt-1 pb-2">
                       <h3 className="text-2xl font-extrabold leading-snug tracking-tight text-gray-800 duration-300 ease-in hover:underline dark:text-gray-200">
                         {title}
                       </h3>
                       <Badge text={content_type.join(', ')} />
                     </div>
-                    <div className="flex items-baseline gap-x-2">
-                      {tags.map((tag) => (
-                        <Tag key={tag} text={tag} />
-                      ))}
-                    </div>
+                    {tags ? (
+                      <div className="flex items-baseline gap-x-2">
+                        {tags.map((tag) => (
+                          <Tag key={tag} text={tag} />
+                        ))}
+                      </div>
+                    ) : null}
                   </Link>
                 </article>
               </li>
