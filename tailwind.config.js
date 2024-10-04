@@ -108,7 +108,7 @@ const sharedTypographyStyles = {
         // textUnderlineOffset: '3px',
       },
       blockquote: {
-        borderLeftColor: customColors.primary[500],
+        borderLeftColor: customColors.secondary[500],
       },
     },
   ],
@@ -141,7 +141,7 @@ module.exports = {
         xxs: '.70rem',
       },
       fontFamily: {
-        sans: ['Thiccboi', ...defaultTheme.fontFamily.sans],
+        sans: ['ITC Avant Garde Pro', ...defaultTheme.fontFamily.sans],
       },
       fontWeight: {
         normal: 500,
@@ -163,7 +163,7 @@ module.exports = {
         dark: {
           css: {
             ...sharedTypographyStyles.css[0],
-            color: colors.gray[300],
+            color: colors.gray[200],
             a: {
               ...sharedTypographyStyles.css[0].a,
               color: customColors.primary[500],
@@ -213,7 +213,7 @@ module.exports = {
             },
             strong: {
               ...sharedTypographyStyles.css[0].strong,
-              color: colors.gray[100],
+              color: colors.gray[300],
             },
             blockquote: {
               ...sharedTypographyStyles.css[0].blockquote,
