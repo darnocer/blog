@@ -31,7 +31,7 @@ const Callout = ({ type, text, title }) => {
   0
   // Apply a different style if 'text' is provided
   const calloutStyleWithText =
-    'mb-8 rounded-md border-1 border-primary-600/25 bg-primary-500 bg-opacity-30 p-4 shadow-lg' // Style for callout with text
+    'mb-8 rounded-md border-1 border-secondary-600/25 bg-secondary-500 bg-opacity-30 p-4 shadow-lg' // Style for callout with text
   const calloutStyleWithTitleOnly =
     'mb-8 rounded-md border-1 border-secondary-400/60 bg-secondary-100 bg-opacity-70 dark:bg-gray-400 p-4 shadow-lg text-gray-700 dark:text-secondary-300 dark:bg-opacity-10' // Style for title only
   const calloutStyle = text ? calloutStyleWithText : calloutStyleWithTitleOnly
