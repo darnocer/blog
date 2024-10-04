@@ -1,8 +1,8 @@
 ---
 title: Nothing More
-summary: 
-date: ""
-aliases: 
+summary:
+date: ''
+aliases:
 draft: false
 status:
   - published
@@ -17,16 +17,16 @@ layout:
 ---
 
 I blew a spider off of the table today
-It's my table  
+She startled me
 and I didn't want her there
 
 So I blew her off 
 with my breath
 like a gust of wind
-and she fell onto the ground
+and she dropped onto the ground
 
-I didn't mean to
-disrupt this creature's day
+I didn't intend
+to harm this creature
 She didn't know
 after all
 it was my table
@@ -50,5 +50,5 @@ nothing at all
 So how can
 I know 
 whether
-the wind 
-is nothing more
+the wind is
+nothing more
