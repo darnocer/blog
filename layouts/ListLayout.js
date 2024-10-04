@@ -7,6 +7,7 @@ import Tag from '@/components/Tag'
 import Pagination from '@/components/Pagination'
 import PageTitle from '@/components/PageTitle'
 import LinkArrow from '@/components/LinkArrow'
+import Badge from '@/components/Badge'
 
 export default function ListLayout({
   posts,
@@ -19,10 +20,10 @@ export default function ListLayout({
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent = (
-      frontMatter.title +
-      frontMatter.summary +
-      frontMatter.tags.join(' ') +
-      (frontMatter.category || []).join(' ')
+      (frontMatter.title || '') +
+      (frontMatter.summary || '') +
+      (Array.isArray(frontMatter.tags) ? frontMatter.tags.join(' ') : '') +
+      (Array.isArray(frontMatter.category) ? frontMatter.category.join(' ') : '')
     ).toLowerCase()
     return searchContent.includes(searchValue.toLowerCase())
   })
@@ -64,32 +65,33 @@ export default function ListLayout({
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!filteredBlogPosts.length && <span className="mt-6">'No posts found.'</span>}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags, type } = frontMatter
+            const { slug, date, title, summary, tags, type, content_type } = frontMatter
             return (
               <li key={slug} className="group no-arrow py-2">
                 <article className="space-y-1">
                   <Link
                     href={`/${slug}`}
-                    className="block text-gray-900 transition-all duration-300 group-hover:border-l-4 group-hover:border-accent-300 group-hover:pl-4 dark:text-gray-100 dark:group-hover:border-accent-400"
+                    className="block text-gray-900 transition-all duration-300 group-hover:border-l-4 group-hover:border-secondary-300 group-hover:pl-4 dark:text-gray-100 dark:group-hover:border-secondary-400"
                   >
                     <div className="space-y-0.5 xl:col-span-3">
-                      <time
-                        className="text-xs font-semibold uppercase text-gray-600 dark:text-gray-400"
-                        dateTime={date}
-                      >
-                        {formatDate(date)}
-                      </time>
-                      <div className="flex flex-wrap gap-x-2">
-                        {tags.map((tag) => (
-                          <Tag key={tag} text={tag} />
-                        ))}
-                      </div>
-                      <div>
+                      {date ? (
+                        <time
+                          className="text-xs font-semibold uppercase text-gray-600 dark:text-gray-400"
+                          dateTime={date}
+                        >
+                          {formatDate(date)}
+                        </time>
+                      ) : null}
+
+                      <div className="flex items-center gap-x-2 pt-1 pb-2">
                         <h3 className="whitespace-nowrap pt-2 text-2xl font-bold tracking-tight hover:underline">
                           {title}
                         </h3>
+                        {content_type ? <Badge text={content_type} /> : null}
                       </div>
-
+                      <div className="pb- flex flex-wrap gap-x-2 pb-1">
+                        {Array.isArray(tags) && tags.map((tag) => <Tag key={tag} text={tag} />)}
+                      </div>
                       <div className="prose max-w-none text-gray-600 dark:text-gray-400">
                         {summary}
                       </div>

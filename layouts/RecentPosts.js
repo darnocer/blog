@@ -1,5 +1,5 @@
 import Link from '@/components/Link'
-import formatDate from '@/lib/utils/formatDate'
+import formatDateShort from '@/lib/utils/formatDateShort'
 import LinkArrow from '@/components/LinkArrow'
 import Heading from '@/components/Heading'
 import SectionContainer from '@/components/SectionContainer'
@@ -36,7 +36,7 @@ export default function RecentPosts({
     : filteredByCategory
 
   return (
-    <SectionContainer padding="xlarge">
+    <SectionContainer padding="large">
       <Heading text={heading} />
       <div className="space-y-6">
         <ul className="space-y-6">
@@ -47,11 +47,19 @@ export default function RecentPosts({
               <li key={slug} className="group no-arrow py-2">
                 <article className="flex flex-col">
                   <Link href={`/${slug}`} className="text-gray-900 dark:text-gray-100">
-                    <div className="flex items-center gap-x-2 pt-1 pb-2">
-                      <h3 className="text-2xl font-extrabold leading-snug tracking-tight text-gray-800 duration-300 ease-in hover:underline dark:text-gray-200">
+                    {/* {date ? (
+                      <time
+                        className="mb-0 pb-0 text-xs font-semibold uppercase text-gray-600 dark:text-gray-400"
+                        dateTime={date}
+                      >
+                        {formatDateShort(date)}
+                      </time>
+                    ) : null} */}
+                    <div className="mt-0 flex items-center gap-x-2 pb-2">
+                      <h3 className="whitespace-nowrap pt-2 text-2xl font-bold tracking-tight hover:underline">
                         {title}
                       </h3>
-                      <Badge text={content_type.join(', ')} />
+                      {content_type ? <Badge text={content_type} /> : null}
                     </div>
                     {tags ? (
                       <div className="flex items-baseline gap-x-2">
