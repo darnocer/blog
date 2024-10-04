@@ -1,16 +1,17 @@
 ---
 title: Nothing More
-summary:
-date: ''
-aliases:
-draft: true
+summary: 
+date: ""
+aliases: 
+draft: false
 status:
   - published
 category:
   - blog
 content_type:
-  - poems
-tags: []
+  - poem
+tags:
+  - spirituality
 layout:
   - PostSimple
 ---

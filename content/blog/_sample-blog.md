@@ -13,11 +13,12 @@ category:
 layout:
   - PostSimple
 content_type:
+  - blog
 ---
 
 # Heading 1
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae **vestibulum**. Donec in efficitur ipsum, _in egestas orci_. Maecenas libero nisi, pellentesque vel pretium eu, [link to somewhere](https://chat.openai.com/c/b381a204-bd2f-45b4-a464-ca9434d9cbf1#).
+<span className="bold-underline">Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae **vestibulum**. Donec in efficitur ipsum, _in egestas orci_. Maecenas libero nisi, pellentesque vel pretium eu, [link to somewhere](https://chat.openai.com/c/b381a204-bd2f-45b4-a464-ca9434d9cbf1#).
 
 ## Heading 2
 
@@ -36,7 +37,16 @@ const num = getRandomNumber(1, 100)
 console.log(`Random number between 1 and 100: ${num}`)
 ```
 
-## Another Heading 2
+## Heading again
+
+<details>
+<summary>This is an expandable section</summary>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+</details>
+
+## Another Heading
 
 Duis cursus, mi quis `viverra ornare`, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus:
 
@@ -48,6 +58,6 @@ Duis cursus, mi quis `viverra ornare`, eros dolor interdum nulla, ut commodo dia
 
 This is a checklist:
 
-- [ ] Item 1
+- [x] Item 1
 - [ ] Item 2
 - [ ] Item 3
