@@ -3,7 +3,7 @@ title: Ignoring Knowledge
 summary: 
 date: 2024-10-04
 aliases: 
-draft: false
+draft: true
 status:
   - published
 category:

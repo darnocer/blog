@@ -3,7 +3,7 @@ title: The Power of Now
 summary: 
 date: 2024-10-04
 aliases: 
-draft: false
+draft: true
 status:
   - published
 category:

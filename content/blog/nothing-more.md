@@ -1,9 +1,9 @@
 ---
 title: Nothing More
-summary:
-date: ''
-aliases:
-draft: false
+summary: 
+date: ""
+aliases: 
+draft: true
 status:
   - published
 category:
