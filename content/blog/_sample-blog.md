@@ -12,8 +12,7 @@ category:
   - blog
 layout:
   - PostSimple
-content_type:
-  - blog
+content_type: blog
 ---
 
 # Heading 1

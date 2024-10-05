@@ -8,15 +8,14 @@ status:
   - published
 category:
   - blog
-content_type:
-  - poem
+content_type: poem
 tags:
   - spirituality
 layout:
   - PostSimple
 ---
 
-I blew a spider off of the table today
+I blew a spider off of my table
 She startled me
 and I didn't want her there
 
