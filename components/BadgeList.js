@@ -1,27 +1,27 @@
 import Link from '@/components/Link'
-import Tag from '@/components/Tag'
+import Badge from '@/components/Badge'
 import kebabCase from '@/lib/utils/kebabCase'
 
 import Heading from '@/components/Heading'
 import SectionContainer from './SectionContainer'
 
-export default function TagList({
-  tags,
+export default function BadgeList({
+  types,
   heading,
   level = 'h2',
   border = 'border',
   color = 'gray-200',
 }) {
-  const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a])
+  const sortedTypes = Object.keys(types).sort((a, b) => types[b] - types[a])
   return (
     <>
       {heading ? <Heading text={heading} level={level} border={border} color={color} /> : null}
       <div className="mb-6 flex flex-wrap justify-start">
-        {Object.keys(tags).length === 0 && 'No tags found.'}
-        {sortedTags.map((t) => {
+        {Object.keys(types).length === 0 && 'No types found.'}
+        {sortedTypes.map((t) => {
           return (
             <div key={t} className="mt-2 mb-2 mr-4">
-              <Tag text={t} index={tags[t]} />
+              <Badge text={t} />
             </div>
           )
         })}

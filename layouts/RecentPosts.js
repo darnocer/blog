@@ -46,8 +46,7 @@ export default function RecentPosts({
             return (
               <li key={slug} className="group no-arrow py-2">
                 <article className="flex flex-col">
-                  <Link href={`/${slug}`} className="text-gray-900 dark:text-gray-100">
-                    {/* {date ? (
+                  {/* {date ? (
                       <time
                         className="mb-0 pb-0 text-xs font-semibold uppercase text-gray-600 dark:text-gray-400"
                         dateTime={date}
@@ -55,20 +54,21 @@ export default function RecentPosts({
                         {formatDateShort(date)}
                       </time>
                     ) : null} */}
-                    <div className="mt-0 flex items-center gap-x-2 pb-2">
+                  <div className="mt-0 flex items-center gap-x-2 pb-2">
+                    <Link href={`/${slug}`} className="text-gray-900 dark:text-gray-100">
                       <h3 className="whitespace-nowrap pt-2 text-2xl font-bold tracking-tight hover:underline">
                         {title}
                       </h3>
-                      {content_type ? <Badge text={content_type} /> : null}
+                    </Link>
+                    {content_type ? <Badge text={content_type} /> : null}
+                  </div>
+                  {tags ? (
+                    <div className="flex items-baseline gap-x-2">
+                      {tags.map((tag) => (
+                        <Tag key={tag} text={tag} />
+                      ))}
                     </div>
-                    {tags ? (
-                      <div className="flex items-baseline gap-x-2">
-                        {tags.map((tag) => (
-                          <Tag key={tag} text={tag} />
-                        ))}
-                      </div>
-                    ) : null}
-                  </Link>
+                  ) : null}
                 </article>
               </li>
             )

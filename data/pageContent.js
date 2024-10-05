@@ -15,12 +15,8 @@ const pageContent = {
     button: '',
   },
   tips: {
-    title: 'Tips & Trix',
+    title: 'Tips',
     description: 'Short efficiency tips and snippets for random stuff',
-  },
-  posts: {
-    title: 'All Posts',
-    description: null,
   },
   posts: {
     title: 'All Posts',
@@ -28,9 +24,17 @@ const pageContent = {
   },
   tags: {
     title: 'Tags',
-    tagDescriptions: {
-      test: 'Awesome resources',
-    },
+    description: 'Blog topics',
+  },
+  tag: {
+    description: (tag) => `Posts tagged with #${tag}`,
+  },
+  types: {
+    title: 'Content Types',
+    description: 'Types of content',
+  },
+  type: {
+    description: (type) => `Posts with a content type of '${type}'`,
   },
 }
 module.exports = pageContent
