@@ -56,7 +56,7 @@ export default function RecentPosts({
                     ) : null} */}
                   <div className="mt-0 flex items-center gap-x-2 pb-2">
                     <Link href={`/${slug}`} className="text-gray-900 dark:text-gray-100">
-                      <h3 className="whitespace-nowrap pt-2 text-2xl font-bold tracking-tight hover:underline">
+                      <h3 className="whitespace-nowrap pt-2 text-3xl font-bold tracking-tight hover:underline">
                         {title}
                       </h3>
                     </Link>

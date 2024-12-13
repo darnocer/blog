@@ -1,52 +1,18 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
-
-const customColors = {
-  primary: {
-    300: '#55C3D0',
-    400: '#40BCCA',
-    500: '#39B4C4',
-    600: '#32A2B0',
-    700: '#2C909D',
-  },
-  secondary: {
-    100: '#fef9c3',
-    200: '#fef08a',
-    300: '#FCE047',
-    400: '#FACC14',
-    500: '#EAB307',
-    600: '#CA8A04',
-  },
-  tertiary: {
-    300: '#59B49D',
-    400: '#45AA91',
-    500: '#30A185',
-    600: '#2C9178',
-  },
-  accent: {
-    300: '#c76565',
-    400: '#c05252',
-    500: '#B93F3F',
-    600: '#a73939',
-    700: '#943232',
-  },
-  gray: {
-    100: '#ffffff',
-    200: '#e6e6e6',
-    300: '#cdcccc',
-    400: '#b3b3b3',
-    500: '#9a9a9a',
-    600: '#818181',
-    700: '#4f4e4e',
-    800: '#353535',
-    900: '#1c1b1b',
-  },
-}
+const customColors = require('./colors')
 
 const sharedTypographyStyles = {
   css: [
     {
+      fontFamily: defaultTheme.fontFamily.serif,
+      // base color
       color: colors.gray[800],
+      // paragraphs
+      p: {
+        fontSize: '1.2rem',
+      },
+      // links
       a: {
         fontWeight: 600,
         color: customColors.primary[500],
@@ -56,6 +22,7 @@ const sharedTypographyStyles = {
           textDecoration: 'underline',
         },
       },
+      // headings
       h1: {
         fontWeight: '800',
         letterSpacing: defaultTheme.letterSpacing.tight,
@@ -65,14 +32,19 @@ const sharedTypographyStyles = {
         fontWeight: '800',
         letterSpacing: defaultTheme.letterSpacing.tight,
         color: colors.gray[900],
+        fontSize: '3rem',
+        marginBottom: '0.5em',
+        marginTop: '1em',
       },
       h3: {
         fontWeight: '800',
         color: colors.gray[900],
+        fontSize: '2.25rem',
       },
       'h4,h5,h6': {
         color: colors.gray[900],
       },
+      // code
       pre: {
         backgroundColor: colors.gray[800],
         boxShadow: '0 8px 16px rgba(0, 0, 0, 0.75)',
@@ -86,6 +58,8 @@ const sharedTypographyStyles = {
       'pre code': {
         backgroundColor: 'transparent', // Ensure code blocks have no background here
       },
+
+      // misc
       details: {
         backgroundColor: colors.gray[200],
       },
@@ -102,10 +76,6 @@ const sharedTypographyStyles = {
       strong: {
         fontWeight: '800',
         color: colors.gray[800],
-        // textDecoration: 'underline',
-        // textDecorationColor: colors.teal[500],
-        // textDecorationThickness: '4px',
-        // textUnderlineOffset: '3px',
       },
       blockquote: {
         borderLeftColor: customColors.secondary[500],
@@ -142,6 +112,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['ITC Avant Garde Pro', ...defaultTheme.fontFamily.sans],
+        serif: ['Domine', ...defaultTheme.fontFamily.serif],
       },
       fontWeight: {
         normal: 500,
@@ -152,17 +123,12 @@ module.exports = {
       borderWidth: {
         1: '1px',
       },
-      boxShadow: {
-        greenDark: '0 0 22px 8px rgba(5, 255, 0, .25)',
-        green: '0 0 22px 8px rgba(39, 161, 133, .25)',
-        yellow: '0 0 22px 8px rgba(236, 172, 69, .25)',
-        code: '0 8px 16px rgba(0, 0, 0, 0.75)',
-      },
       typography: (theme) => ({
         DEFAULT: sharedTypographyStyles,
         dark: {
           css: {
             ...sharedTypographyStyles.css[0],
+            fontFamily: defaultTheme.fontFamily.serif,
             color: colors.gray[200],
             a: {
               ...sharedTypographyStyles.css[0].a,
@@ -235,4 +201,9 @@ module.exports = {
     },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  function({ addBase, theme }) {
+    addBase({
+      html: { fontFamily: theme('fontFamily.serif') },
+    })
+  },
 }

@@ -64,17 +64,50 @@
   font-weight: 800;
 }
 
+@font-face {
+  font-family: Domine;
+  src: url('../public/static/fonts/Domine-Regular.ttf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Domine;
+  src: url('../public/static/fonts/Domine-Medium.ttf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Domine;
+  src: url('../public/static/fonts/Domine-SemiBold.ttf') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Domine;
+  src: url('../public/static/fonts/Domine-Bold.ttf') format('opentype');
+  font-weight: 700;
+}
+
 html {
   font-weight: 500;
 }
+
+/* html {
+  font-family: 'Domine', serif;
+} */
 
 .prose a:hover {
   text-decoration: underline !important;
 }
 
-p,
+/* p,
 li {
   font-size: 1.2rem;
+} */
+
+ol:has(li[id^='user-content-fn']) ::marker,
+li[id^='user-content-fn'] p {
+  font-size: 0.8rem;
 }
 
 /* hides backticks  */

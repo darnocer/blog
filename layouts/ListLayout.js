@@ -84,7 +84,7 @@ export default function ListLayout({
                       ) : null}
 
                       <div className="flex items-center gap-x-2 pt-1 pb-2">
-                        <h3 className="whitespace-nowrap pt-2 text-2xl font-bold tracking-tight hover:underline">
+                        <h3 className="whitespace-nowrap pt-2 text-3xl font-bold tracking-tight hover:underline">
                           {title}
                         </h3>
                         {content_type ? <Badge text={content_type} /> : null}
