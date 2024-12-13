@@ -33,6 +33,7 @@ export default function Home({ posts, homeContent }) {
         mdxSource={mdxSource}
         frontMatter={frontMatter}
       />
+
       <RecentPosts posts={posts} heading="Recent Posts" />
 
       {/* 
