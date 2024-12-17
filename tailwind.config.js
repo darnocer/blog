@@ -5,7 +5,7 @@ const customColors = require('./colors')
 const sharedTypographyStyles = {
   css: [
     {
-      fontFamily: defaultTheme.fontFamily.serif,
+      // fontFamily: defaultTheme.fontFamily.serif,
       fontWeight: 400,
       // base color
       color: colors.gray[800],
@@ -88,7 +88,7 @@ const sharedTypographyStyles = {
 
 module.exports = {
   experimental: {
-    optimizeUniversalDefaults: true,
+    // optimizeUniversalDefaults: true,
   },
   content: [
     './pages/**/*.js',
@@ -136,7 +136,7 @@ module.exports = {
         dark: {
           css: {
             ...sharedTypographyStyles.css[0],
-            fontFamily: defaultTheme.fontFamily.serif,
+            // fontFamily: defaultTheme.fontFamily.serif,
             color: colors.gray[200],
             a: {
               ...sharedTypographyStyles.css[0].a,
@@ -209,9 +209,9 @@ module.exports = {
     },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
-  function({ addBase, theme }) {
-    addBase({
-      html: { fontFamily: theme('fontFamily.serif') },
-    })
-  },
+  // function({ addBase, theme }) {
+  //   addBase({
+  //     html: { fontFamily: theme('fontFamily.serif') },
+  //   })
+  // },
 }

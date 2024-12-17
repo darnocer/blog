@@ -20,6 +20,32 @@
 
 /* *** FONT DECLARATIONS *** */
 
+/* Prose (serif) font */
+
+@font-face {
+  font-family: Domine;
+  src: url('../public/static/fonts/Domine-Regular.ttf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Domine;
+  src: url('../public/static/fonts/Domine-Medium.ttf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Domine;
+  src: url('../public/static/fonts/Domine-SemiBold.ttf') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Domine;
+  src: url('../public/static/fonts/Domine-Bold.ttf') format('opentype');
+  font-weight: 700;
+}
+
 /* Italic font */
 
 @font-face {
@@ -58,32 +84,6 @@
   font-family: ITC Avant Garde Pro;
   src: url('../public/static/fonts/ITCAvantGardePro-Bold.otf') format('opentype');
   font-weight: 800;
-}
-
-/* Prose (serif) font */
-
-@font-face {
-  font-family: Domine;
-  src: url('../public/static/fonts/Domine-Regular.ttf') format('opentype');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: Domine;
-  src: url('../public/static/fonts/Domine-Medium.ttf') format('opentype');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: Domine;
-  src: url('../public/static/fonts/Domine-SemiBold.ttf') format('opentype');
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: Domine;
-  src: url('../public/static/fonts/Domine-Bold.ttf') format('opentype');
-  font-weight: 700;
 }
 
 @layer base {
