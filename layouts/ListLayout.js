@@ -37,14 +37,16 @@ export default function ListLayout({
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <PageTitle>{title}</PageTitle>
-          <p className="text-gray-800 dark:text-gray-300">{description ? description : null}</p>
+          <p className="font-medium text-gray-800 dark:text-gray-300">
+            {description ? description : null}
+          </p>
           <div className="relative max-w-lg">
             <input
               aria-label="Search articles"
               type="text"
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder="Search articles"
-              className="block w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
+              className="block w-full rounded-md border border-gray-300 bg-white px-4 py-2 font-medium text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
             />
             <svg
               className="absolute right-3 top-3 h-5 w-5 text-gray-400 dark:text-gray-300"
@@ -71,9 +73,9 @@ export default function ListLayout({
                 <article className="space-y-1">
                   <Link
                     href={`/${slug}`}
-                    className="block text-gray-900 transition-all duration-300 group-hover:border-l-4 group-hover:border-secondary-300 group-hover:pl-4 dark:text-gray-100 dark:group-hover:border-secondary-400"
+                    className="block text-gray-900 transition-all duration-300 group-hover:border-l-4 group-hover:border-secondary-300 group-hover:pl-4 dark:text-gray-200 dark:group-hover:border-secondary-400"
                   >
-                    <div className="space-y-0.5 xl:col-span-3">
+                    <div className="space-y-0.5 pt-4 xl:col-span-3">
                       {date ? (
                         <time
                           className="text-xs font-semibold uppercase text-gray-600 dark:text-gray-400"
@@ -92,7 +94,7 @@ export default function ListLayout({
                       <div className="pb- flex flex-wrap gap-x-2 pb-1">
                         {Array.isArray(tags) && tags.map((tag) => <Tag key={tag} text={tag} />)}
                       </div>
-                      <div className="prose max-w-none text-gray-600 dark:text-gray-400">
+                      <div className="prose max-w-none font-medium text-gray-700 dark:text-gray-300">
                         {summary}
                       </div>
                       <LinkArrow text="Read More" direction="right" href={`/${slug}`} />

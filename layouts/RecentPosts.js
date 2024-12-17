@@ -46,16 +46,16 @@ export default function RecentPosts({
             return (
               <li key={slug} className="group no-arrow py-2">
                 <article className="flex flex-col">
-                  {/* {date ? (
-                      <time
-                        className="mb-0 pb-0 text-xs font-semibold uppercase text-gray-600 dark:text-gray-400"
-                        dateTime={date}
-                      >
-                        {formatDateShort(date)}
-                      </time>
-                    ) : null} */}
+                  {date ? (
+                    <time
+                      className="mb-0 pb-0 text-xs font-semibold uppercase text-gray-600 dark:text-gray-400"
+                      dateTime={date}
+                    >
+                      {formatDateShort(date)}
+                    </time>
+                  ) : null}
                   <div className="mt-0 flex items-center gap-x-2 pb-2">
-                    <Link href={`/${slug}`} className="text-gray-900 dark:text-gray-100">
+                    <Link href={`/${slug}`} className="text-gray-900 dark:text-gray-200">
                       <h3 className="whitespace-nowrap pt-2 text-3xl font-bold tracking-tight hover:underline">
                         {title}
                       </h3>
