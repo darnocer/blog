@@ -43,11 +43,10 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Type({ posts, type }) {
-  const title =
-    type
-      .split('-')
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ') + 's'
+  const title = type
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
   // const description = pageContent.type.description(title)
 
   return (
