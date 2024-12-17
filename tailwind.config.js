@@ -125,6 +125,12 @@ module.exports = {
       borderWidth: {
         1: '1px',
       },
+      boxShadow: {
+        greenDark: '0 0 22px 8px rgba(5, 255, 0, .25)',
+        green: '0 0 22px 8px rgba(39, 161, 133, .25)',
+        yellow: '0 0 22px 8px rgba(236, 172, 69, .25)',
+        code: '0 8px 16px rgba(0, 0, 0, 0.75)',
+      },
       typography: (theme) => ({
         DEFAULT: sharedTypographyStyles,
         dark: {
