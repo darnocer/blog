@@ -20,7 +20,7 @@ export default function RecentPosts({ posts, heading, directory }) {
             const { slug, date, title, summary, tags, type } = frontMatter
             return (
               <li key={slug} className="no-arrow py-0">
-                <article className="justify-stretch w-100 flex flex-row flex-nowrap items-center">
+                <article className="w-100 justify-stretch flex flex-row flex-nowrap items-center">
                   <Link
                     href={`/${type}/${slug}`}
                     className="justify-stretch flex content-center items-baseline gap-x-4"
