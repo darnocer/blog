@@ -13,15 +13,18 @@ export default function BadgeList({
   color = 'gray-200',
 }) {
   const sortedTypes = Object.keys(types).sort((a, b) => types[b] - types[a])
+
   return (
     <>
       {heading ? <Heading text={heading} level={level} border={border} color={color} /> : null}
       <div className="mb-6 flex flex-wrap justify-start">
         {Object.keys(types).length === 0 && 'No types found.'}
         {sortedTypes.map((t) => {
+          // Convert hyphenated keys back to a readable form
+          const displayText = t.replace(/-/g, ' ')
           return (
             <div key={t} className="mt-2 mb-2 mr-4">
-              <Badge text={t} />
+              <Badge text={displayText} />
             </div>
           )
         })}

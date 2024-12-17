@@ -2,9 +2,7 @@ import Link from 'next/link'
 import kebabCase from '@/lib/utils/kebabCase'
 
 const Badge = ({ text }) => {
-  console.log('Badge text:', text)
   const href = `/types/${kebabCase(text)}`
-  console.log('Generated href:', href)
 
   return text ? (
     <Link href={href}>
