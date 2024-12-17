@@ -9,7 +9,6 @@ status:
 content_type: musings
 tags:
   - spirituality
-  - mindfulness
 layout:
   - PostSimple
 ---
