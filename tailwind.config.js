@@ -6,6 +6,7 @@ const sharedTypographyStyles = {
   css: [
     {
       fontFamily: defaultTheme.fontFamily.serif,
+      fontWeight: 400,
       // base color
       color: colors.gray[800],
       // paragraphs
@@ -17,9 +18,10 @@ const sharedTypographyStyles = {
         fontWeight: 600,
         color: customColors.primary[500],
         textDecoration: 'none',
+        transition: 'all 0.3s ease',
         '&:hover': {
           color: customColors.primary[600],
-          textDecoration: 'underline',
+          textDecoration: 'underline !important',
         },
       },
       // headings
@@ -32,7 +34,7 @@ const sharedTypographyStyles = {
         fontWeight: '800',
         letterSpacing: defaultTheme.letterSpacing.tight,
         color: colors.gray[900],
-        fontSize: '3rem',
+        fontSize: '2.5rem',
         marginBottom: '0.5em',
         marginTop: '1em',
       },
@@ -179,11 +181,11 @@ module.exports = {
             },
             strong: {
               ...sharedTypographyStyles.css[0].strong,
-              color: colors.gray[300],
+              color: colors.gray[100],
             },
             blockquote: {
               ...sharedTypographyStyles.css[0].blockquote,
-              color: colors.gray[100],
+              color: colors.gray[300],
             },
             thead: {
               th: {
