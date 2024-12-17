@@ -2,10 +2,8 @@ import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-// import { getAllTags } from '@/lib/getAllTags'
 
 import RecentPosts from '@/layouts/RecentPosts'
-// import SectionContainer from '@/components/SectionContainer'
 import NewsletterForm from '@/components/NewsletterForm'
 
 import pageContent from '@/data/pageContent'
@@ -36,8 +34,7 @@ export default function Home({ posts, homeContent }) {
 
       <RecentPosts posts={posts} heading="Recent Posts" />
 
-      {/* 
-      {siteMetadata.newsletter.provider !== '' && (
+      {/* {siteMetadata.newsletter.provider !== '' && (
         <NewsletterForm
           title={pageContent.newsletter.heading}
           description={pageContent.newsletter.description}
