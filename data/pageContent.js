@@ -1,15 +1,11 @@
 const pageContent = {
   home: {
-    title: "Darian's Blog",
-    topicHeading: 'Topics',
-    tipsTagsHeading: 'Technical',
-    blogTagsHeading: 'Not Technical',
-    blogHeading: null,
-    tipHeading: 'Recent Posts',
+    title: "D's Blog",
+    postsHeading: 'Recent Posts',
   },
   newsletter: {
-    heading: 'Subscribe',
-    description: 'Get extremely infrequent updates about new posts',
+    heading: 'Receive updates from me',
+    description: 'Subscribe for occasional emails about new posts',
     error: '',
     success: '',
     button: '',
