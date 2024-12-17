@@ -42,7 +42,7 @@ const Callout = ({ type, text, title }) => {
         <div className="mr-2">{icon}</div>
         <p className="text-md my-0 font-bold">{title || 'Summary'}</p>
       </div>
-      {text && <div className="mt-2">{formatText(text)}</div>}
+      {text && <div className="mt-2 font-medium">{formatText(text)}</div>}
     </div>
   )
 }

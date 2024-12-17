@@ -7,7 +7,7 @@ import siteMetadata from '@/data/siteMetadata'
 const Logo = () => {
   return (
     <Link href="/" aria-label={siteMetadata.headerTitle}>
-      <div style={{ width: '100px' }} className="hover:cursor-pointer">
+      <div style={{ width: '75px' }} className="hover:cursor-pointer">
         <div className="block dark:hidden">
           <LogoLight style={{ width: '100%', height: 'auto', display: 'block' }} />
         </div>
