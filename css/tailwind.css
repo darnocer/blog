@@ -86,6 +86,18 @@
   font-weight: 700;
 }
 
+@layer base {
+  .prose a {
+    text-decoration: none;
+    font-weight: 600;
+    transition: ease 0.3s all;
+  }
+
+  .prose a:hover {
+    text-decoration: underline !important;
+  }
+}
+
 /* *** FOOTNOTES *** */
 
 /* Size of footnotes at bottom */
@@ -95,7 +107,7 @@ li[id^='user-content-fn'] p {
   font-size: 0.9rem !important;
 }
 
-/* Wrap footnote marker links in brackets  */
+/* Wrap footnote marker links in brackets */
 
 a[id^='user-content-fnref-']::before {
   content: '[';
@@ -105,11 +117,12 @@ a[id^='user-content-fnref-']::after {
   content: ']';
 }
 
-/* *** TYPOGRAPHY  *** */
+/* *** TYPOGRAPHY *** */
 
 /* CODE */
 
-/* hides backticks  */
+/* hides backticks */
+
 .prose code::before,
 .prose code::after {
   content: none !important;
@@ -119,10 +132,13 @@ a[id^='user-content-fnref-']::after {
   background-color: transparent !important;
 }
 
-/* Italic text  */
+/* Italic text */
+
 .prose em {
   font-family: 'Edu', cursive;
+
   font-size: 1.3rem;
+
   color: var(--accent);
 }
 
@@ -130,16 +146,24 @@ a[id^='user-content-fnref-']::after {
 
 .bold-underline {
   font-weight: 800;
+
   font-size: 1.2rem;
+
   color: var(--gray-100);
+
   text-decoration: underline;
+
   /* text-decoration-color: #eab307; */
+
   text-decoration-color: var(--tertiary);
+
   text-decoration-thickness: 4px;
+
   text-underline-offset: 3px;
 }
 
 /* tasks */
+
 .task-list-item::before {
   @apply hidden;
 }
@@ -153,15 +177,17 @@ a[id^='user-content-fnref-']::after {
 }
 
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
 
-/* Unordered list styles  */
+/* Unordered list styles */
 
 ul {
   list-style: none !important;
+
   padding-left: 0;
 }
 
@@ -169,17 +195,25 @@ ul {
 
 ul > li:not(.no-arrow) {
   position: relative;
+
   padding-left: 20px;
+
   margin-bottom: 5px;
 }
 
 ul > li:not(.no-arrow)::before {
   content: '\279C'; /* This is the unicode for the arrow symbol */
+
   /* color: #2dd4bf !important; */
+
   color: var(--secondary) !important;
+
   position: absolute;
+
   left: -10px;
+
   top: 0;
+
   color: inherit;
 }
 
@@ -187,35 +221,51 @@ ul > li:not(.no-arrow)::before {
 
 h2 .list-heading {
   position: relative;
+
   padding-left: 35px;
 }
 
 h2 .list-heading::before {
   content: counter(h2-counter);
+
   counter-increment: h2-counter;
+
   position: absolute;
+
   left: -5px;
+
   top: 2px;
+
   background: rgb(236, 172, 69, 0.75);
+
   color: var(--gray-900);
+
   font-size: large;
+
   width: 25px;
+
   height: 25px;
+
   border-radius: 50%;
+
   text-align: center;
+
   line-height: 25px;
+
   font-weight: bold;
 }
 
 /* Optional: Reset the counter at the start of a new section or container */
+
 .section {
   counter-reset: h2-counter;
 }
 
-/*  Summary/details */
+/* Summary/details */
 
 details[open] summary {
   border-radius: 5px 5px 0 0 !important;
+
   margin: 0;
 }
 
@@ -225,23 +275,37 @@ details {
 
 details > *:not(summary) {
   font-size: 1rem;
+
   padding: 1rem;
+
   background-color: var(--gray-300);
+
   border-radius: 0 0 5px 5px;
+
   margin: 0;
+
   color: var(--gray-900);
 }
 
 details summary {
   font-size: 1.2rem;
+
   font-weight: 600;
+
   text-decoration: underline;
+
   padding: 0.5rem;
+
   border-radius: 5px !important;
+
   list-style: none;
+
   background-color: var(--gray-400);
+
   color: var(--gray-900);
+
   cursor: pointer;
+
   margin: 0;
 }
 
@@ -251,11 +315,13 @@ details summary::-webkit-details-marker {
 
 details summary::before {
   content: '▶ ';
+
   color: rgb(236, 172, 69);
 }
 
 details[open] summary::before {
   content: '▼ ';
+
   color: rgb(236, 172, 69);
 }
 
@@ -263,35 +329,66 @@ details p {
   margin-top: 0 !important;
 }
 
-/* Ordered List Styles  */
+/* Ordered List Styles */
+
 /* ol {
-  list-style: none !important;
-  counter-reset: list-counter;
-  padding-left: 0;
+
+list-style: none !important;
+
+counter-reset: list-counter;
+
+padding-left: 0;
+
 }
+
+  
 
 ol > li {
-  counter-increment: list-counter;
-  position: relative;
-  margin-top: 10px;
+
+counter-increment: list-counter;
+
+position: relative;
+
+margin-top: 10px;
+
 }
+
+  
 
 ol > li::before {
-  content: counter(list-counter);
-  position: absolute;
-  left: -25px;
-  top: 2px;
-  background: rgb(236, 172, 69, 0.75);
-  color: #181818;
-  font-size: large;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 25px;
-  font-weight: bold;
+
+content: counter(list-counter);
+
+position: absolute;
+
+left: -25px;
+
+top: 2px;
+
+background: rgb(236, 172, 69, 0.75);
+
+color: #181818;
+
+font-size: large;
+
+width: 25px;
+
+height: 25px;
+
+border-radius: 50%;
+
+text-align: center;
+
+line-height: 25px;
+
+font-weight: bold;
+
 }
 
+  
+
 ol > li ul li {
-  margin-bottom: 5px;
+
+margin-bottom: 5px;
+
 } */

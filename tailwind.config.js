@@ -21,7 +21,7 @@ const sharedTypographyStyles = {
         transition: 'all 0.3s ease',
         '&:hover': {
           color: customColors.primary[600],
-          textDecoration: 'underline !important',
+          textDecoration: 'underline',
         },
       },
       // headings
