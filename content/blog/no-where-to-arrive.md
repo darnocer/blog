@@ -17,9 +17,9 @@ I thought I had done it.
 
 I thought I had it alllll figured out. 
 
-... Lol. 
+(... Lol.) 
 
-In my mid-twenties, I experienced a spiritual awakening— a moment so profound and life-altering, it fundamentally shifted how I viewed myself, others, and the world.
+In my mid-twenties, I experienced a spiritual awakening— an experience so profound and life-altering, it fundamentally shifted how I viewed myself, others, and the world.
 
 Amidst this awakening, I felt radical self-love, accompanied by increased confidence, contentment, peace, and joy— all feelings that were genuinely new to me. 
 
@@ -59,7 +59,7 @@ I decided to choose joy in each moment. After all, if you’re not enjoying life
 
 Above all, I committed to a practice of living in the present moment, the only place where true happiness is always available. 
 
-These changes in perspective allowed me to really settle into the journey that is life, accepting it fully with all of its ups and downs, rather than living from one milestone to the next, perpetually unsatisfied with each successive accomplishment. 
+These changes in perspective allowed me to really settle into the journey that is life, accepting it fully with all of its ups and downs, rather than living from one milestone to the next, perpetually dissatisfied with each successive accomplishment. 
 
 When I fully surrendered to the present and let go of preoccupation with the future, I found it easier to take meaningful action in the moment— actions that, ironically, better served my future self.
 
