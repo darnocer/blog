@@ -9,6 +9,8 @@ import { useRouter } from 'next/router'
 import LinkArrow from '@/components/LinkArrow'
 import PostHeader from '@/components/PostHeader'
 
+import ScrollIndicator from '@/components/ScrollIndicator'
+
 import { useEffect } from 'react'
 
 import Prism from 'prismjs'
@@ -25,48 +27,47 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
   }, [])
 
   return (
-    <SectionContainer container="small">
+    <>
       <BlogSEO url={`${siteMetadata.siteUrl}/blog/${frontMatter.slug}`} {...frontMatter} />
       <ScrollTopAndComment />
+      <ScrollIndicator direction="left" />
       <article>
-        <div>
-          <header>
-            <Breadcrumbs />
-            <PostHeader
-              title={title}
-              summary={summary}
-              tags={tags}
-              date={date}
-              contentType={content_type}
-            />
-          </header>
-          <div
-            className="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:divide-y-0 "
-            style={{ gridTemplateRows: 'auto 1fr' }}
-          >
-            <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-              <div className="section prose max-w-none pt-10 pb-8 font-serif dark:prose-dark">
-                {children}
-              </div>
+        <header>
+          <PostHeader
+            title={title}
+            summary={summary}
+            tags={tags}
+            date={date}
+            contentType={content_type}
+          />
+        </header>
+
+        <section
+          className="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:divide-y-0 "
+          style={{ gridTemplateRows: 'auto 1fr' }}
+        >
+          <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
+            <div className="section prose max-w-none pt-10 pb-8 font-serif dark:prose-dark">
+              {children}
             </div>
-            <Comments frontMatter={frontMatter} />
-            <footer>
-              <div className="flex flex-col text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
-                {prev && (
-                  <div className="pt-4 xl:pt-8">
-                    <LinkArrow text={prev.title} direction="left" href={`/${prev.slug}`} />
-                  </div>
-                )}
-                {next && (
-                  <div className="pt-4 xl:pt-8">
-                    <LinkArrow text={next.title} direction="right" href={`/${next.slug}`} />
-                  </div>
-                )}
-              </div>
-            </footer>
           </div>
-        </div>
+        </section>
+        <footer>
+          <Comments frontMatter={frontMatter} />
+          <div className="flex flex-col gap-y-2 text-sm font-medium justify-between sm:flex-row sm:text-base">
+            {prev && (
+              <div className="text-left">
+                <LinkArrow text={prev.title} direction="left" href={`/${prev.slug}`} />
+              </div>
+            )}
+            {next && (
+              <div className="text-right">
+                <LinkArrow text={next.title} direction="right" href={`/${next.slug}`} />
+              </div>
+            )}
+          </div>
+        </footer>
       </article>
-    </SectionContainer>
+    </>
   )
 }

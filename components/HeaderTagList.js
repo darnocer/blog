@@ -6,7 +6,7 @@ import SectionContainer from './SectionContainer'
 
 export default function HeaderTagList({ tags, heading }) {
   return (
-    <SectionContainer>
+    <>
       {heading ? <Heading text={heading} /> : null}
       {tags ? (
         <div className="flex flex-wrap justify-center">
@@ -18,6 +18,6 @@ export default function HeaderTagList({ tags, heading }) {
           ))}
         </div>
       ) : null}
-    </SectionContainer>
+    </>
   )
 }

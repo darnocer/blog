@@ -73,23 +73,26 @@ export default function ListLayout({
                 <article className="space-y-1">
                   <Link
                     href={`/${slug}`}
-                    className="block text-gray-900 transition-all duration-300 group-hover:border-l-4 group-hover:border-secondary-300 group-hover:pl-4 dark:text-gray-200 dark:group-hover:border-secondary-400"
+                    className="text-gray-900 transition-all duration-300 group-hover:border-l-4 group-hover:border-secondary-300 group-hover:pl-4 dark:text-gray-200 dark:group-hover:border-secondary-400 flex flex-col"
                   >
                     <div className="space-y-0.5 pt-4 xl:col-span-3">
-                      {date ? (
-                        <time
-                          className="text-xs font-semibold uppercase text-gray-600 dark:text-gray-400"
-                          dateTime={date}
-                        >
-                          {formatDate(date)}
-                        </time>
-                      ) : null}
+                      <div className="flex items-center gap-x-2">
+                        {date && (
+                          <time
+                            className="text-xs font-semibold uppercase text-gray-600 dark:text-gray-400"
+                            dateTime={date}
+                          >
+                            {formatDate(date)}
+                          </time>
+                        )}{' '}
+                        <span>|</span>
+                        {content_type && <Badge text={content_type} />}
+                      </div>
 
                       <div className="flex items-center gap-x-2 pt-1 pb-2">
-                        <h3 className="whitespace-nowrap pt-2 text-3xl font-bold tracking-tight hover:underline">
+                        <h3 className="break-words pt-2 text-3xl font-bold tracking-tight hover:underline">
                           {title}
                         </h3>
-                        {content_type ? <Badge text={content_type} /> : null}
                       </div>
                       <div className="pb- flex flex-wrap gap-x-2 pb-1">
                         {Array.isArray(tags) && tags.map((tag) => <Tag key={tag} text={tag} />)}
