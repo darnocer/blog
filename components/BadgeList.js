@@ -18,7 +18,7 @@ export default function BadgeList({
     <>
       {heading ? <Heading text={heading} level={level} border={border} color={color} /> : null}
       <div className="mb-6 flex flex-wrap justify-start">
-        {Object.keys(types).length === 0 && 'No types found.'}
+        <span className="font-semibold text-gray-500 dark:text-gray-400">{Object.keys(types).length === 0 && 'No types found.'}</span>
         {sortedTypes.map((t) => {
           // Convert hyphenated keys back to a readable form
           const displayText = t.replace(/-/g, ' ')
