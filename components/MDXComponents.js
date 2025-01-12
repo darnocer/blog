@@ -10,8 +10,10 @@ import PageTitle from './PageTitle'
 import CodeContainer from './CodeContainer'
 import Callout from './Callout'
 import Heading from './Heading'
-import WebflowComponentIcon from './icons/webflow-component'
 import InteractionIcon from './icons/interaction-icon'
+import DefinitionCallout from './DefinitionCallout'
+import Button from './Button'
+import Status from './Status'
 
 export const MDXComponents = {
   Image,
@@ -20,8 +22,10 @@ export const MDXComponents = {
   CodeContainer,
   Callout,
   Heading,
-  WebflowComponentIcon,
   InteractionIcon,
+  DefinitionCallout,
+  Button,
+  Status,
   a: CustomLink,
   pre: Pre,
   BlogNewsletterForm: BlogNewsletterForm,
