@@ -2,12 +2,14 @@ import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
+const PAGE_TITLE = "404 - Not Found"
+
 export default function FourZeroFour() {
   return (
     <>
-      <PageSEO title={`Page Not Found - ${siteMetadata.title}`} />
+      <PageSEO title={PAGE_TITLE} />
       <div className="flex flex-col items-start justify-start md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6">
-        <div className="space-x-2 pt-6 pb-8 md:space-y-5 md:border-r-2">
+        <div className="space-x-2 pt-6 pb-8 md:space-y-5 md:border-r-2 border-gray-500 dark:border-gray-700">
           <h1 className="text-6xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100  md:px-6 md:text-8xl md:leading-14">
             404
           </h1>

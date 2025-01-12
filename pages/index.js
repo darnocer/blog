@@ -5,11 +5,13 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 
 import RecentPosts from '@/layouts/RecentPosts'
 import NewsletterForm from '@/components/NewsletterForm'
+import CardGrid from '@/components/CardGrid'
 
-import pageContent from '@/data/pageContent'
 
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getSectionContent } from '@/lib/mdx'
+
+const PAGE_TITLE = "Home"
 
 export async function getStaticProps() {
   const homeContent = await getSectionContent('home')
@@ -24,7 +26,7 @@ export default function Home({ posts, homeContent }) {
 
   return (
     <>
-      <PageSEO description={siteMetadata.description} />
+      <PageSEO title={PAGE_TITLE} description={siteMetadata.description} />
 
       <MDXLayoutRenderer
         layout={frontMatter.layout || DEFAULT_LAYOUT}
@@ -32,7 +34,9 @@ export default function Home({ posts, homeContent }) {
         frontMatter={frontMatter}
       />
 
-      <RecentPosts posts={posts} heading="Recent Posts" />
+      <CardGrid heading="My Work"/>
+
+      {/* <RecentPosts posts={posts} heading="Recent Posts" /> */}
 
       {/* {siteMetadata.newsletter.provider !== '' && (
         <NewsletterForm

@@ -7,6 +7,8 @@ import pageContent from '@/data/pageContent'
 import ListLayout from '@/layouts/ListLayout'
 
 export const POSTS_PER_PAGE = 10
+const PAGE_TITLE = "All Posts"
+const PAGE_DESCRIPTION = ""
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter()
@@ -22,7 +24,7 @@ export async function getStaticProps() {
 export default function Blog({ posts, initialDisplayPosts, pagination }) {
   return (
     <>
-      <PageSEO title="Blog" description={siteMetadata.description} />
+      <PageSEO title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
       <ListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
