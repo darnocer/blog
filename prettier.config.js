@@ -6,13 +6,14 @@ module.exports = {
   useTabs: false,
   trailingComma: 'es5',
   bracketSpacing: true,
+  jsxSingleQuote: true, // Use single quotes in JSX
   overrides: [
     {
       files: ['*.mdx', '*.md'],
       options: {
-        proseWrap: 'never', // Prevent wrapping
-        htmlWhitespaceSensitivity: 'ignore', // Ignore whitespace in inline HTML
-        embeddedLanguageFormatting: 'off', // Avoid formatting embedded code
+        proseWrap: 'never',
+        htmlWhitespaceSensitivity: 'ignore',
+        embeddedLanguageFormatting: 'off',
       },
     },
   ],
