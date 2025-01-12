@@ -5,12 +5,14 @@ const customColors = require('./colors')
 const sharedTypographyStyles = {
   css: [
     {
-      // fontFamily: defaultTheme.fontFamily.serif,
       fontWeight: 400,
       // base color
       color: colors.gray[800],
       // paragraphs
       p: {
+        fontSize: '1.2rem',
+      },
+      li: {
         fontSize: '1.2rem',
       },
       // links
@@ -27,24 +29,25 @@ const sharedTypographyStyles = {
       // headings
       h1: {
         fontWeight: '800',
-        letterSpacing: defaultTheme.letterSpacing.tight,
         color: colors.gray[900],
+        fontSize: '3rem',
       },
       h2: {
         fontWeight: '800',
-        letterSpacing: defaultTheme.letterSpacing.tight,
         color: colors.gray[900],
         fontSize: '2.5rem',
         marginBottom: '0.5em',
         marginTop: '1em',
+        // fontFamily: defaultTheme.fontFamily.sans,
       },
       h3: {
         fontWeight: '800',
         color: colors.gray[900],
-        fontSize: '2.25rem',
+        fontSize: '2rem',
       },
       'h4,h5,h6': {
         color: colors.gray[900],
+        fontSize: '1.5rem'
       },
       // code
       pre: {
@@ -124,6 +127,7 @@ module.exports = {
       },
       borderWidth: {
         1: '1px',
+        0.5: '0.5px',
       },
       boxShadow: {
         greenDark: '0 0 22px 8px rgba(5, 255, 0, .25)',

@@ -93,10 +93,13 @@
     transition: ease 0.3s all;
   }
 
-  .prose a:hover {
+  .prose a:hover:not(.btn) {
     text-decoration: underline !important;
   }
+
 }
+
+
 
 /* *** FOOTNOTES *** */
 
@@ -137,7 +140,7 @@ a[id^='user-content-fnref-']::after {
 .prose em {
   font-family: 'Edu', cursive;
 
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 
   color: var(--accent);
 }
@@ -149,17 +152,20 @@ a[id^='user-content-fnref-']::after {
 
   font-size: 1.2rem;
 
-  color: var(--gray-100);
+  color: var(--gray-900);
 
   text-decoration: underline;
-
-  /* text-decoration-color: #eab307; */
 
   text-decoration-color: var(--tertiary);
 
   text-decoration-thickness: 4px;
 
   text-underline-offset: 3px;
+}
+
+
+.dark .bold-underline {
+  color: var(--gray-100);
 }
 
 /* tasks */
