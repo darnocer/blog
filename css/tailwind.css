@@ -96,10 +96,7 @@
   .prose a:hover:not(.btn) {
     text-decoration: underline !important;
   }
-
 }
-
-
 
 /* *** FOOTNOTES *** */
 
@@ -162,7 +159,6 @@ a[id^='user-content-fnref-']::after {
 
   text-underline-offset: 3px;
 }
-
 
 .dark .bold-underline {
   color: var(--gray-100);

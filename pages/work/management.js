@@ -1,9 +1,9 @@
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getMdxContent } from '@/lib/mdx'
-import {PageSEO} from '@/components/SEO'
+import { PageSEO } from '@/components/SEO'
 
 const DEFAULT_LAYOUT = 'PageLayout'
-const PAGE_TITLE = "Project Leadership"
+const PAGE_TITLE = 'Project Leadership'
 
 export async function getStaticProps() {
   const content = await getMdxContent('data', 'content', ['management'])

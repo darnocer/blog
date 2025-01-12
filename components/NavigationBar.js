@@ -9,9 +9,8 @@ import Link from '@/components/Link'
 const NavigationBar = () => {
   return (
     <header className="flex items-center justify-between py-6 px-6 md:px-0 m-auto w-full max-w-4xl">
+      <Logo />
 
-        <Logo />
-     
       <nav className="flex items-center text-base leading-5">
         <div className="hidden sm:flex items-center space-x-4">
           {headerNavLinks.map((link) =>

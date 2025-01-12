@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="mt-auto">
       <div className="mt-12 flex flex-col items-center font-medium">
         <div className="mb-3 flex space-x-4">
-        {footerNavLinks.map((link, index) => (
+          {footerNavLinks.map((link, index) => (
             <span key={link.title} className="flex items-center">
               <Link
                 className="text-xxs uppercase text-gray-500 underline dark:text-gray-400"

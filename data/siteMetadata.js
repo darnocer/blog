@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: "D. Nocera",
+  title: 'D. Nocera',
   author: 'Darian',
   description: 'Project Leadership & Transformational Wellness',
   language: 'en-us',

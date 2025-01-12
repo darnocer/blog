@@ -6,8 +6,8 @@ import pageContent from '@/data/pageContent'
 import PageTitle from '@/components/PageTitle'
 import BadgeList from '@/components/BadgeList'
 
-const PAGE_TITLE = "Content Types"
-const PAGE_DESCRIPTION = ""
+const PAGE_TITLE = 'Content Types'
+const PAGE_DESCRIPTION = ''
 
 export async function getStaticProps() {
   const types = await getAllTypes()
@@ -24,7 +24,6 @@ export default function Types({ types }) {
           <PageTitle>{pageContent.types.title}</PageTitle>
         </div>
         <div className="flex max-w-lg flex-wrap">
-
           <BadgeList types={types} />
         </div>
       </div>

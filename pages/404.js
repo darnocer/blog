@@ -2,7 +2,7 @@ import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
-const PAGE_TITLE = "404 - Not Found"
+const PAGE_TITLE = '404 - Not Found'
 
 export default function FourZeroFour() {
   return (

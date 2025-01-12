@@ -47,7 +47,7 @@ const sharedTypographyStyles = {
       },
       'h4,h5,h6': {
         color: colors.gray[900],
-        fontSize: '1.5rem'
+        fontSize: '1.5rem',
       },
       // code
       pre: {

@@ -17,7 +17,10 @@ export default function TagList({
     <>
       {heading ? <Heading text={heading} level={level} border={border} color={color} /> : null}
       <div className="mb-6 flex flex-wrap justify-start">
-      <span className="font-semibold text-gray-500 dark:text-gray-400"> {Object.keys(tags).length === 0 && 'No tags found.'}</span>
+        <span className="font-semibold text-gray-500 dark:text-gray-400">
+          {' '}
+          {Object.keys(tags).length === 0 && 'No tags found.'}
+        </span>
         {sortedTags.map((t) => {
           return (
             <div key={t} className="mt-2 mb-2 mr-4">

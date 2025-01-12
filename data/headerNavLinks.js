@@ -1,5 +1,4 @@
 const headerNavLinks = [
-
   {
     title: 'My Work',
     dropdown: [

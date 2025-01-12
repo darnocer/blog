@@ -98,7 +98,7 @@ const MobileNav = () => {
                     }`}
                   >
                     {link.dropdown.map((dropdownLink) => (
-                      <li key={dropdownLink.title} className="py-2 no-arrow font-semibold">
+                      <li key={dropdownLink.title} className="no-arrow py-2 font-semibold">
                         <Link
                           href={dropdownLink.href}
                           className="text-2xl text-gray-700 dark:text-gray-300"

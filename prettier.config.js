@@ -6,7 +6,6 @@ module.exports = {
   useTabs: false,
   trailingComma: 'es5',
   bracketSpacing: true,
-  // plugins: [require('@prettier/plugin-mdx')],
   overrides: [
     {
       files: '*.mdx',

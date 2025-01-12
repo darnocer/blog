@@ -7,11 +7,10 @@ import RecentPosts from '@/layouts/RecentPosts'
 import NewsletterForm from '@/components/NewsletterForm'
 import CardGrid from '@/components/CardGrid'
 
-
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getSectionContent } from '@/lib/mdx'
 
-const PAGE_TITLE = "Home"
+const PAGE_TITLE = 'Home'
 
 export async function getStaticProps() {
   const homeContent = await getSectionContent('home')
@@ -34,7 +33,7 @@ export default function Home({ posts, homeContent }) {
         frontMatter={frontMatter}
       />
 
-      <CardGrid heading="My Work"/>
+      <CardGrid heading="My Work" />
 
       {/* <RecentPosts posts={posts} heading="Recent Posts" /> */}
 

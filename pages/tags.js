@@ -6,8 +6,8 @@ import TagList from '@/components/TagList'
 
 import pageContent from '@/data/pageContent'
 
-const PAGE_TITLE = "Tags"
-const PAGE_DESCRIPTION = ""
+const PAGE_TITLE = 'Tags'
+const PAGE_DESCRIPTION = ''
 
 export async function getStaticProps() {
   const tags = await getAllTags()
@@ -16,7 +16,6 @@ export async function getStaticProps() {
 }
 
 export default function Tags({ tags }) {
-
   return (
     <>
       <PageSEO title={PAGE_TITLE} description={PAGE_DESCRIPTION} />

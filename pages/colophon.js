@@ -4,7 +4,7 @@ import { getMdxContent } from '@/lib/mdx'
 import { PageSEO } from '@/components/SEO'
 
 const DEFAULT_LAYOUT = 'ContentLayout'
-const PAGE_TITLE = "Colophon"
+const PAGE_TITLE = 'Colophon'
 
 export async function getStaticProps() {
   const content = await getMdxContent('data', 'content', ['colophon'])
@@ -17,7 +17,7 @@ export default function Colophon({ content }) {
   return (
     <>
       <PageSEO title={PAGE_TITLE} description="test" />
-      
+
       <MDXLayoutRenderer
         layout={frontMatter.layout || DEFAULT_LAYOUT}
         mdxSource={mdxSource}
