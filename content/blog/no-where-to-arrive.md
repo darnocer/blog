@@ -3,7 +3,7 @@ title: There's No Where to Arrive
 summary: 
 date: 2024-10-13
 aliases: 
-draft: true
+draft: false
 status:
   - published
 content_type: musings
