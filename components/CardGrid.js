@@ -14,26 +14,31 @@ const CardGrid = ({ heading }) => {
           const isDisabled = status === 'disabled'
 
           return (
-            <Link href={link}>
-            <div
-              key={index}
-              className={`relative flex flex-col justify-between rounded-lg border px-4 py-6 shadow-lg transition-all ease duration-200 dark:bg-black bg-black bg-opacity-80 border-gray-800 hover:border-black dark:border-gray-300/20 dark:hover:border-gray-400/40 cursor-pointer h-full
-                ${isDisabled ? 'cursor-not-allowed' : 'hover:border-gray-600/40 hover:shadow-none hover:bg-gray-700 dark:hover:bg-gray-850'}`}
-            >
-              {isDisabled && (
-                <div className="absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-50 text-white text-lg font-bold opacity-0 transition-opacity hover:opacity-100">
-                  Coming Soon
-                </div>
-              )}
-              <div className="text-3xl mb-4">
-                {icon.startsWith('/') ? (
-                  <Image src={icon} alt={title} width={32} height={32} />
-                ) : (
-                  <span>{icon}</span>
+            <Link href={link} key={index}>
+              <div
+                className={`ease relative flex flex-col justify-between rounded-lg border px-4 py-6 shadow-lg transition-all duration-200 dark:bg-black bg-black bg-opacity-80 border-gray-800 hover:border-black dark:border-gray-300/20 dark:hover:border-gray-400/40 cursor-pointer h-full
+                ${
+                  isDisabled
+                    ? 'cursor-not-allowed'
+                    : 'hover:border-gray-600/40 hover:shadow-none hover:bg-gray-700 dark:hover:bg-gray-850'
+                }`}
+              >
+                {isDisabled && (
+                  <div className="absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-50 text-white text-lg font-bold opacity-0 transition-opacity hover:opacity-100">
+                    Coming Soon
+                  </div>
                 )}
+                <div className="text-3xl mb-4">
+                  {icon.startsWith('/') ? (
+                    <Image src={icon} alt={title} width={32} height={32} />
+                  ) : (
+                    <span>{icon}</span>
+                  )}
+                </div>
+                <h3 className="text-lg font-sans font-bold text-gray-100 dark:text-gray-100">
+                  {title}
+                </h3>
               </div>
-              <h3 className="text-lg font-sans font-bold text-gray-100 dark:text-gray-100">{title}</h3>
-            </div>
             </Link>
           )
         })}
