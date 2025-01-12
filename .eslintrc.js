@@ -14,8 +14,15 @@ module.exports = {
     'plugin:storybook/recommended',
     'prettier',
   ],
+  overrides: [
+    {
+      files: ['*.mdx'],
+      rules: {
+        'prettier/prettier': 'off', // Disable Prettier in ESLint for MDX files
+      },
+    },
+  ],
   rules: {
-    'prettier/prettier': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 0,
     'no-unused-vars': 0,
