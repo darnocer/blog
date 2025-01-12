@@ -5,9 +5,9 @@ import NavigationBar from '@/components/NavigationBar'
 const LayoutWrapper = ({ children }) => {
   return (
     <>
-      <div className="flex h-screen flex-col justify-between">
+      <div className="align-start flex flex-col h-screen justify-start">
         <NavigationBar />
-        <main className="m-auto px-4 sm:px-6 lg:px-8 w-full max-w-4xl">{children}</main>
+        <main className="m-auto w-full max-w-5xl flex-grow px-6 lg:px-1">{children}</main>
         <Footer />
       </div>
     </>

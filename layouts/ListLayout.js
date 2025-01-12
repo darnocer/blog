@@ -9,6 +9,8 @@ import PageTitle from '@/components/PageTitle'
 import LinkArrow from '@/components/LinkArrow'
 import Badge from '@/components/Badge'
 
+import SectionContainer from '@/components/SectionContainer'
+
 export default function ListLayout({
   posts,
   title,
@@ -34,6 +36,7 @@ export default function ListLayout({
 
   return (
     <>
+    <SectionContainer>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <PageTitle>{title}</PageTitle>
@@ -65,7 +68,7 @@ export default function ListLayout({
           </div>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!filteredBlogPosts.length && <span className="mt-6">'No posts found.'</span>}
+          {!filteredBlogPosts.length && <span className="mt-6 font-semibold dark:text-gray-400 text-gray-600">No posts found.</span>}
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags, type, content_type } = frontMatter
             return (
@@ -116,6 +119,7 @@ export default function ListLayout({
           directory={directory}
         />
       )}
+      </SectionContainer>
     </>
   )
 }
