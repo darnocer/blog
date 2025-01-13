@@ -5,7 +5,7 @@ const footerNavLinks = [
     href: 'https://drive.google.com/file/d/1iTvpI1tIrhsLtupMHxhMja_BJkFOAb55/view?usp=drive_link',
     title: 'Resume',
   },
-  { href: 'mailto:d@rootedvision.co', title: 'Email' },
+  { href: 'mailto:d@rootedvision.co?Subject=Website Contact', title: 'Email' },
 ]
 
 export default footerNavLinks
