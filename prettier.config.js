@@ -11,7 +11,7 @@ module.exports = {
     {
       files: ['*.mdx', '*.md'],
       options: {
-        proseWrap: 'never',
+        proseWrap: 'preserve',
         htmlWhitespaceSensitivity: 'ignore',
         embeddedLanguageFormatting: 'off',
       },
