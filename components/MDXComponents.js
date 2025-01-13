@@ -10,10 +10,10 @@ import PageTitle from './PageTitle'
 import CodeContainer from './CodeContainer'
 import Callout from './Callout'
 import Heading from './Heading'
-import InteractionIcon from './icons/interaction-icon'
 import DefinitionCallout from './DefinitionCallout'
 import Button from './Button'
 import Status from './Status'
+import Testimonial from './Testimonial'
 
 export const MDXComponents = {
   Image,
@@ -22,10 +22,10 @@ export const MDXComponents = {
   CodeContainer,
   Callout,
   Heading,
-  InteractionIcon,
   DefinitionCallout,
   Button,
   Status,
+  Testimonial,
   a: CustomLink,
   pre: Pre,
   BlogNewsletterForm: BlogNewsletterForm,
