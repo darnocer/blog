@@ -7,7 +7,7 @@ const sharedTypographyStyles = {
     {
       fontWeight: 400,
       // base color
-      color: colors.gray[800],
+      color: colors.gray[900],
       // paragraphs
       p: {
         fontSize: '1.2rem',
@@ -84,6 +84,7 @@ const sharedTypographyStyles = {
       },
       blockquote: {
         borderLeftColor: customColors.secondary[500],
+        color: colors.gray[700],
       },
     },
   ],
@@ -93,13 +94,7 @@ module.exports = {
   experimental: {
     // optimizeUniversalDefaults: true,
   },
-  content: [
-    './pages/**/*.js',
-    './components/**/*.js',
-    './layouts/**/*.js',
-    './lib/**/*.js',
-    './data/**/*.mdx',
-  ],
+  content: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js', './lib/**/*.js', './data/**/*.mdx'],
   darkMode: 'class',
   theme: {
     extend: {
@@ -134,6 +129,9 @@ module.exports = {
         green: '0 0 22px 8px rgba(39, 161, 133, .25)',
         yellow: '0 0 22px 8px rgba(236, 172, 69, .25)',
         code: '0 8px 16px rgba(0, 0, 0, 0.75)',
+        tealDark: '0 0 20px 5px rgba(48, 161, 133, .25)',
+        teal: '0 0 20px 5px rgba(48, 161, 133, .1)',
+        white: '0 0 10px 1px rgba(255, 255, 255, .1)',
       },
       typography: (theme) => ({
         DEFAULT: sharedTypographyStyles,
@@ -195,7 +193,7 @@ module.exports = {
             },
             blockquote: {
               ...sharedTypographyStyles.css[0].blockquote,
-              color: colors.gray[300],
+              color: colors.gray[400],
             },
             thead: {
               th: {
