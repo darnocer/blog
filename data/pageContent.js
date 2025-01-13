@@ -10,10 +10,6 @@ const pageContent = {
     success: '',
     button: '',
   },
-  tips: {
-    title: 'Tips',
-    description: 'Short efficiency tips and snippets for random stuff',
-  },
   posts: {
     title: 'All Posts',
     description: null,
