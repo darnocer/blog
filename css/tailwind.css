@@ -98,6 +98,21 @@
   }
 }
 
+/* Italic text */
+.prose em {
+  font-family: 'Edu', cursive;
+
+  font-size: 1.2rem;
+
+  color: var(--accent);
+}
+
+.prose .no-style em {
+  font-family: serif !important;
+  color: inherit !important;
+  font-size: inherit !important;
+}
+
 /* *** FOOTNOTES *** */
 
 /* Size of footnotes at bottom */
@@ -130,16 +145,6 @@ a[id^='user-content-fnref-']::after {
 
 .no-code-bg code {
   background-color: transparent !important;
-}
-
-/* Italic text */
-
-.prose em {
-  font-family: 'Edu', cursive;
-
-  font-size: 1.2rem;
-
-  color: var(--accent);
 }
 
 /* Custom bold */
