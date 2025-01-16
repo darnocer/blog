@@ -29,7 +29,9 @@ const Testimonial = ({ quote, author }) => {
             <Star />
             <Star />
           </div>
-          <p className=' text-base mb-4 leading-normal font-semibold text-gray-900 dark:text-gray-100 mt-6'>{quote}</p>
+          <p className='italic text-base mb-4 leading-normal font-semibold text-gray-900 dark:text-gray-100 mt-6'>
+            {quote}
+          </p>
           <hr className=' border-gray-300 dark:border-gray-700 mt-0 mb-2' />
           <p className='font-semibold mb-0 font-sans text-right text-gray-700 dark:text-gray-300 leading-normal'>
             —{author}
