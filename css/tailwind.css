@@ -226,46 +226,40 @@ ul > li:not(.no-arrow)::before {
 
 /* Ordered list headings */
 
-h2 .list-heading {
+h2 .list-heading,
+h3 .list-heading,
+h4 .list-heading,
+h5 .list-heading {
   position: relative;
-
   padding-left: 35px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
 }
 
-h2 .list-heading::before {
-  content: counter(h2-counter);
-
-  counter-increment: h2-counter;
-
+h2 .list-heading::before,
+h3 .list-heading::before,
+h4 .list-heading::before,
+h5 .list-heading::before {
+  content: counter(h-counter);
+  counter-increment: h-counter;
   position: absolute;
-
   left: -5px;
-
-  top: 2px;
-
-  background: rgb(236, 172, 69, 0.75);
-
+  top: 0.5px;
+  background: var(--secondary);
   color: var(--gray-900);
-
-  font-size: large;
-
   width: 25px;
-
   height: 25px;
-
   border-radius: 50%;
-
   text-align: center;
-
-  line-height: 25px;
-
+  line-height: 1.5;
   font-weight: bold;
 }
 
 /* Optional: Reset the counter at the start of a new section or container */
 
 .section {
-  counter-reset: h2-counter;
+  counter-reset: h-counter;
 }
 
 /* Summary/details */

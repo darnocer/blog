@@ -15,6 +15,9 @@ const sharedTypographyStyles = {
       li: {
         fontSize: '1.2rem',
       },
+      'ul,ol': {
+        marginBottom: '24px',
+      },
       // links
       a: {
         fontWeight: 600,
@@ -31,6 +34,7 @@ const sharedTypographyStyles = {
         fontWeight: '800',
         color: colors.gray[900],
         fontSize: '3rem',
+        fontFamily: 'ITC Avant Garde Pro',
       },
       h2: {
         fontWeight: '800',
@@ -38,17 +42,33 @@ const sharedTypographyStyles = {
         fontSize: '2.5rem',
         marginBottom: '0.5em',
         marginTop: '1em',
-        // fontFamily: defaultTheme.fontFamily.sans,
+        fontFamily: 'ITC Avant Garde Pro',
       },
       h3: {
         fontWeight: '800',
         color: colors.gray[900],
         fontSize: '2rem',
+        fontFamily: 'ITC Avant Garde Pro',
       },
-      'h4,h5,h6': {
+      h4: {
         color: colors.gray[900],
+        fontWeight: '800',
         fontSize: '1.5rem',
+        fontFamily: 'ITC Avant Garde Pro',
       },
+      h5: {
+        color: colors.gray[900],
+        fontSize: '1.25rem',
+        fontWeight: '800',
+        fontFamily: 'ITC Avant Garde Pro',
+      },
+      h6: {
+        color: colors.gray[900],
+        fontSize: '1rem',
+        fontWeight: '800',
+        fontFamily: 'ITC Avant Garde Pro',
+      },
+
       // code
       pre: {
         backgroundColor: colors.gray[800],
