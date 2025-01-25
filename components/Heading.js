@@ -1,8 +1,7 @@
 import React from 'react'
 
 export default function Heading({ text, level = 'h2', border = 'border', color = 'gray-200' }) {
-  const borderClasses =
-    border === 'border' ? 'mb-8 border-b-2 border-gray-300 py-2 dark:border-gray-500 font-sans' : ''
+  const borderClasses = border === 'border' ? 'mb-8 border-b-2 border-gray-300 py-2 dark:border-gray-500 font-sans' : ''
 
   const HeadingLevels = {
     h1: ({ text }) => (
