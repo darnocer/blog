@@ -6,6 +6,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import RecentPosts from '@/layouts/RecentPosts'
 import NewsletterForm from '@/components/NewsletterForm'
 import CardGrid from '@/components/CardGrid'
+import SectionContainer from '@/components/SectionContainer'
 
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getSectionContent } from '@/lib/mdx'
@@ -32,10 +33,13 @@ export default function Home({ posts, homeContent }) {
         mdxSource={mdxSource}
         frontMatter={frontMatter}
       />
+      <SectionContainer padding='large' container='small'>
+        <CardGrid heading='My Work' />
+      </SectionContainer>
 
-      <CardGrid heading="My Work" />
-
-      {/* <RecentPosts posts={posts} heading="Recent Posts" /> */}
+      <SectionContainer padding='large' container='small'>
+        <RecentPosts posts={posts} heading='Recent Posts' />
+      </SectionContainer>
 
       {/* {siteMetadata.newsletter.provider !== '' && (
         <NewsletterForm

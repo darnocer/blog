@@ -8,7 +8,7 @@ import ExternalIcon from '@/components/icons/external.svg'
 
 const CardGrid = ({ heading }) => {
   return (
-    <SectionContainer padding='large' container='medium'>
+    <>
       <Heading level='h2' text={heading} />
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 sm:py-6 auto-rows-fr'>
         {cardData.map(({ title, link, icon, status }, index) => {
@@ -40,13 +40,13 @@ const CardGrid = ({ heading }) => {
                     <span>{icon}</span>
                   )}
                 </div>
-                <h3 className='text-lg font-sans font-bold'>{title}</h3>
+                <h3 className='text-base font-sans font-bold'>{title}</h3>
               </div>
             </Link>
           )
         })}
       </div>
-    </SectionContainer>
+    </>
   )
 }
 
