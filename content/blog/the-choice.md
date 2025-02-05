@@ -1,7 +1,7 @@
 ---
 title: It Starts with a Choice
 summary: 
-date: 2025-02-05
+date: 2025-02-04
 aliases: 
 draft: false
 status:
@@ -13,12 +13,13 @@ tags:
 layout:
   - PostSimple
 ---
-When choosing to walk a spiritual Path, there comes a time when one must make <span className="bold-underline">The Choice</span>: A conscious decision to play an active role in their Truth-seeking journey. 
 
-This Choice alerts Spirit that you are ready to be a conscious participant in the Game of Life. As part of making The Choice, we must also commit to daily self-cultivation. 
+When choosing to walk a spiritual Path, there comes a time when one must make <span className="bold-underline">The Choice</span>: A conscious decision to play an active role in their Truth-seeking journey.
 
-Our practice is a subtractive process. By removing that which doesn't serve our greater purpose, it brings us closer to our Destiny. 
+This **Choice** alerts Spirit that you are ready to be a conscious participant in the _Game of Life_. As part of making **The Choice**, we must also commit to daily self-cultivation.
 
-Through daily dedication to our spiritual practice, the veil is lifted; we begin to see things as they truly are. 
+Our practice is a subtractive process. By removing that which doesn't serve our greater purpose, it brings us closer to our Destiny.
 
-And things are beautiful. It is this deep appreciation and awe of the beauty that already surrounds us that moves us towards the Love & Light of the Infinite Creator. 
+Through daily dedication to our spiritual practice, the veil is lifted; we begin to see things as they truly are.
+
+And things are beautiful. It is this deep appreciation and awe of the beauty that already surrounds us that moves us towards the Love & Light of the Infinite Creator.
