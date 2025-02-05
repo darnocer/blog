@@ -12,7 +12,7 @@ const NavigationBar = () => {
       <Logo />
 
       <nav className='flex items-center text-base leading-5'>
-        <div className='hidden sm:flex items-center space-x-4'>
+        <div className='hidden sm:flex items-center'>
           {headerNavLinks.map((link) =>
             link.dropdown ? (
               <DropdownMenu key={link.title} title={link.title} links={link.dropdown} />
@@ -20,7 +20,7 @@ const NavigationBar = () => {
               <Link
                 key={link.title}
                 href={link.href}
-                className='p-1 font-semibold uppercase text-gray-700 duration-200 ease-in hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 sm:p-4'
+                className='p-1 font-semibold uppercase text-gray-700 duration-200 ease-in hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 sm:p-2'
               >
                 {link.title}
               </Link>

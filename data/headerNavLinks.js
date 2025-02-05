@@ -6,6 +6,10 @@ const headerNavLinks = [
       { href: '/work/spiritual', title: 'Transformational Wellness' },
     ],
   },
+  {
+    title: 'All Posts',
+    href: '/posts',
+  },
 ]
 
 export default headerNavLinks
