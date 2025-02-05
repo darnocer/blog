@@ -10,7 +10,12 @@ const MAX_DISPLAY = 5
 
 export default function RecentPosts({ posts, heading, directory, categoryFilter, typeFilter, tagFilter }) {
   const filteredByType = typeFilter
-    ? posts.filter((post) => post.content_type.some((type) => typeFilter.includes(type)))
+    ? posts.filter((post) => {
+        if (typeFilter.startsWith('!')) {
+          return !post.content_type.includes(typeFilter.substring(1)) // Exclude type
+        }
+        return post.content_type.includes(typeFilter) // Include type
+      })
     : posts
 
   const filteredByCategory = categoryFilter
@@ -51,7 +56,7 @@ export default function RecentPosts({ posts, heading, directory, categoryFilter,
                     {content_type && <Badge text={content_type} />}
                   </div>
                   <Link href={`/${slug}`} className='text-gray-900 dark:text-gray-200'>
-                    <h3 className='text-2xl font-bold tracking-tight hover:underline'>{title}</h3>
+                    <h3 className='text-2xl font-bold tracking-tight hover:cursor-pointer hover:underline'>{title}</h3>
                   </Link>
                   {tags && (
                     <div className='flex items-baseline gap-x-2'>

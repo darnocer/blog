@@ -4,6 +4,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 
 import RecentPosts from '@/layouts/RecentPosts'
+import RecentSnippets from '@/layouts/RecentSnippets'
 import NewsletterForm from '@/components/NewsletterForm'
 import CardGrid from '@/components/CardGrid'
 import SectionContainer from '@/components/SectionContainer'
@@ -37,8 +38,12 @@ export default function Home({ posts, homeContent }) {
         <CardGrid heading='My Work' />
       </SectionContainer>
 
+      <SectionContainer padding='medium' container='small'>
+        <RecentPosts posts={posts} heading='Recent Posts' typeFilter='!musings' />
+      </SectionContainer>
+
       <SectionContainer padding='large' container='small'>
-        <RecentPosts posts={posts} heading='Recent Posts' />
+        <RecentSnippets posts={posts} heading='Microblog' />
       </SectionContainer>
 
       {/* {siteMetadata.newsletter.provider !== '' && (
