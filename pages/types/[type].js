@@ -14,24 +14,32 @@ const root = process.cwd()
 
 export async function getStaticPaths() {
   const types = await getAllTypes()
+  console.log('Generated Type Paths:', types)
+
+  const paths = Object.keys(types)
+    .filter((type) => type)
+    .map((type) => ({
+      params: { type: kebabCase(type) },
+    }))
+
+  console.log('Generated Paths:', paths)
 
   return {
-    paths: Object.keys(types).map((type) => ({
-      params: {
-        type,
-      },
-    })),
+    paths,
     fallback: false,
   }
 }
 
 export async function getStaticProps({ params }) {
   const allPosts = await getAllFilesFrontMatter()
+
   const filteredPosts = allPosts.filter((post) => {
-    return post.draft !== true && kebabCase(post.content_type) === params.type
+    if (post.draft) return false
+
+    const postTypes = Array.isArray(post.content_type) ? post.content_type : [post.content_type]
+    return postTypes.some((type) => kebabCase(type) === params.type)
   })
 
-  // rss
   if (filteredPosts.length > 0) {
     const rss = generateRss(filteredPosts, `types/${params.type}/feed.xml`)
     const rssPath = path.join(root, 'public', 'types', params.type)
