@@ -6,7 +6,7 @@ aliases:
 draft: true
 status:
   - published
-content_type: blog
+content_type: article
 tags:
   - spirituality
 layout:
