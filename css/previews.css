@@ -1,0 +1,25 @@
+.mdx-preview {
+  @apply text-xs leading-relaxed text-gray-200 dark:text-gray-300 font-serif;
+}
+
+.mdx-preview h1,
+.mdx-preview h2,
+.mdx-preview h3 {
+  @apply text-gray-100 font-semibold leading-tight;
+}
+
+.mdx-preview p {
+  @apply text-gray-300;
+}
+
+.mdx-preview a {
+  @apply text-blue-400 hover:underline;
+}
+
+.mdx-preview strong {
+  @apply font-semibold text-gray-50;
+}
+
+.mdx-preview em {
+  @apply italic text-gray-200;
+}
