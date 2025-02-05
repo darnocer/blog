@@ -43,7 +43,7 @@ export default function Home({ posts, homeContent }) {
       </SectionContainer>
 
       <SectionContainer padding='large' container='small'>
-        <RecentSnippets posts={posts} heading='Microblog' />
+        <RecentSnippets posts={posts} heading='Reflections' />
       </SectionContainer>
 
       {/* {siteMetadata.newsletter.provider !== '' && (
