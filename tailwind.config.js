@@ -32,7 +32,7 @@ const sharedTypographyStyles = {
       // headings
       h1: {
         fontWeight: '800',
-        color: colors.gray[900],
+        color: colors.gray[800],
         fontSize: '3rem',
         fontFamily: 'ITC Avant Garde Pro',
       },

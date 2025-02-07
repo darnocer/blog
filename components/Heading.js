@@ -6,7 +6,7 @@ export default function Heading({ text, level = 'h2', border = 'border', color =
   const HeadingLevels = {
     h1: ({ text }) => (
       <h1
-        className={`font-sans font-bold leading-none tracking-tighter text-gray-800 dark:text-gray-100 ${borderClasses}`}
+        className={`text-5xl font-sans font-bold leading-none tracking-tighter text-gray-800 dark:text-gray-100 ${borderClasses}`}
       >
         {text}
       </h1>
@@ -20,7 +20,7 @@ export default function Heading({ text, level = 'h2', border = 'border', color =
     ),
     h3: ({ text }) => (
       <h3
-        className={`font-sans font-bold leading-none tracking-tighter text-gray-800 dark:text-gray-100 ${borderClasses}`}
+        className={`font-sans text-3xl font-bold leading-none tracking-tighter text-gray-800 dark:text-gray-100 ${borderClasses}`}
       >
         {text}
       </h3>
