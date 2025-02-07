@@ -1,8 +1,4 @@
 const pageContent = {
-  home: {
-    title: "D's Blog",
-    postsHeading: 'Recent Posts',
-  },
   newsletter: {
     heading: 'Receive updates from me',
     description: 'Subscribe for occasional emails about new posts',
