@@ -38,12 +38,12 @@ export default function Home({ posts, homeContent }) {
         <CardGrid heading='My Work' />
       </SectionContainer>
 
-      <SectionContainer padding='medium' container='small'>
+      {/* <SectionContainer padding='medium' container='small'>
         <RecentPosts posts={posts} heading='Recent Posts' typeFilter='!musings' />
-      </SectionContainer>
+      </SectionContainer> */}
 
       <SectionContainer padding='large' container='small'>
-        <RecentSnippets posts={posts} heading='Reflections' />
+        <RecentSnippets posts={posts} heading='Recent Musings' />
       </SectionContainer>
 
       {/* {siteMetadata.newsletter.provider !== '' && (
