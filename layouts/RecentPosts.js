@@ -54,17 +54,18 @@ export default function RecentPosts({ posts, heading, directory, categoryFilter,
                     )}{' '}
                     <span className='text-gray-700 dark:text-gray-400'>|</span>
                     {content_type && <Badge text={content_type} />}
+                    <span className='text-gray-700 dark:text-gray-400'>|</span>
+                    {tags && (
+                      <div className='flex items-baseline gap-x-2'>
+                        {tags.map((tag) => (
+                          <Tag key={tag} text={tag} />
+                        ))}
+                      </div>
+                    )}
                   </div>
                   <Link href={`/${slug}`} className='text-gray-900 dark:text-gray-200'>
                     <h3 className='text-2xl font-bold tracking-tight hover:cursor-pointer hover:underline'>{title}</h3>
                   </Link>
-                  {tags && (
-                    <div className='flex items-baseline gap-x-2'>
-                      {tags.map((tag) => (
-                        <Tag key={tag} text={tag} />
-                      ))}
-                    </div>
-                  )}
                 </article>
               </li>
             )
