@@ -22,4 +22,6 @@ The practice is simple: <span className="bold-underline">"begin again"</span>. A
 
 Eventually, the gaps in between periods of mindfulness begin to shorten, and the line between "practice" and "life" starts to dissolve.
 
-It is in the present moment that we find, quite literally, everything that we seek. Our True Nature, God, Happiness, and Peace are only available in the Now. And the Now is always available.
+It is in the present moment that we find, quite literally, everything that we seek. Our True Nature, God, Happiness, and Peace are only available in the Now.
+
+And the Now is always available.
