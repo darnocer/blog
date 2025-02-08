@@ -20,7 +20,7 @@ const Callout = ({ type = 'info', text, title = 'Summary' }) => {
         <div className='mr-2'>{icon}</div>
         <p className='text-md mt-1 font-bold'>{title}</p>
       </div>
-      {text && <div className='mt-2 font-semibold text-gray-600 dark:text-gray-300'>{formatText(text)}</div>}
+      {text && <div className='mt-2 font-semibold text-gray-700 dark:text-gray-300'>{formatText(text)}</div>}
     </div>
   )
 }
