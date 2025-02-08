@@ -1,7 +1,7 @@
 ---
 title: Time Never Wasted
 summary: 
-date: 2025-02-07
+date: 2025-02-01
 aliases: 
 draft: false
 status:

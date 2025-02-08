@@ -1,7 +1,7 @@
 ---
 title: It Starts with a Choice
 summary: 
-date: 2025-02-04
+date: 2025-02-06
 aliases: 
 draft: false
 status:

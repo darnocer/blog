@@ -1,7 +1,7 @@
 ---
 title: There's No Where to Arrive
 summary: 
-date: 2025-02-01
+date: 2025-02-03
 aliases: 
 draft: false
 status:
