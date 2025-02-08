@@ -8,6 +8,7 @@ import RecentSnippets from '@/layouts/RecentSnippets'
 import NewsletterForm from '@/components/NewsletterForm'
 import CardGrid from '@/components/CardGrid'
 import SectionContainer from '@/components/SectionContainer'
+import TagList from '@/components/TagList'
 
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getSectionContent } from '@/lib/mdx'
@@ -38,12 +39,12 @@ export default function Home({ posts, homeContent }) {
         <CardGrid heading='My Work' />
       </SectionContainer>
 
-      {/* <SectionContainer padding='medium' container='small'>
-        <RecentPosts posts={posts} heading='Recent Posts' typeFilter='!musings' />
-      </SectionContainer> */}
-
       <SectionContainer padding='large' container='small'>
-        <RecentSnippets posts={posts} heading='Recent Musings' />
+        <RecentSnippets posts={posts} heading='Latest Musing' numPosts={1} />
+      </SectionContainer>
+
+      <SectionContainer padding='medium' container='small'>
+        <RecentPosts posts={posts} heading='More Posts' typeFilter='!musings' />
       </SectionContainer>
 
       {/* {siteMetadata.newsletter.provider !== '' && (

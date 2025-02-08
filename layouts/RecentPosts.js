@@ -72,7 +72,7 @@ export default function RecentPosts({ posts, heading, directory, categoryFilter,
           })}
         </ul>
         <div className='mt-2'>
-          {filteredByTags.length > MAX_DISPLAY && <LinkArrow text='View All' direction='right' href={`/posts`} />}
+          {filteredByTags.length > MAX_DISPLAY && <LinkArrow text='See All Posts' direction='right' href={`/posts`} />}
         </div>
       </div>
     </>
