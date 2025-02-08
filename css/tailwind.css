@@ -112,6 +112,15 @@
   color: inherit !important;
   font-size: inherit !important;
 }
+/* 
+force line breaks for long links  */
+
+.prose a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
 
 /* *** FOOTNOTES *** */
 
