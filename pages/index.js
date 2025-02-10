@@ -9,6 +9,7 @@ import NewsletterForm from '@/components/NewsletterForm'
 import CardGrid from '@/components/CardGrid'
 import SectionContainer from '@/components/SectionContainer'
 import TagList from '@/components/TagList'
+import homeCardData from '@/data/cards/homeCardData'
 
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getSectionContent } from '@/lib/mdx'
@@ -36,7 +37,7 @@ export default function Home({ posts, homeContent }) {
         frontMatter={frontMatter}
       />
       <SectionContainer padding='large' container='small'>
-        <CardGrid heading='My Work' />
+        <CardGrid heading='My Work' data={homeCardData} />
       </SectionContainer>
 
       <SectionContainer padding='large' container='small'>
