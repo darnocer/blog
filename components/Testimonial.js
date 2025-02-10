@@ -1,5 +1,5 @@
 import React from 'react'
-import Star from '@/components/icons/star.svg'
+import Star from '@/components/icons/components/star.svg'
 
 const Testimonial = ({ quote, author }) => {
   return (

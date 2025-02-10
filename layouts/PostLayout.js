@@ -9,8 +9,8 @@ import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import ScrollIndicator from '@/components/ScrollIndicator'
 import PostHeaderSimple from '@/components/PostHeaderSimple'
-import ChevronLeft from '@/components/icons/ChevronLeftIcon'
-import ChevronRight from '@/components/icons/ChevronRightIcon'
+import ChevronLeft from '@/components/icons/ui/ChevronLeftIcon'
+import ChevronRight from '@/components/icons/ui/ChevronRightIcon'
 import LinkArrow from '@/components/LinkArrow'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`

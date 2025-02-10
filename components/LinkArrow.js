@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Link from '@/components/Link'
-import ChevronLeft from '@/components/icons/ChevronLeftIcon'
-import ChevronRight from '@/components/icons/ChevronRightIcon'
+import ChevronLeft from '@/components/icons/ui/ChevronLeftIcon'
+import ChevronRight from '@/components/icons/ui/ChevronRightIcon'
 
 export default function LinkArrow({ text, direction, href }) {
   return (

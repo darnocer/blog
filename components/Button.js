@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from '@/components/Link'
 
-import Download from '@/components/icons/download.svg'
-import Contact from '@/components/icons/paper-plane.svg'
-import Calendar from '@/components/icons/calendar.svg'
+import Download from '@/components/icons/buttons/download.svg'
+import Contact from '@/components/icons/buttons/paper-plane.svg'
+import Calendar from '@/components/icons/buttons/calendar.svg'
 
 const ICONS = {
   download: <Download />,
@@ -17,7 +17,7 @@ const Button = ({ action, text, link }) => {
   return (
     <Link
       href={link}
-      className='btn ease hover:pointer mr-6 inline-flex items-center justify-center gap-2 rounded-md
+      className='exclude-underline ease hover:pointer mr-6 inline-flex items-center justify-center gap-2 rounded-md
                  px-6 py-3 border 
        border-gray-700 dark:border-gray-300/30
                  bg-white dark:bg-black  
