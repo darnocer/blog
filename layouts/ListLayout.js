@@ -68,7 +68,7 @@ export default function ListLayout({ posts, title, description, initialDisplayPo
                   <article className='space-y-1'>
                     <Link
                       href={`/${slug}`}
-                      className='text-gray-900 transition-all duration-300 group-hover:border-l-4 group-hover:border-secondary-300 group-hover:pl-4 dark:text-gray-200 dark:group-hover:border-secondary-400 flex flex-col'
+                      className='text-gray-900 transition-all duration-300 group-hover:border-l-4 group-hover:border-accent-300 group-hover:pl-4 dark:text-gray-200 dark:group-hover:border-accent-400 flex flex-col'
                     >
                       <div className='space-y-0.5 pt-4 xl:col-span-3'>
                         <div className='flex items-center gap-x-2'>

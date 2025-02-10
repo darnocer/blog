@@ -18,8 +18,8 @@ const CardGrid = ({ heading }) => {
           return (
             <Link href={isDisabled ? '#' : link} key={index}>
               <div
-                className={`group ease-in-out relative flex flex-col justify-between rounded-md px-4 py-6 shadow-md transition-all duration-300 dark:bg-black dark:hover:bg-gray-900 border-1 dark:border-gray-400/20 dark:text-gray-200 dark:hover:text-gray-100 dark:hover:border-gray-400/30 h-full
-                ${isDisabled ? 'cursor-not-allowed' : 'cursor-pointer hover:shadow-teal dark:hover:shadow-tealDark'}`}
+                className={`group ease-in-out relative flex flex-col justify-between rounded-md px-4 py-6 shadow-md transition-all duration-300 text-gray-850 hover:text-black dark:bg-black dark:hover:bg-gray-900 border-2 border-secondary-600/60 hover:border-secondary-500/40 dark:border-secondary-500 dark:text-gray-200 dark:hover:text-gray-100 dark:hover:border-secondary-400/50 h-full
+                ${isDisabled ? 'cursor-not-allowed' : 'cursor-pointer hover:shadow-lg'}`}
               >
                 {isDisabled && (
                   <div className='absolute inset-0 flex items-center justify-center rounded-md dark:bg-black dark:bg-opacity-70 bg-gray-600 bg-opacity-50 text-accent-600 text-lg font-bold opacity-0 transition-opacity hover:opacity-100'>
