@@ -43,7 +43,7 @@ export const MDXComponents = {
     if (!layout) {
       return <div {...rest} />
     }
-    const Layout = require(`../layouts/${layout}`).default
+    const Layout = require(`./layout/${layout}`).default
     return <Layout {...rest} />
   },
 }

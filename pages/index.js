@@ -3,8 +3,8 @@ import siteMetadata from '@/data/siteMetadata'
 
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 
-import RecentPosts from '@/layouts/RecentPosts'
-import RecentSnippets from '@/layouts/RecentSnippets'
+import RecentPosts from '@/components/listings/RecentPosts'
+import RecentSnippets from '@/components/listings/RecentSnippets'
 import NewsletterForm from '@/components/blocks/NewsletterForm'
 import CardGrid from '@/components/blocks/CardGrid'
 import SectionContainer from '@/components/layout/SectionContainer'

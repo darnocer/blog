@@ -14,7 +14,7 @@ import ScrollIndicator from '@/components/post/ScrollIndicator'
 import { useEffect } from 'react'
 
 import Prism from 'prismjs'
-import '../lib/prism/dataview'
+import '../../lib/prism/dataview'
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { date, title, tags, summary, content_type } = frontMatter

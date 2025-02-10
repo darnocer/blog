@@ -5,7 +5,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import pageContent from '@/data/pageContent'
 
 import SectionContainer from '@/components/layout/SectionContainer'
-import RecentSnippets from '@/layouts/RecentSnippets'
+import RecentSnippets from '@/components/listings/RecentSnippets'
 import Heading from '@/components/headings/Heading'
 
 export const POSTS_PER_PAGE = 10

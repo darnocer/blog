@@ -4,7 +4,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import pageContent from '@/data/pageContent'
 
-import ListLayout from '@/layouts/ListLayout'
+import ListLayout from '@/components/listings/ListLayout'
 
 export const POSTS_PER_PAGE = 10
 const PAGE_TITLE = 'All Posts'
