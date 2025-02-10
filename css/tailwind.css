@@ -93,7 +93,7 @@
     transition: ease 0.3s all;
   }
 
-  .prose a:hover:not(.btn) {
+  .prose a:hover:not(.exclude-underline) {
     text-decoration: underline !important;
   }
 }
