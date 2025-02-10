@@ -25,7 +25,7 @@ Take things less seriously— smile at mistakes, looking for the lessons in each
 
 Choose joy in each moment. After all, if you’re not enjoying life, what’s the point?
 
-Above all, make [The Choice](/the-choice) to live in the present moment, the only place where true happiness is always available.
+Above all, make [The Choice](/choice) to live in the present moment, the only place where true happiness is always available.
 
 When you really settle into the journey that is life, you can accept it fully with all of its ups and downs, rather than living from one milestone to the next, perpetually dissatisfied with each successive accomplishment.
 
