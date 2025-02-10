@@ -3,14 +3,16 @@ import Link from '@/components/Link'
 
 import Download from '@/components/icons/download.svg'
 import Contact from '@/components/icons/paper-plane.svg'
+import Calendar from '@/components/icons/calendar.svg'
 
 const ICONS = {
   download: <Download />,
   contact: <Contact />,
+  schedule: <Calendar />,
 }
 
-const Button = ({ icon, text, link }) => {
-  const IconComponent = icon && ICONS[icon]
+const Button = ({ action, text, link }) => {
+  const IconComponent = action && ICONS[action]
 
   return (
     <Link
