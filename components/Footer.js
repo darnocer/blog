@@ -1,6 +1,6 @@
 import Link from '@/components/Link'
 import siteMetadata from '@/data/siteMetadata'
-import footerNavLinks from '@/data/footerNavLinks'
+import footerNavLinks from '@/data/nav/footerNavLinks'
 import SocialIcon from '@/components/icons/social-icons'
 
 export default function Footer() {

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import MobileNav from '@/components/MobileNav'
 import ThemeSwitch from '@/components/ThemeSwitch'
-import headerNavLinks from '@/data/headerNavLinks'
+import headerNavLinks from '@/data/nav/headerNavLinks'
 import Logo from '@/components/Logo'
 import Link from '@/components/Link'
 
