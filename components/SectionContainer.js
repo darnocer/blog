@@ -14,9 +14,7 @@ const SectionContainer = ({ padding, container, children }) => {
   }
 
   const sectionClasses = `${padding ? paddingClassNames[padding] : paddingClassNames.medium}`
-  const containerClasses = `m-auto w-full ${
-    container ? containerClassNames[container] : containerClassNames.medium
-  }`
+  const containerClasses = `m-auto w-full ${container ? containerClassNames[container] : containerClassNames.small}`
 
   return (
     <section className={sectionClasses}>
