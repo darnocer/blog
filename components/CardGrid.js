@@ -1,24 +1,23 @@
 import React from 'react'
 import Image from 'next/image'
-import cardData from '@/data/cardData'
 import Link from '@/components/Link'
 import Heading from '@/components/Heading'
 import SectionContainer from './SectionContainer'
-import ExternalIcon from '@/components/icons/external.svg'
+import ExternalIcon from '@/components/icons/ui/external.svg'
 
-const CardGrid = ({ heading }) => {
+const CardGrid = ({ heading, data }) => {
   return (
     <>
       <Heading level='h2' text={heading} />
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 sm:py-6 auto-rows-fr'>
-        {cardData.map(({ title, link, icon, status }, index) => {
+      <div className='not-prose grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 sm:py-6 auto-rows-fr'>
+        {data.map(({ title, link, icon, status }, index) => {
           const isDisabled = status === 'disabled'
           const isExternal = link.startsWith('http')
 
           return (
-            <Link href={isDisabled ? '#' : link} key={index}>
+            <Link href={isDisabled ? '#' : link} key={index} className='exclude-underline'>
               <div
-                className={`group ease-in-out relative flex flex-col justify-between rounded-md px-4 py-6 shadow-md transition-all duration-300 text-gray-850 hover:text-black dark:bg-black dark:hover:bg-gray-900 border-2 border-secondary-600/60 hover:border-secondary-500/40 dark:border-secondary-500 dark:text-gray-200 dark:hover:text-gray-100 dark:hover:border-secondary-400/50 h-full
+                className={`group ease-in-out relative flex flex-col justify-between rounded-md px-4 py-6 shadow-md transition-all duration-300 text-gray-850 hover:text-black dark:bg-black dark:hover:bg-gray-900 border-2 border-secondary-600/60 hover:border-secondary-500/40 dark:border-secondary-500/70 dark:text-gray-200 dark:hover:text-gray-100 dark:hover:border-secondary-500 h-full
                 ${isDisabled ? 'cursor-not-allowed' : 'cursor-pointer hover:shadow-lg'}`}
               >
                 {isDisabled && (

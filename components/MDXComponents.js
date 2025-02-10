@@ -14,6 +14,15 @@ import DefinitionCallout from './DefinitionCallout'
 import Button from './Button'
 import Status from './Status'
 import Testimonial from './Testimonial'
+import CardGrid from './CardGrid'
+
+import homeCardData from '@/data/cards/homeCardData'
+import workCardData from '@/data/cards/workCardData'
+
+const cardDataMap = {
+  home: homeCardData,
+  work: workCardData,
+}
 
 export const MDXComponents = {
   Image,
@@ -25,6 +34,7 @@ export const MDXComponents = {
   DefinitionCallout,
   Button,
   Status,
+  CardGrid: ({ type = 'work', ...props }) => <CardGrid {...props} data={cardDataMap[type] || []} />,
   Testimonial,
   a: CustomLink,
   pre: Pre,
