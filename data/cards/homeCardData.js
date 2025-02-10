@@ -1,7 +1,6 @@
 import LaptopIcon from '@/components/icons/components/LaptopIcon'
 import SparklesIcon from '@/components/icons/components/SparklesIcon'
 import MicrodoseIcon from '@/components/icons/components/MicrodoseIcon'
-import SoulScienceIcon from '@/components/icons/components/SoulScienceIcon'
 import PencilIcon from '@/components/icons/components/PencilIcon'
 
 const homeCardData = [

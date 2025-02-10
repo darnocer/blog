@@ -2,14 +2,14 @@ import { useState } from 'react'
 
 import formatDate from '@/lib/utils/formatDate'
 
-import Link from '@/components/Link'
-import Tag from '@/components/Tag'
-import Pagination from '@/components/Pagination'
-import PageTitle from '@/components/PageTitle'
-import LinkArrow from '@/components/LinkArrow'
-import Badge from '@/components/Badge'
+import Link from '@/components/links/Link'
+import Tag from '@/components/links/Tag'
+import Pagination from '@/components/links/Pagination'
+import PageTitle from '@/components/headings/PageTitle'
+import LinkArrow from '@/components/links/LinkArrow'
+import Badge from '@/components/links/Badge'
 
-import SectionContainer from '@/components/SectionContainer'
+import SectionContainer from '@/components/layout/SectionContainer'
 
 export default function ListLayout({ posts, title, description, initialDisplayPosts = [], pagination, directory }) {
   const [searchValue, setSearchValue] = useState('')

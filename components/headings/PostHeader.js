@@ -1,10 +1,10 @@
-import PageTitle from './PageTitle'
-import HeaderTagList from './HeaderTagList'
+import PageTitle from '@/components/headings/PageTitle'
+import HeaderTagList from '@/components/links/HeaderTagList'
 import formatDate from '@/lib/utils/formatDate'
-import Badge from './Badge'
-import Breadcrumbs from './Breadcrumbs'
+import Badge from '@/components/links/Badge'
+import Breadcrumbs from '@/components/links/Breadcrumbs'
 
-export default function PostHeaderSimple({ title, summary, tags, date, contentType }) {
+export default function PostHeader({ title, summary, tags, date, contentType }) {
   return (
     <>
       <div className='flex flex-col gap-y-4 border-b border-gray-200 pb-8 text-center dark:border-gray-700'>
@@ -26,7 +26,7 @@ export default function PostHeaderSimple({ title, summary, tags, date, contentTy
 
         <PageTitle>{title}</PageTitle>
 
-        {/* <HeaderTagList tags={tags} /> */}
+        <HeaderTagList tags={tags} />
 
         {/* <div className="m-4">
         <p className="italic">{summary}</p>

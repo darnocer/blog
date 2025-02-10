@@ -1,4 +1,4 @@
-import SectionContainer from '@/components/SectionContainer'
+import SectionContainer from '@/components/layout/SectionContainer'
 
 export default function PageLayout({ children }) {
   return (

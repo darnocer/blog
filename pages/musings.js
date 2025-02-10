@@ -4,9 +4,9 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import pageContent from '@/data/pageContent'
 
-import SectionContainer from '@/components/SectionContainer'
+import SectionContainer from '@/components/layout/SectionContainer'
 import RecentSnippets from '@/layouts/RecentSnippets'
-import Heading from '@/components/Heading'
+import Heading from '@/components/headings/Heading'
 
 export const POSTS_PER_PAGE = 10
 const PAGE_TITLE = 'Musings'

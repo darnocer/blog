@@ -1,5 +1,5 @@
 import fs from 'fs'
-import PageTitle from '@/components/PageTitle'
+import PageTitle from '@/components/headings/PageTitle'
 import generateRss from '@/lib/generate-rss'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFiles, getMdxContent } from '@/lib/mdx'
@@ -58,10 +58,10 @@ export default function Blog({ post, authorDetails, prev, next }) {
           next={next}
         />
       ) : (
-        <div className="mt-24 text-center">
+        <div className='mt-24 text-center'>
           <PageTitle>
             Under Construction{' '}
-            <span role="img" aria-label="roadwork sign">
+            <span role='img' aria-label='roadwork sign'>
               🚧
             </span>
           </PageTitle>

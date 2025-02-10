@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import Link from '@/components/Link'
-import Heading from '@/components/Heading'
-import SectionContainer from './SectionContainer'
+import Link from '@/components/links/Link'
+import Heading from '@/components/headings/Heading'
+
 import ExternalIcon from '@/components/icons/ui/external.svg'
 
 const CardGrid = ({ heading, data }) => {

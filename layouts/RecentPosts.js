@@ -1,10 +1,10 @@
-import Link from '@/components/Link'
+import Link from '@/components/links/Link'
 import formatDateShort from '@/lib/utils/formatDateShort'
-import LinkArrow from '@/components/LinkArrow'
-import Heading from '@/components/Heading'
-import SectionContainer from '@/components/SectionContainer'
-import Tag from '@/components/Tag'
-import Badge from '@/components/Badge'
+import LinkArrow from '@/components/links/LinkArrow'
+import Heading from '@/components/headings/Heading'
+import SectionContainer from '@/components/layout/SectionContainer'
+import Tag from '@/components/links/Tag'
+import Badge from '@/components/links/Badge'
 
 const MAX_DISPLAY = 5
 

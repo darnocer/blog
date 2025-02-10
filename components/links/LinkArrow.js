@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Link from '@/components/Link'
+import Link from '@/components/links/Link'
 import ChevronLeft from '@/components/icons/ui/ChevronLeftIcon'
 import ChevronRight from '@/components/icons/ui/ChevronRightIcon'
 

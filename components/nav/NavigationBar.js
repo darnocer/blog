@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-import MobileNav from '@/components/MobileNav'
-import ThemeSwitch from '@/components/ThemeSwitch'
+import MobileNav from '@/components/nav/MobileNav'
+import ThemeSwitch from '@/components/nav/ThemeSwitch'
 import headerNavLinks from '@/data/nav/headerNavLinks'
-import Logo from '@/components/Logo'
-import Link from '@/components/Link'
+import Logo from '@/components/nav/Logo'
+import Link from '@/components/links/Link'
 
 const NavigationBar = () => {
   return (

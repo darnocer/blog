@@ -1,4 +1,4 @@
-import Link from '@/components/Link'
+import Link from '@/components/links/Link'
 import siteMetadata from '@/data/siteMetadata'
 import footerNavLinks from '@/data/nav/footerNavLinks'
 import SocialIcon from '@/components/icons/social-icons'

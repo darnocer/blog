@@ -1,15 +1,15 @@
-import SectionContainer from '@/components/SectionContainer'
+import SectionContainer from '@/components/layout/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
-import Comments from '@/components/comments'
-import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import Breadcrumbs from '@/components/Breadcrumbs'
+import Comments from '@/components/post/comments'
+import ScrollTopAndComment from '@/components/post/ScrollTopAndComment'
+import Breadcrumbs from '@/components/links/Breadcrumbs'
 import { useRouter } from 'next/router'
-import LinkArrow from '@/components/LinkArrow'
-import PostHeader from '@/components/PostHeader'
+import LinkArrow from '@/components/links/LinkArrow'
+import PostHeader from '@/components/headings/PostHeader'
 
-import ScrollIndicator from '@/components/ScrollIndicator'
+import ScrollIndicator from '@/components/post/ScrollIndicator'
 
 import { useEffect } from 'react'
 

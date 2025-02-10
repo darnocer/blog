@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from '@/components/Link'
+import Link from '@/components/links/Link'
 
 import Download from '@/components/icons/buttons/download.svg'
 import Contact from '@/components/icons/buttons/paper-plane.svg'
