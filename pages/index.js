@@ -2,6 +2,7 @@ import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
 import { getAllFilesFrontMatter } from '@/lib/mdx'
+import { getAllTags } from '@/lib/getAllTags'
 
 import RecentPosts from '@/components/listings/RecentPosts'
 import RecentSnippets from '@/components/listings/RecentSnippets'
@@ -19,11 +20,12 @@ const PAGE_TITLE = 'Home'
 export async function getStaticProps() {
   const homeContent = await getSectionContent('home')
   const posts = await getAllFilesFrontMatter()
+  const tags = await getAllTags()
 
-  return { props: { posts, homeContent } }
+  return { props: { posts, homeContent, tags } }
 }
 
-export default function Home({ posts, homeContent }) {
+export default function Home({ posts, homeContent, tags }) {
   const { mdxSource, frontMatter } = homeContent
   const DEFAULT_LAYOUT = 'ContentLayout'
 
@@ -37,16 +39,24 @@ export default function Home({ posts, homeContent }) {
         frontMatter={frontMatter}
       />
       <SectionContainer padding='large' container='small'>
-        <CardGrid heading='My Work' data={homeCardData} />
+        <CardGrid heading='My Work' type='home' />
       </SectionContainer>
 
-      <SectionContainer padding='large' container='small'>
+      {/* <SectionContainer padding='large' container='small'>
         <RecentSnippets posts={posts} heading='Latest Musing' numPosts={1} />
+      </SectionContainer> */}
+
+      <SectionContainer padding='medium' container='small'>
+        <TagList tags={tags} heading='Explore By Topic' level='h2' />
+      </SectionContainer>
+
+      {/* <SectionContainer padding='medium' container='small'>
+        <RecentPosts posts={posts} heading='Shorter Reflections' typeFilter='musings' />
       </SectionContainer>
 
       <SectionContainer padding='medium' container='small'>
-        <RecentPosts posts={posts} heading='More Posts' typeFilter='!musings' />
-      </SectionContainer>
+        <RecentPosts posts={posts} heading='Longer Posts' typeFilter='!musings' />
+      </SectionContainer> */}
 
       {/* {siteMetadata.newsletter.provider !== '' && (
         <NewsletterForm
