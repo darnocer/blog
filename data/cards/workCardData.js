@@ -1,9 +1,9 @@
-import LaptopIcon from '@/components/icons/components/LaptopIcon'
-import SparklesIcon from '@/components/icons/components/SparklesIcon'
+import PsychedelicsIcon from '@/components/icons/components/PsychedelicsIcon'
+import MeditationIcon from '@/components/icons/components/MeditationIcon'
 
 const workCardData = [
-  { title: 'Psychedelics', link: '/work/psychedelics', icon: <LaptopIcon /> },
-  { title: 'Meditation', link: '/work/meditation', icon: <SparklesIcon /> },
+  { title: 'Psychedelics', link: '/work/psychedelics', icon: <PsychedelicsIcon /> },
+  { title: 'Meditation', link: '/work/meditation', icon: <MeditationIcon /> },
 ]
 
 export default workCardData

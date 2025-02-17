@@ -4,14 +4,14 @@ import MicrodoseIcon from '@/components/icons/components/MicrodoseIcon'
 import PencilIcon from '@/components/icons/components/PencilIcon'
 
 const homeCardData = [
-  { title: 'Project Leadership', link: '/work/management', icon: <LaptopIcon /> },
   { title: 'Transformational Wellness', link: '/work/spiritual', icon: <SparklesIcon /> },
-  { title: 'Microdose.wiki', link: 'https://microdose.wiki', icon: <MicrodoseIcon /> },
+  { title: 'Project Leadership', link: '/work/management', icon: <LaptopIcon /> },
   {
     title: 'Writing',
-    link: '/posts',
+    link: '/work/writing',
     icon: <PencilIcon />,
   },
+  { title: 'Microdose.wiki', link: 'https://microdose.wiki', icon: <MicrodoseIcon /> },
 ]
 
 export default homeCardData
