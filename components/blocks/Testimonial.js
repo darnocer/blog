@@ -3,7 +3,7 @@ import Star from '@/components/icons/components/star.svg'
 
 const Testimonial = ({ quote, author }) => {
   return (
-    <div className='flex justify-center max-w-none'>
+    <div className='flex justify-center max-w-none my-6'>
       <div className='relative w-full bg-gray-100 dark:bg-gray-800 border-l-4 border-secondary-500 p-6 rounded-md shadow-md'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
