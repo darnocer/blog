@@ -17,7 +17,7 @@ const Button = ({ action, text, link }) => {
   return (
     <Link
       href={link}
-      className='exclude-underline ease hover:pointer mr-6 inline-flex items-center justify-center gap-2 rounded-md
+      className='exclude-underline ease hover:pointer mb-4 sm:mb-0 mr-6 inline-flex items-center justify-center gap-2 rounded-md
                  px-6 py-3 border 
        border-gray-700 dark:border-gray-300/30
                  bg-white dark:bg-black  
