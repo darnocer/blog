@@ -1,7 +1,7 @@
 ---
-title: There's No Where to Arrive
+title: What to Do If You're Not Happy
 summary: 
-date: 2025-02-03
+date: 2025-02-14
 aliases: 
 draft: false
 status:
@@ -13,26 +13,37 @@ tags:
 layout:
   - PostSimple
 ---
-Happiness is not an aspiration for a future state, nor is it a state we can arrive at permanently. It's only ever possible to be happy in the present moment— right <span className="bold-underline">NOW</span>.
+Are you happy? 
 
-There is not a future point in time when your life will magically be devoid of all problems and you'll have all of your desires fulfilled so you can finally be happy.
+It is human nature to strive for happiness. 
 
-Achieving results or goals may bring happiness for a brief moment, but it's only temporary, and not a ticket to lasting fulfillment.
+But we can't be happy all of the time. 
 
-Resolve to let go of the results and fall in love with the process— showing up each day with curiosity and a willingness to experiment, rather than fixating on the end goal.
+Happiness also isn't a destination we can [arrive](/arrive) at. 
 
-Take things less seriously— smile at mistakes, looking for the lessons in each failure.
+So a better question may be: _"Are you content?"_
 
-Choose joy in each moment. After all, if you’re not enjoying life, what’s the point?
+Contentment **is** a realistic goal. 
 
-Above all, make [The Choice](/choice) to live in the present moment, the only place where true happiness is always available.
+If you answered _yes_, congratulations! You are doing great. 
 
-When you really settle into the journey that is life, you can accept it fully with all of its ups and downs, rather than living from one milestone to the next, perpetually dissatisfied with each successive accomplishment.
+If you answered _no_, you have only 3 options: 
+* **Leave** the situation 
+* **Change** the situation 
+* **Accept** the situation fully
 
-When you fully surrender to the present and let go of preoccupation with the future, it is easier to take meaningful action in the moment— actions that, ironically, better served your future self.
+That's it, those are your choices. 
 
-Knowing this, it feels almost absurd not to make an effort to live in the present moment— the only place where life actually happens.
+Leaving may not always be possible, but there's almost always _something_ you can change.
 
-In the end, there's no where to arrive.
+And if you can't, your only real option is to accept it _fully_ and to stop resisting reality as it is. Otherwise, you're left with one alternative: **suffering**.
 
-**You're already here.**
+We constantly overcomplicate things. We create problems for ourselves, when there are really only situations. 
+
+But if you don't like the situation you're in, you _do_ have the power to change your relationship to it.
+
+Take control of your life by employing one of these options. 
+
+Stop waiting for life to happen— **make it happen**.
+
+
