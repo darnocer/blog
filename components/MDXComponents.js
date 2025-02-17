@@ -15,14 +15,7 @@ import Button from '@/components/links/Button'
 import Status from '@/components/blocks/Status'
 import Testimonial from '@/components/blocks/Testimonial'
 import CardGrid from '@/components/blocks/CardGrid'
-
-import homeCardData from '@/data/cards/homeCardData'
-import workCardData from '@/data/cards/workCardData'
-
-const cardDataMap = {
-  home: homeCardData,
-  work: workCardData,
-}
+import Breadcrumbs from './links/Breadcrumbs'
 
 export const MDXComponents = {
   Image,
@@ -34,8 +27,9 @@ export const MDXComponents = {
   DefinitionCallout,
   Button,
   Status,
-  CardGrid: ({ type = 'work', ...props }) => <CardGrid {...props} data={cardDataMap[type] || []} />,
+  CardGrid,
   Testimonial,
+  Breadcrumbs,
   a: CustomLink,
   pre: Pre,
   BlogNewsletterForm: BlogNewsletterForm,

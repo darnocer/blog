@@ -2,10 +2,19 @@ import React from 'react'
 import Image from 'next/image'
 import Link from '@/components/links/Link'
 import Heading from '@/components/headings/Heading'
-
 import ExternalIcon from '@/components/icons/ui/external.svg'
 
-const CardGrid = ({ heading, data }) => {
+import homeCardData from '@/data/cards/homeCardData'
+import workCardData from '@/data/cards/workCardData'
+
+const cardDataMap = {
+  home: homeCardData,
+  work: workCardData,
+}
+
+const CardGrid = ({ heading, type = 'work' }) => {
+  const data = cardDataMap[type] || []
+
   return (
     <>
       <Heading level='h2' text={heading} />
