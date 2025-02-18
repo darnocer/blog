@@ -32,7 +32,7 @@ In the West, we often dismiss Eastern spiritual concepts in favor of "logic" and
 
 We like to believe we already know it all. But the truth is: we don't.
 
-Stay humble, stay curious— there is always more to learn. 
+Stay humble, stay curious— there is always more to learn. And that, at least in part, is what spirituality is really about. 
 
 
 
