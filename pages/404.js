@@ -1,5 +1,5 @@
 import Link from '@/components/links/Link'
-import { PageSEO } from '@/components/SEO'
+import { PageSEO } from '@/components/seo/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
 const PAGE_TITLE = '404 - Not Found'

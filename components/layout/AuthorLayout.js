@@ -1,6 +1,6 @@
 import SocialIcon from '@/components/icons/social-icons'
 import Image from '@/components/blocks/Image'
-import { PageSEO } from '@/components/SEO'
+import { PageSEO } from '@/components/seo/SEO'
 
 import Heading from '@/components/headings/Heading'
 

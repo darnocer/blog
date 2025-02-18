@@ -1,7 +1,7 @@
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getMdxContent } from '@/lib/mdx'
 
-import { PageSEO } from '@/components/SEO'
+import MetadataWrapper from '@/components/seo/MetadataWrapper'
 
 const DEFAULT_LAYOUT = 'PageLayout'
 const PAGE_TITLE = 'Sitemap'
@@ -15,14 +15,12 @@ export default function Sitemap({ content }) {
   const { mdxSource, frontMatter } = content
 
   return (
-    <>
-      <PageSEO title={PAGE_TITLE} description='test' />
-
+    <MetadataWrapper title={PAGE_TITLE}>
       <MDXLayoutRenderer
         layout={frontMatter.layout || DEFAULT_LAYOUT}
         mdxSource={mdxSource}
         frontMatter={frontMatter}
       />
-    </>
+    </MetadataWrapper>
   )
 }

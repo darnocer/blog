@@ -1,5 +1,4 @@
-import { PageSEO } from '@/components/SEO'
-import siteMetadata from '@/data/siteMetadata'
+import MetadataWrapper from '@/components/seo/MetadataWrapper'
 
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import pageContent from '@/data/pageContent'
@@ -7,8 +6,7 @@ import pageContent from '@/data/pageContent'
 import ListLayout from '@/components/listings/ListLayout'
 
 export const POSTS_PER_PAGE = 10
-const PAGE_TITLE = 'All Posts'
-const PAGE_DESCRIPTION = ''
+const PAGE_TITLE = 'Posts'
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter()
@@ -23,8 +21,7 @@ export async function getStaticProps() {
 
 export default function Blog({ posts, initialDisplayPosts, pagination }) {
   return (
-    <>
-      <PageSEO title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+    <MetadataWrapper title={PAGE_TITLE}>
       <ListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
@@ -32,6 +29,6 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
         title={pageContent.posts.title}
         description={pageContent.posts.description}
       />
-    </>
+    </MetadataWrapper>
   )
 }

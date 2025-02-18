@@ -1,6 +1,10 @@
-import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
+import pageMetadata from '@/data/pageMetadata'
 
+import MetadataWrapper from '@/components/seo/MetadataWrapper'
+
+import { MDXLayoutRenderer } from '@/components/MDXComponents'
+import { getSectionContent } from '@/lib/mdx'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { getAllTags } from '@/lib/getAllTags'
 
@@ -10,10 +14,6 @@ import NewsletterForm from '@/components/blocks/NewsletterForm'
 import CardGrid from '@/components/blocks/CardGrid'
 import SectionContainer from '@/components/layout/SectionContainer'
 import TagList from '@/components/links/TagList'
-import homeCardData from '@/data/cards/homeCardData'
-
-import { MDXLayoutRenderer } from '@/components/MDXComponents'
-import { getSectionContent } from '@/lib/mdx'
 
 const PAGE_TITLE = 'Home'
 
@@ -30,9 +30,7 @@ export default function Home({ posts, homeContent, tags }) {
   const DEFAULT_LAYOUT = 'ContentLayout'
 
   return (
-    <>
-      <PageSEO title={PAGE_TITLE} description={siteMetadata.description} />
-
+    <MetadataWrapper title={PAGE_TITLE}>
       <MDXLayoutRenderer
         layout={frontMatter.layout || DEFAULT_LAYOUT}
         mdxSource={mdxSource}
@@ -64,6 +62,6 @@ export default function Home({ posts, homeContent, tags }) {
           description={pageContent.newsletter.description}
         />
       )} */}
-    </>
+    </MetadataWrapper>
   )
 }

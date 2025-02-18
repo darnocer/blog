@@ -1,12 +1,12 @@
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getMdxContent } from '@/lib/mdx'
-import { PageSEO } from '@/components/SEO'
+import { getAllFilesFrontMatter } from '@/lib/mdx'
+
+import MetadataWrapper from '@/components/seo/MetadataWrapper'
 
 import SectionContainer from '@/components/layout/SectionContainer'
 import RecentSnippets from '@/components/listings/RecentSnippets'
 import RecentPosts from '@/components/listings/RecentPosts'
-
-import { getAllFilesFrontMatter } from '@/lib/mdx'
 
 const DEFAULT_LAYOUT = 'PageLayout'
 const PAGE_TITLE = 'Writing'
@@ -21,9 +21,7 @@ export default function Writing({ content, posts }) {
   const { mdxSource, frontMatter } = content
 
   return (
-    <>
-      <PageSEO title={PAGE_TITLE} description='test' />
-
+    <MetadataWrapper title={PAGE_TITLE}>
       <MDXLayoutRenderer
         layout={frontMatter.layout || DEFAULT_LAYOUT}
         mdxSource={mdxSource}
@@ -41,6 +39,6 @@ export default function Writing({ content, posts }) {
       <SectionContainer padding='medium' container='small'>
         <RecentPosts posts={posts} heading='Longer Posts' typeFilter='!musings' />
       </SectionContainer>
-    </>
+    </MetadataWrapper>
   )
 }

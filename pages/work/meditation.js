@@ -1,6 +1,7 @@
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getMdxContent } from '@/lib/mdx'
-import { PageSEO } from '@/components/SEO'
+
+import MetadataWrapper from '@/components/seo/MetadataWrapper'
 
 import SectionContainer from '@/components/layout/SectionContainer'
 import RecentPosts from '@/components/listings/RecentPosts'
@@ -20,9 +21,7 @@ export default function Meditation({ content, posts }) {
   const { mdxSource, frontMatter } = content
 
   return (
-    <>
-      <PageSEO title={PAGE_TITLE} description='test' />
-
+    <MetadataWrapper title={PAGE_TITLE}>
       <MDXLayoutRenderer
         layout={frontMatter.layout || DEFAULT_LAYOUT}
         mdxSource={mdxSource}
@@ -32,6 +31,6 @@ export default function Meditation({ content, posts }) {
       <SectionContainer padding='medium' container='small'>
         <RecentPosts posts={posts} heading='Related Posts' tagFilter='mindfulness' />
       </SectionContainer>
-    </>
+    </MetadataWrapper>
   )
 }

@@ -1,5 +1,5 @@
 import SectionContainer from '@/components/layout/SectionContainer'
-import { BlogSEO } from '@/components/SEO'
+import { BlogSEO } from '@/components/seo/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
 import Comments from '@/components/post/comments'

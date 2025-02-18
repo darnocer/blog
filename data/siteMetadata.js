@@ -1,14 +1,15 @@
 const siteMetadata = {
-  title: 'D. Nocera',
+  title: 'Darian Nocera',
   author: 'Darian',
-  description: 'Project Leadership & Transformational Wellness',
+  description:
+    'Darian is a former project manager turned transformational wellness mentor specializing in spiritual healing, psychedelic journeys, and mindfulness & meditation.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.dnocera.com',
   siteRepo: 'https://github.com/darnocer/blog',
   siteLogo: '/static/images/logos/logo.png',
   image: '/static/images/avatar.png',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/default-social-share.png',
   website: 'https://www.dnocera.com',
   email: 'd@rootedvision.co',
   github: 'https://github.com/darnocer',

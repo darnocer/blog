@@ -1,7 +1,7 @@
 import Link from '@/components/links/Link'
 import PageTitle from '@/components/headings/PageTitle'
 import SectionContainer from '@/components/layout/SectionContainer'
-import { BlogSEO } from '@/components/SEO'
+import { BlogSEO } from '@/components/seo/SEO'
 import CustomImage from '@/components/blocks/Image'
 import Tag from '@/components/links/Tag'
 import siteMetadata from '@/data/siteMetadata'
