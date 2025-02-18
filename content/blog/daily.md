@@ -1,5 +1,5 @@
 ---
-title: Spend Your Time Doing This
+title: Daily Spiritual Practices
 summary: 
 date: 2025-02-01
 aliases: 

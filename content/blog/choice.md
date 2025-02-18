@@ -22,4 +22,4 @@ Our practice is a subtractive process. By removing that which doesn't serve our 
 
 Through daily dedication to our spiritual practice, the veil is lifted; we begin to see things as they truly are.
 
-And things truly are beautiful. It is this deep appreciation and awe of the beauty that already surrounds us that moves us closer towards the Love & Light of the Infinite Creator.
+And things truly are beautiful. It is this deep appreciation and awe of the beauty that already surrounds us that moves us closer towards the Love & Light of the Absolute. 

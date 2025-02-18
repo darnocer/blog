@@ -1,5 +1,5 @@
 ---
-title: The Chemical Imbalance Myth
+title: The "Chemical Imbalance" Myth
 summary: 
 date: 2025-02-08
 aliases: 

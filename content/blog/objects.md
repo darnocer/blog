@@ -1,5 +1,5 @@
 ---
-title: Objects of Meditation
+title: Working with Objects of Meditation
 summary: 
 date: 2025-02-05
 aliases: 

@@ -1,5 +1,5 @@
 ---
-title: Who Am I?
+title: The Most Important Question
 summary: 
 date: 2025-02-12
 aliases: 
@@ -19,19 +19,19 @@ Can you answer this question?
 
 The answer to this question lies not in your race, gender, political views, occupation, or relationship status. 
 
-At its core, this question asks you to look beyond labels— to the essence of who you **truly** are.
+The core of this question means to look beyond labels— to the essence of who you **truly** are.
 
 It's okay if you've forgotten. We all do. 
 
 In meditation, we sometimes ask ourselves: _"Who is having these thoughts?"_
 
-Through a meditation practice, you learn who you _thought_ you were is simply an ever-changing collection of beliefs, opinions, traits, and preferences. 
+Through a meditation practice, you learn who you **thought** you were is simply an ever-changing collection of beliefs, opinions, traits, and preferences. 
 
 And you may struggle to find this thing you call _"I"_. 
 
 Our thoughts are like clouds— constantly shifting. Sometimes light and fluffy, sometimes dark and stormy. But no matter what, there is always a blue sky underneath.
 
-_You_ are the ever-present blue sky. 
+And _you_ are the ever-present blue sky. 
 
 Of course, this is a metaphor, but the nature of "I" is worth investigating for yourself. 
 

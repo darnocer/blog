@@ -31,7 +31,7 @@ When you really settle into the journey that is life, you can accept it fully wi
 
 When you fully surrender to the present and let go of preoccupation with the future, it is easier to take meaningful action in the moment— actions that, ironically, better served your future self.
 
-Knowing this, it feels almost absurd not to make an effort to live in the present moment— the only place where life actually happens.
+Knowing this, it feels almost absurd not to prioritize making an effort to live in the present moment— the only place where life actually happens.
 
 In the end, there's no where to arrive.
 
