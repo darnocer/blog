@@ -102,9 +102,11 @@
 .prose em {
   font-family: 'Edu', cursive;
 
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 
   color: var(--accent);
+
+  line-height: 100%;
 }
 
 .prose .no-style em {

@@ -19,3 +19,7 @@
 .mdx-preview em {
   @apply italic;
 }
+
+.mdx-preview .callout {
+  font-size: 1rem;
+}
