@@ -11,7 +11,7 @@ import Badge from '@/components/links/Badge'
 import { MDXComponents } from '@/components/MDXComponents'
 
 const MAX_SNIPPETS = 10
-const MAX_PREVIEW_LENGTH = 1200
+const MAX_PREVIEW_LENGTH = 1500
 
 export default function RecentSnippets({ heading, numPosts = MAX_SNIPPETS }) {
   const [snippets, setSnippets] = useState([])
@@ -67,7 +67,7 @@ export default function RecentSnippets({ heading, numPosts = MAX_SNIPPETS }) {
                   </Link>
 
                   <div className='mdx-preview prose prose-sm max-w-full'>
-                    <MDXRemote {...mdxSource} />
+                    <MDXRemote {...mdxSource} components={MDXComponents} />
                     {/* {isTruncated && (
                       <Link
                         href={`/${slug}`}

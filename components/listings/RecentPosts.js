@@ -64,7 +64,9 @@ export default function RecentPosts({ posts, heading, directory, categoryFilter,
                     )}
                   </div>
                   <Link href={`/${slug}`} className='text-gray-900 dark:text-gray-200'>
-                    <h3 className='text-2xl font-bold tracking-tight hover:cursor-pointer hover:underline'>{title}</h3>
+                    <h3 className='capitalize text-2xl font-bold tracking-tight hover:cursor-pointer hover:underline'>
+                      {title}
+                    </h3>
                   </Link>
                 </article>
               </li>

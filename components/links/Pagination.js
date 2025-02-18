@@ -17,21 +17,21 @@ export default function Pagination({ totalPages, currentPage }) {
 
   return (
     <div className='space-y-2 pt-6 pb-8 md:space-y-5'>
-      <nav className='flex justify-between'>
+      <nav className='items-center flex justify-between'>
         {prevPage ? (
           <LinkArrow text='Previous' direction='left' href={prevPageLink} />
         ) : (
-          <button rel='previous' className='cursor-auto disabled:opacity-50' disabled>
+          <button rel='previous' className='font-semibold cursor-auto disabled:opacity-50' disabled>
             Previous
           </button>
         )}
-        <span>
+        <span className='font-semibold opacity-60'>
           {currentPage} of {totalPages}
         </span>
         {nextPage ? (
           <LinkArrow text='Next' direction='right' href={nextPageLink} />
         ) : (
-          <button rel='next' className='cursor-auto disabled:opacity-50' disabled>
+          <button rel='next' className='font-semibold cursor-auto disabled:opacity-50' disabled>
             Next
           </button>
         )}
