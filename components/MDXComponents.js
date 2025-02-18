@@ -16,6 +16,7 @@ import Status from '@/components/blocks/Status'
 import Testimonial from '@/components/blocks/Testimonial'
 import CardGrid from '@/components/blocks/CardGrid'
 import Breadcrumbs from './links/Breadcrumbs'
+import TimeOfDayText from './headings/TimeOfDayText'
 
 export const MDXComponents = {
   Image,
@@ -30,6 +31,7 @@ export const MDXComponents = {
   CardGrid,
   Testimonial,
   Breadcrumbs,
+  TimeOfDayText,
   a: CustomLink,
   pre: Pre,
   BlogNewsletterForm: BlogNewsletterForm,
