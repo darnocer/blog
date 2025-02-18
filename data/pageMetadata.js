@@ -2,6 +2,10 @@ const pageMetadata = {
   Home: {
     title: 'Home',
   },
+  404: {
+    title: '404 - Not Found',
+    description: 'Oops!',
+  },
   Spiritual: {
     title: 'Work - Transformational Wellness',
     description: 'Spiritual Healing & Transformational Wellness Work',
