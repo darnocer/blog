@@ -14,7 +14,7 @@ const root = process.cwd()
 
 export async function getStaticPaths() {
   const types = await getAllTypes()
-  console.log('Generated Type Paths:', types)
+  // console.log('Generated Type Paths:', types)
 
   const paths = Object.keys(types)
     .filter((type) => type)
@@ -22,7 +22,7 @@ export async function getStaticPaths() {
       params: { type: kebabCase(type) },
     }))
 
-  console.log('Generated Paths:', paths)
+  // console.log('Generated Paths:', paths)
 
   return {
     paths,
