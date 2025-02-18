@@ -3,8 +3,10 @@ import pageMetadata from '@/data/pageMetadata'
 import { PageSEO } from '@/components/seo/SEO'
 
 const MetadataWrapper = ({ title, children }) => {
-  const metadata = pageMetadata[title] || {}
-  const metaTitle = metadata.title || title
+  const pageKey = String(title) // Ensure title is always a string
+  const metadata = pageMetadata[pageKey] ?? {} // Use optional chaining
+
+  const metaTitle = metadata.title || pageKey || siteMetadata.title
   const metaDescription = metadata.description || siteMetadata.description
   const metaImage = metadata.metaImage || `${siteMetadata.siteUrl}${siteMetadata.socialBanner}`
 

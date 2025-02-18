@@ -2,8 +2,10 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import siteMetadata from '@/data/siteMetadata'
 
-const CommonSEO = ({ title, description, ogType, ogImage, twImage, canonicalUrl }) => {
+const CommonSEO = ({ title, description, ogType, canonicalUrl, metaImage }) => {
   const router = useRouter()
+  const ogImage = metaImage || `${siteMetadata.siteUrl}${siteMetadata.socialBanner}`
+  const twImage = ogImage
   return (
     <Head>
       <title>{title ? `${title} | ${siteMetadata.title}` : `${siteMetadata.title}`}</title>
@@ -30,18 +32,19 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage, canonicalUrl 
 }
 
 export const PageSEO = ({ title, description, metaImage }) => {
-  // const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
-  // const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
-  return <CommonSEO title={title} description={description} ogType='website' ogImage={metaImage} twImage={metaImage} />
+  const ogImage = metaImage || `${siteMetadata.siteUrl}${siteMetadata.socialBanner}`
+  const twImage = ogImage
+  return <CommonSEO title={title} description={description} ogType='website' ogImage={ogImage} twImage={twImage} />
 }
 
 export const TagSEO = ({ title, description, metaImage }) => {
-  // const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
-  // const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
+  const ogImage = metaImage || `${siteMetadata.siteUrl}${siteMetadata.socialBanner}`
+  const twImage = ogImage
+
   const router = useRouter()
   return (
     <>
-      <CommonSEO title={title} description={description} ogType='website' ogImage={metaImage} twImage={metaImage} />
+      <CommonSEO title={title} description={description} ogType='website' ogImage={ogImage} twImage={twImage} />
       <Head>
         <link
           rel='alternate'
@@ -117,14 +120,17 @@ export const BlogSEO = ({
 
   const twImageUrl = featuredImages[0].url
 
+  const ogImage = metaImage || `${siteMetadata.siteUrl}${siteMetadata.socialBanner}`
+  const twImage = ogImage
+
   return (
     <>
       <CommonSEO
         title={title}
         description={summary}
         ogType='article'
-        ogImage={metaImage}
-        twImage={metaImage}
+        ogImage={ogImage}
+        twImage={twImage}
         canonicalUrl={canonicalUrl}
       />
       <Head>
