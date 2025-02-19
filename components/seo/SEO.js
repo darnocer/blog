@@ -6,6 +6,7 @@ const CommonSEO = ({ title, description, ogType, canonicalUrl, metaImage }) => {
   const router = useRouter()
   const ogImage = metaImage || `${siteMetadata.siteUrl}${siteMetadata.socialBanner}`
   const twImage = ogImage
+
   return (
     <Head>
       <title>{title ? `${title} | ${siteMetadata.title}` : `${siteMetadata.title}`}</title>
