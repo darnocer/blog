@@ -3,9 +3,6 @@
   "version": "1.5.6",
   "private": true,
   "scripts": {
-    "sync": "npm run sync:tips && npm run sync:blogs",
-    "sync:tips": "node ./scripts/airtable/tipsSync.js",
-    "sync:blogs": "node ./scripts/airtable/blogsSync.js",
     "start": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
     "dev": "next dev",
     "build": "next build && node ./scripts/generate-sitemap",
