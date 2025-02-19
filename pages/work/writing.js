@@ -33,11 +33,11 @@ export default function Writing({ content, posts }) {
       </SectionContainer>
 
       <SectionContainer padding='medium' container='small'>
-        <RecentPosts posts={posts} heading='Shorter Reflections' typeFilter='musings' />
+        <RecentPosts posts={posts} heading='Microdoses' typeFilter='musings' />
       </SectionContainer>
 
       <SectionContainer padding='medium' container='small'>
-        <RecentPosts posts={posts} heading='Longer Posts' typeFilter='!musings' />
+        <RecentPosts posts={posts} heading='Macrodoses' typeFilter='!musings' />
       </SectionContainer>
     </MetadataWrapper>
   )
