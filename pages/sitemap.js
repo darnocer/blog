@@ -1,5 +1,5 @@
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
-import { getMdxContent } from '@/lib/mdx'
+import { getSectionContent } from '@/lib/mdx'
 
 import MetadataWrapper from '@/components/seo/MetadataWrapper'
 
@@ -7,7 +7,7 @@ const DEFAULT_LAYOUT = 'PageLayout'
 const PAGE_TITLE = 'Sitemap'
 
 export async function getStaticProps() {
-  const content = await getMdxContent('data', 'content', ['sitemap'])
+  const content = await getSectionContent('sitemap')
   return { props: { content } }
 }
 

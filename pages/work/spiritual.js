@@ -1,5 +1,5 @@
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
-import { getMdxContent } from '@/lib/mdx'
+import { getSectionContent } from '@/lib/mdx'
 
 import MetadataWrapper from '@/components/seo/MetadataWrapper'
 
@@ -7,7 +7,7 @@ const DEFAULT_LAYOUT = 'PageLayout'
 const PAGE_TITLE = 'Spiritual'
 
 export async function getStaticProps() {
-  const content = await getMdxContent('data', 'content', ['spiritual'])
+  const content = await getSectionContent('spiritual')
   return { props: { content } }
 }
 

@@ -1,6 +1,3 @@
-import siteMetadata from '@/data/siteMetadata'
-import pageMetadata from '@/data/pageMetadata'
-
 import MetadataWrapper from '@/components/seo/MetadataWrapper'
 
 import { MDXLayoutRenderer } from '@/components/MDXComponents'

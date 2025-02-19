@@ -21,7 +21,7 @@ npm run dev
 
 ### Content
 
-- All posts live in `.mdx` files in `/content/blog`
+- All posts live in `.mdx` files in `/blog/content`
   - There are no subdirectories for post content. All slugs are added to the root url.
 - `content_type` metadata appears as a `Badge` next to the post
 - `tags` metadata appears as a link prefixed with `#`
@@ -280,8 +280,8 @@ Add buttons using:
 
 - `getMdxContent()` - Returns: An object containing the processed MDX source, a table of contents, and frontmatter (metadata) of the file.
 - `getSectionContent()` - Returns: An object containing the processed MDX source, a table of contents, and frontmatter (metadata) of the file specifically for section content not blog posts
-- `getFiles()` - Retrieves a list of files in the /content/blog directory and any subdirectories by default. Optionally specify a subdirectory to return only those files in the specified subdirectory.
-- `getAllFilesFrontMatter()` - Returns: An array of frontmatter objects from all files inside /content/blog/ and any subdirctories by default. Optionally specify a subdirectory to return only those files in the specified subdirectory.
+- `getFiles()` - Retrieves a list of files in the /blog/content directory and any subdirectories by default. Optionally specify a subdirectory to return only those files in the specified subdirectory.
+- `getAllFilesFrontMatter()` - Returns: An array of frontmatter objects from all files inside /blog/content/ and any subdirctories by default. Optionally specify a subdirectory to return only those files in the specified subdirectory.
 
 **`lib/getAllTags.js`**:
 
