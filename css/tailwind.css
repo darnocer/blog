@@ -96,6 +96,10 @@
   .prose a:hover:not(.exclude-underline) {
     text-decoration: underline !important;
   }
+
+  .prose a.exclude-underline:hover {
+    text-decoration: none !important;
+  }
 }
 
 /* Italic text */
