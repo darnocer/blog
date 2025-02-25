@@ -1,10 +1,13 @@
 const headerNavLinks = [
   {
+    title: 'About',
+    href: '/about',
+  },
+  {
     title: 'My Work',
     dropdown: [
-      { href: '/work/spiritual', title: 'Transformational Wellness' },
-      { href: '/work/management', title: 'Project Leadership' },
-      { href: '/work/writing', title: 'Writing' },
+      { href: '/work/psychedelics', title: 'Psychedelics' },
+      { href: '/work/meditation', title: 'Mindfulness' },
     ],
   },
   {
