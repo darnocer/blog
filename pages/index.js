@@ -33,7 +33,7 @@ export default function Home({ posts, homeContent, tags }) {
         mdxSource={mdxSource}
         frontMatter={frontMatter}
       />
-      <SectionContainer padding='large' container='small'>
+      <SectionContainer padding='large' container='medium'>
         <CardGrid heading='My Work' type='home' />
       </SectionContainer>
 
@@ -41,7 +41,7 @@ export default function Home({ posts, homeContent, tags }) {
         <RecentSnippets posts={posts} heading='Latest Musing' numPosts={1} />
       </SectionContainer> */}
 
-      <SectionContainer padding='medium' container='small'>
+      <SectionContainer padding='medium' container='medium'>
         <TagList tags={tags} heading='Explore By Topic' level='h2' />
       </SectionContainer>
 

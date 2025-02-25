@@ -28,7 +28,7 @@ export default function Meditation({ content, posts }) {
         frontMatter={frontMatter}
       />
 
-      <SectionContainer padding='medium' container='small'>
+      <SectionContainer padding='medium' container='medium'>
         <RecentPosts posts={posts} heading='Related Posts' tagFilter='mindfulness' />
       </SectionContainer>
     </MetadataWrapper>
