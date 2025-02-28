@@ -6,22 +6,23 @@ const pageMetadata = {
     title: '404 - Not Found',
     description: 'Oops!',
   },
-  Spiritual: {
-    title: 'Work - Transformational Wellness',
-    description: 'Spiritual Healing & Transformational Wellness Work',
+  // Spiritual: {
+  //   title: 'Work - Transformational Wellness',
+  //   description: 'Spiritual Healing & Transformational Wellness Work',
+  // },
+  // Management: {
+  //   title: 'Work - Project Leadership',
+  //   description: 'Technical Consulting & Project Leadership Work',
+  // },
+  TransformationalWellness: {
+    title: 'Transformational Wellness',
+    description:
+      'Transformational Wellness is a holistic approach to healing and transformation utilizing tools including psychedelics and meditation.',
   },
-  Management: {
-    title: 'Work - Project Leadership',
-    description: 'Technical Consulting & Project Leadership Work',
-  },
-  Psychedelics: {
-    title: 'Psychedelics',
-    description: 'Psilocybin medicine journeys for spiritual healing.',
-  },
-  Meditation: {
-    title: 'Meditation',
-    description: 'Mindfulness & meditation mentorship',
-  },
+  // Meditation: {
+  //   title: 'Meditation',
+  //   description: 'Mindfulness & meditation mentorship',
+  // },
   Writing: {
     title: 'Writing',
     description:
