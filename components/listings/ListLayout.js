@@ -28,7 +28,7 @@ export default function ListLayout({ posts, title, description, initialDisplayPo
 
   return (
     <>
-      <SectionContainer container='medium'>
+      <SectionContainer container='small'>
         <div className='divide-y divide-gray-200 dark:divide-gray-700'>
           <div className='space-y-2 pb-8 pt-6 md:space-y-5'>
             <PageTitle>{title}</PageTitle>

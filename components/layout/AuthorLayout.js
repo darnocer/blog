@@ -8,7 +8,7 @@ export default function AuthorLayout({ children, frontMatter }) {
   const { name, avatar, occupation, company, email, linkedin, bio, medium, website } = frontMatter
 
   return (
-    <div className='mx-auto max-w-4xl'>
+    <div className='mx-auto max-w-3xl'>
       <Heading text='About Me' level='h1' />
 
       <div className='items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0'>

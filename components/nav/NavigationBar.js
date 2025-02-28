@@ -8,7 +8,7 @@ import Link from '@/components/links/Link'
 
 const NavigationBar = () => {
   return (
-    <header className='m-auto flex w-full max-w-4xl items-center justify-between px-6 py-6 md:px-0'>
+    <header className='m-auto flex w-full max-w-3xl items-center justify-between px-6 py-6 md:px-0'>
       <Logo />
 
       <nav className='flex items-center text-base leading-5'>
