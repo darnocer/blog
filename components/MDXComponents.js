@@ -15,8 +15,8 @@ import Button from '@/components/links/Button'
 import Status from '@/components/blocks/Status'
 import Testimonial from '@/components/blocks/Testimonial'
 import CardGrid from '@/components/blocks/CardGrid'
-import Breadcrumbs from './links/Breadcrumbs'
-import TimeOfDayText from './headings/TimeOfDayText'
+import Breadcrumbs from '@/components/links/Breadcrumbs'
+import TimeOfDayText from '@/components/headings/TimeOfDayText'
 
 export const MDXComponents = {
   Image,
