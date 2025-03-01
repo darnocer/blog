@@ -3,10 +3,6 @@ import Link from '@/components/links/Link'
 import headerNavLinks from '@/data/nav/headerNavLinks'
 
 const MobileNav = () => {
-  if (!headerNavLinks.length) {
-    return null
-  }
-
   const [navShow, setNavShow] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(Object.fromEntries(headerNavLinks.map((link) => [link.title, true])))
 
@@ -19,6 +15,11 @@ const MobileNav = () => {
 
   const toggleDropdown = (title) => {
     setDropdownOpen((prev) => ({ ...prev, [title]: !prev[title] }))
+  }
+
+  // Ensure the component does not render if there are no nav links
+  if (!headerNavLinks.length) {
+    return <></> // Return an empty fragment instead of null to prevent errors
   }
 
   return (
