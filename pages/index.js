@@ -2,8 +2,8 @@ import MetadataWrapper from '@/components/seo/MetadataWrapper'
 
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getSectionContent } from '@/lib/mdx'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
-import { getAllTags } from '@/lib/getAllTags'
+// import { getAllFilesFrontMatter } from '@/lib/mdx'
+// import { getAllTags } from '@/lib/getAllTags'
 
 import RecentPosts from '@/components/listings/RecentPosts'
 import RecentSnippets from '@/components/listings/RecentSnippets'
@@ -16,13 +16,13 @@ const PAGE_TITLE = 'Home'
 
 export async function getStaticProps() {
   const homeContent = await getSectionContent('home')
-  const posts = await getAllFilesFrontMatter()
-  const tags = await getAllTags()
+  // const posts = await getAllFilesFrontMatter()
+  // const tags = await getAllTags()
 
-  return { props: { posts, homeContent, tags } }
+  return { props: { homeContent } }
 }
 
-export default function Home({ posts, homeContent, tags }) {
+export default function Home({ homeContent }) {
   const { mdxSource, frontMatter } = homeContent
   const DEFAULT_LAYOUT = 'ContentLayout'
 
@@ -41,9 +41,9 @@ export default function Home({ posts, homeContent, tags }) {
         <RecentSnippets posts={posts} heading='Latest Musing' numPosts={1} />
       </SectionContainer> */}
 
-      <SectionContainer padding='medium' container='small'>
+      {/* <SectionContainer padding='medium' container='small'>
         <TagList tags={tags} heading='Explore By Topic' level='h2' />
-      </SectionContainer>
+      </SectionContainer> */}
 
       {/* <SectionContainer padding='medium' container='small'>
         <RecentPosts posts={posts} heading='Shorter Reflections' typeFilter='musings' />
