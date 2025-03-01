@@ -33,7 +33,10 @@ const sharedTypographyStyles = {
       h1: {
         fontWeight: '800',
         color: colors.gray[800],
-        fontSize: '3rem',
+        fontSize: '2.5rem',
+        '@screen sm': {
+          fontSize: '3rem',
+        },
         fontFamily: 'ITC Avant Garde Pro',
       },
       h2: {

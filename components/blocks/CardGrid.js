@@ -26,7 +26,7 @@ const CardGrid = ({ heading, type = 'work' }) => {
           return (
             <Link href={isDisabled ? '#' : link} key={index} className='exclude-underline'>
               <div
-                className={`group relative flex h-full flex-col justify-between rounded-md border-2 border-secondary-600/60 px-4 py-6 text-gray-850 shadow-md transition-all duration-300 ease-in-out hover:border-secondary-500/40 hover:text-black dark:border-secondary-500/70 dark:bg-black dark:text-gray-200 dark:hover:border-secondary-500 dark:hover:bg-gray-900 dark:hover:text-gray-100
+                className={`group relative mx-auto flex min-h-28 max-w-72 flex-col justify-between rounded-md border-2 border-secondary-600/60 px-4 py-6 text-gray-850 shadow-md transition-all duration-300 ease-in-out hover:border-secondary-500/40 hover:text-black dark:border-secondary-500/70 dark:bg-black dark:text-gray-200 dark:hover:border-secondary-500 dark:hover:bg-gray-900 dark:hover:text-gray-100 md:h-full
                 ${isDisabled ? 'cursor-not-allowed' : 'cursor-pointer hover:shadow-lg'}`}
               >
                 {isDisabled && (

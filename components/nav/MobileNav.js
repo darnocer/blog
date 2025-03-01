@@ -3,10 +3,12 @@ import Link from '@/components/links/Link'
 import headerNavLinks from '@/data/nav/headerNavLinks'
 
 const MobileNav = () => {
+  if (!headerNavLinks.length) {
+    return null
+  }
+
   const [navShow, setNavShow] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(
-    Object.fromEntries(headerNavLinks.map((link) => [link.title, true])) // Default all dropdowns to open
-  )
+  const [dropdownOpen, setDropdownOpen] = useState(Object.fromEntries(headerNavLinks.map((link) => [link.title, true])))
 
   const onToggleNav = () => {
     setNavShow((status) => {
@@ -36,7 +38,7 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`fixed top-0 left-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out dark:bg-gray-900 ${
+        className={`fixed left-0 top-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out dark:bg-gray-900 ${
           navShow ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -62,7 +64,7 @@ const MobileNav = () => {
               {link.dropdown ? (
                 <>
                   <button
-                    className='flex items-center justify-between w-full text-3xl font-bold tracking-widest text-gray-900 dark:text-gray-100'
+                    className='flex w-full items-center justify-between text-3xl font-bold tracking-widest text-gray-900 dark:text-gray-100'
                     onClick={() => toggleDropdown(link.title)}
                   >
                     <span>{link.title}</span>
