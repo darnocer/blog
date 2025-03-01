@@ -10,12 +10,12 @@ const pageMetadata = {
   //   title: 'Work - Transformational Wellness',
   //   description: 'Spiritual Healing & Transformational Wellness Work',
   // },
-  // Management: {
-  //   title: 'Work - Project Leadership',
-  //   description: 'Technical Consulting & Project Leadership Work',
-  // },
+  Leadership: {
+    title: 'Work - Project Leadership',
+    description: 'Technical Consulting & Project Leadership Work',
+  },
   TransformationalWellness: {
-    title: 'Transformational Wellness',
+    title: 'Work - Transformational Wellness',
     description:
       'Transformational Wellness is a holistic approach to healing and transformation utilizing tools including psychedelics and meditation.',
   },
