@@ -34,7 +34,7 @@ export default function Home({ homeContent }) {
         frontMatter={frontMatter}
       />
       <SectionContainer padding='large' container='small'>
-        <CardGrid heading='My Work' type='home' />
+        <CardGrid heading='My Current Projects' type='home' />
       </SectionContainer>
 
       {/* <SectionContainer padding='large' container='small'>
