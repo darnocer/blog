@@ -7,7 +7,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <footer className='mt-12 divide-y border-t-1 border-gray-500/50 bg-white dark:bg-black'>
-      <div className='mt-6 flex flex-col items-center font-medium md:mt-12'>
+      <div className='mt-6 flex flex-col items-center pb-4 font-medium md:mt-12'>
         <nav className='mb-3 flex flex-col items-center space-y-2 sm:flex-row sm:space-x-4 sm:space-y-0'>
           {footerNavLinks.map((link) => (
             <Link
