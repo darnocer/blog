@@ -33,7 +33,7 @@ const pageMetadata = {
     description: 'Short reflections about the spiritual path.',
   },
   Posts: {
-    title: 'Writing - All Posts',
+    title: 'Blog',
     description:
       'All posts on topics including spirituality, psychedelics, health & wellness, and meditation & mindfulness',
   },
