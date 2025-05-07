@@ -7,10 +7,13 @@ import MeditationIcon from '@/components/icons/components/MeditationIcon'
 import SoulScienceIcon from '@/components/icons/components/SoulScienceIcon'
 
 const homeCardData = [
-  { title: 'Transformational Wellness', link: '/transformational-wellness', icon: <SparklesIcon /> },
-  { title: 'Project Leadership', link: '/leadership', icon: <LaptopIcon /> },
-  { title: 'Soul Signals', link: 'https://soul-science.com', icon: <SoulScienceIcon /> },
+  { title: 'Soul Science', link: 'https://soulsciencehq.com', icon: <SoulScienceIcon /> },
   { title: 'Microdose.wiki', link: 'https://microdose.wiki', icon: <MicrodoseIcon /> },
+  {
+    title: 'darian.digital',
+    link: 'https://drive.google.com/file/d/1K15gxW-LqSCN0RbsmkotsjSpPwyvikh_/view?usp=sharing',
+    icon: <LaptopIcon />,
+  },
 ]
 
 export default homeCardData
