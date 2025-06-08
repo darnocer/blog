@@ -1,4 +1,4 @@
-import Mail from './mail.svg'
+import Email from './email.svg'
 import Github from './github.svg'
 import Facebook from './facebook.svg'
 import Youtube from './youtube.svg'
@@ -6,11 +6,13 @@ import Linkedin from './linkedin.svg'
 import Twitter from './twitter.svg'
 import Medium from './medium.svg'
 import Website from './website.svg'
+import Instagram from './instagram.svg'
+import X from './x.svg'
 
 // Icons taken from: https://simpleicons.org/
 
 const components = {
-  mail: Mail,
+  email: Email,
   github: Github,
   facebook: Facebook,
   youtube: Youtube,
@@ -18,6 +20,8 @@ const components = {
   twitter: Twitter,
   medium: Medium,
   website: Website,
+  instagram: Instagram,
+  x: X,
 }
 
 const SocialIcon = ({ kind, href, size = 8 }) => {
@@ -35,7 +39,7 @@ const SocialIcon = ({ kind, href, size = 8 }) => {
       <span className='sr-only'>{kind}</span>
       <SocialSvg
         className={`h-6 text-gray-700 duration-200 ease-in hover:text-tertiary-600 dark:text-gray-200 dark:hover:text-tertiary-500`}
-        fill={kind === 'website' ? 'none' : 'currentColor'} // Ensure website icon uses stroke only
+        fill={kind === 'email' ? 'none' : 'currentColor'} // Ensure website icon uses stroke only
       />
     </a>
   )
