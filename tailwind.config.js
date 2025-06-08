@@ -121,6 +121,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      animation: {
+        'spin-slow': 'spin 1s linear infinite',
+      },
       spacing: {
         '9/16': '56.25%',
       },

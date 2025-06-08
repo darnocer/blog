@@ -2,9 +2,9 @@ const footerNavLinks = [
   // { href: '/colophon', title: 'Colophon' },
   // { href: '/sitemap', title: 'Sitemap' },
   { href: 'https://linkedin.com/in/darian-nocera', title: 'LinkedIn' },
-  // { href: 'https://medium.com/@soul-science', title: 'Medium' },
   { href: 'https://www.instagram.com/no.imdirtyd', title: 'Instagram' },
   { href: 'https://www.x.com/noimdirtyd', title: 'X' },
+  { href: 'https://soulsciencehq.medium.com/', title: 'Medium' },
   { href: 'mailto:darian@soulsciencehq.com?Subject=Website Contact', title: 'Email' },
   { href: 'https://calendly.com/soulsciencehq/30', title: 'Schedule' },
   // {
